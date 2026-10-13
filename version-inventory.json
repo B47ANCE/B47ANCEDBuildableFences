@@ -1,0 +1,218 @@
+{
+  "schema": 1,
+  "canonical": "VERSION",
+  "mirrors": [
+    {
+      "path": "README.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "src/B47ANCEDBuildableFences/42/mod.info",
+      "pattern": "^modversion=(?P<version>\\S+)$"
+    },
+    {
+      "path": "src/B47ANCEDBuildableFences/42/README.txt",
+      "pattern": "^B47ANCE\\u0027d Buildable Fences \\u2014 v(?P<version>\\S+)$"
+    },
+    {
+      "path": "src/B47ANCEDBuildableFences/42/media/lua/client/B47_NonBlockingPosts_Client.lua",
+      "pattern": "^-- B47ANCE'd Buildable Fences v(?P<version>\\S+)$"
+    },
+    {
+      "path": "src/B47ANCEDBuildableFences/42/media/lua/server/B47_NonBlockingPosts_Server.lua",
+      "pattern": "^-- B47ANCE'd Buildable Fences v(?P<version>\\S+)$"
+    },
+    {
+      "path": "src/B47ANCEDBuildableFences/42/media/lua/server/B47_FenceConstruction.lua",
+      "pattern": "^-- B47ANCE\\u0027d Buildable Fences v(?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/CONCRETE_RECIPE_AUDIT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/WROUGHT_IRON_SPRITE_AUDIT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "WORKSHOP_CHANGE_NOTE.txt",
+      "pattern": "^\\[b\\]Version (?P<version>[^\\[]+)\\[/b\\]$"
+    },
+    {
+      "path": "workshop-update.properties",
+      "pattern": "^version=(?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/TESTING.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/VERSIONING.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/WORKSHOP_DESCRIPTION.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/IMPLEMENTATION_REPORT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/SKILL_REBALANCE_REPORT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "prototypes/cohesive/42/media/lua/client/B47_CohesivePresentation.lua",
+      "pattern": "^-- B47ANCE'd Buildable Fences v(?P<version>\\S+)$"
+    },
+    {
+      "path": "prototypes/cohesive/42/media/lua/server/B47_CohesiveAuthority.lua",
+      "pattern": "^-- B47ANCE'd Buildable Fences v(?P<version>\\S+)$"
+    },
+    {
+      "path": "prototypes/cohesive/42/media/lua/server/B47_CohesiveCursor.lua",
+      "pattern": "^-- B47ANCE'd Buildable Fences v(?P<version>\\S+)$"
+    },
+    {
+      "path": "prototypes/cohesive/42/media/lua/shared/B47_CohesiveModel.lua",
+      "pattern": "^-- B47ANCE'd Buildable Fences v(?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/COHESIVE_PROTOTYPE_REPORT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "prototypes/cohesive/README.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/LEGACY_COMPATIBILITY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "compatibility/LegacyFenceMap.json",
+      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
+    },
+    {
+      "path": "prototypes/cohesive/42/media/lua/client/B47_CohesivePresentation.lua",
+      "pattern": "cohesive selector (?P<version>\\S+) initialized"
+    },
+    {
+      "path": "WORKSHOP_DESCRIPTION.txt",
+      "pattern": "^\\[b\\]Version (?P<version>[^\\[]+)\\[/b\\]$"
+    },
+    {
+      "path": "docs/evidence/workshop-dev6-package.json",
+      "pattern": "\"version\": \"(?P<version>[^\\\"]+)\""
+    },
+    {
+      "path": "docs/TEST_KIT_REMOVAL.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    }
+  ],
+  "changelog": {
+    "path": "CHANGELOG.md",
+    "pattern": "^## \\[(?P<version>[^\\]]+)\\]$"
+  },
+  "packaging": {
+    "artifacts": [
+      {
+        "glob": "dist/current/*.zip",
+        "pattern": "B47ANCEDBuildableFences-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?)\\.zip",
+        "zip_members": [
+          {
+            "member": "B47ANCEDBuildableFences/42/mod.info",
+            "pattern": "^modversion=(?P<version>\\S+)\\r?$"
+          }
+        ]
+      }
+    ]
+  },
+  "other_versions": [
+    {
+      "category": "pz",
+      "reference": "src/B47ANCEDBuildableFences/42/mod.info versionMin; docs game build",
+      "reason": "PZ compatibility, not mod version"
+    },
+    {
+      "category": "dependency",
+      "reference": "docs/BADLANDS_FENCE_REFERENCE_AUDIT.md reference version",
+      "reason": "Reference-only upstream version; no dependency"
+    },
+    {
+      "category": "inventory-schema",
+      "reference": "version-inventory.json schema",
+      "reason": "Inventory schema"
+    },
+    {
+      "category": "compatibility",
+      "reference": "src/B47ANCEDBuildableFences/42/media/sandbox-options.txt VERSION = 1",
+      "reason": "Vanilla sandbox definition format"
+    },
+    {
+      "category": "project-fixture",
+      "reference": "scripts/prepare_development.py and tests/test_fences.py recovery version constants",
+      "reason": "Fixed baseline-to-development transformation and test fixtures; not release metadata"
+    },
+    {
+      "category": "compatibility",
+      "reference": "Generated staging workshop.txt version=1",
+      "reason": "Native Workshop metadata format, independent of project version"
+    }
+  ],
+  "historical": [
+    {
+      "reference": "docs/evidence/baseline-1.0.37; baseline references and historical Lua comments; CHANGELOG older entries",
+      "reason": "Original downloaded baseline and user-provided history; not current proof"
+    },
+    {
+      "reference": "research/vanilla; research/classes; scripts/check_versions.py",
+      "reason": "Vanilla/CFR/framework provenance versions, not current mod version"
+    },
+    {
+      "reference": "docs/evidence/source-diff.txt; pre-change reference/material audits",
+      "reason": "Dated before/after evidence retains the versions and source state actually inspected"
+    },
+    {
+      "reference": "docs/evidence/history/1.1.0-dev.1; scripts/rebalance_skills.py fixed checkpoint fixtures; docs/evidence/skill-only-diff.txt before/after lines",
+      "reason": "Preserved dev.1 source/validation and bounded recovery fixtures; never current runtime proof"
+    },
+    {
+      "reference": "docs/evidence/history/1.1.0-dev.2; scripts/cohesive_checkpoint.py",
+      "reason": "Immutable prior checkpoint and fixed transition fixture; not current proof"
+    },
+    {
+      "reference": "docs/evidence/history/dev.3-before-testkit",
+      "reason": "Original 29-test dev.3 prototype evidence before test utility; not current proof"
+    },
+    {
+      "reference": "docs/evidence/history/1.1.0-dev.3; scripts/variant_checkpoint.py",
+      "reason": "Rejected topology overlay, old tests/reports and exact dev.3 evidence; never current proof"
+    },
+    {
+      "reference": "docs/evidence/history/1.1.0-dev.4; docs/evidence/test-deployment.json; scripts/legacy_checkpoint.py",
+      "reason": "Preserved dev.4 validation and actual deployed dev.4 copy; not dev.5 proof"
+    },
+    {
+      "reference": "scripts/finish_legacy_checkpoint.py",
+      "reason": "Bounded dev.5 documentation transition fixture, not current metadata"
+    },
+    {
+      "reference": "docs/evidence/test-install-backups; docs/evidence/pre-dev5-console-20261003T070602Z.txt; scripts/Deploy-Dev5-Test.ps1 bounded prior-version fixture",
+      "reason": "Archived original test installation and pre-deployment native log retain their observed versions; never dev.5 runtime proof"
+    },
+    {
+      "reference": "docs/evidence/CHANGED_FILES.md; docs/evidence/offline-tests.txt; docs/evidence/version-check.txt; docs/evidence/development-hashes.json; docs/evidence/cohesive-hashes.json; prototypes/cohesive/42/media/lua/client/B47_FenceTestKitClient.lua; prototypes/cohesive/42/media/lua/server/B47_FenceTestKitServer.lua; prototypes/cohesive/42/media/lua/shared/B47_FenceTestKitPlan.lua; docs/FENCE_TEST_KIT.md; docs/evidence/legacy-identity-table.md; docs/evidence/legacy-checkpoint-changes.md; docs/evidence/legacy-live-observation.json; docs/DEPLOYMENT_DEV5.md; docs/evidence/test-deployment-dev.5.json; docs/WORKSHOP_DEV5_TEST_RELEASE.md; docs/evidence/workshop-test-package.json; docs/evidence/history/1.1.0-dev.5; dist/history/1.1.0-dev.5",
+      "reason": "Original dev.5 evidence/test-kit remains historical; not dev.6 proof"
+    }
+  ]
+}

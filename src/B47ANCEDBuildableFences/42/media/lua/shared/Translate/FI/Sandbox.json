@@ -1,0 +1,5 @@
+{
+    "Sandbox_B47ANCEDBuildableFences": "B47ANCE'd Buildable Fences",
+    "Sandbox_B47_ConstructionHealthPercent": "Fence construction health (%)",
+    "Sandbox_B47_ConstructionHealthPercent_tooltip": "Health of newly constructed B47 fence sections and corners, as a percentage of normal health. Default: 100. Range: 10 to 500. Existing fences and nonblocking standalone posts are unchanged. The server setting is authoritative."
+}

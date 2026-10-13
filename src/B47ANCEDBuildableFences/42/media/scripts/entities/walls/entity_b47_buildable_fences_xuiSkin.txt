@@ -1,0 +1,170 @@
+module Base
+{
+    xuiSkin default
+    {
+        entity ES_B47_MilitaryFence_PlainSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_MilitaryFence_PlainSection,
+            Icon = Build_MilitaryFence_PlainSection,
+        }
+
+        entity ES_B47_MilitaryFence_PostEndedSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_MilitaryFence_PostEndedSection,
+            Icon = Build_MilitaryFence_PostEndedSection,
+        }
+
+        entity ES_B47_MilitaryFence_Corner
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_MilitaryFence_Corner,
+            Icon = Build_MilitaryFence_Corner,
+        }
+
+        entity ES_B47_MilitaryFence_Post
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_MilitaryFence_Post,
+            Icon = Build_MilitaryFence_Post,
+        }
+    }
+}
+
+module Base
+{
+    xuiSkin default
+    {
+        entity ES_B47_SecurityFence_PlainSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_SecurityFence_PlainSection,
+            Icon = Build_SecurityFence_PlainSection,
+        }
+
+        entity ES_B47_SecurityFence_PostEndedSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_SecurityFence_PostEndedSection,
+            Icon = Build_SecurityFence_PostEndedSection,
+        }
+
+        entity ES_B47_SecurityFence_Corner
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_SecurityFence_Corner,
+            Icon = Build_SecurityFence_Corner,
+        }
+
+        entity ES_B47_RazorWireSecurityFence_PlainSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_RazorWireSecurityFence_PlainSection,
+            Icon = Build_RazorWireSecurityFence_PlainSection,
+        }
+
+        entity ES_B47_RazorWireSecurityFence_PostEndedSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_RazorWireSecurityFence_PostEndedSection,
+            Icon = Build_RazorWireSecurityFence_PostEndedSection,
+        }
+
+        entity ES_B47_RazorWireSecurityFence_Corner
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_RazorWireSecurityFence_Corner,
+            Icon = Build_RazorWireSecurityFence_Corner,
+        }
+    }
+}
+
+module Base
+{
+    xuiSkin default
+    {
+        entity ES_B47_TallWoodenFence_PostEnded
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_TallWoodenFence_PostEnded,
+            Icon = Build_TallWoodFence_PostEnded,
+        }
+
+        entity ES_B47_TallWoodenFence_Continuous
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_TallWoodenFence_Continuous,
+            Icon = Build_TallWoodFence_Continuous,
+        }
+
+        entity ES_B47_TallWoodenFence_Corner
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_TallWoodenFence_Corner,
+            Icon = Build_TallWoodFence_Corner,
+        }
+
+        entity ES_B47_TallWoodenFence_Post
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_TallWoodenFence_Post,
+            Icon = Build_TallWoodFence_Post,
+        }
+
+        entity ES_B47_TallWoodenFence_StraightTop
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_TallWoodenFence_StraightTop,
+            Icon = Build_TallWoodFence_StraightTop,
+        }
+
+        entity ES_B47_TallWoodenFence_StraightTopCorner
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_TallWoodenFence_StraightTopCorner,
+            Icon = Build_TallWoodFence_StraightTopCorner,
+        }
+
+        entity ES_B47_TallWoodenFence_StraightTopPost
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_TallWoodenFence_StraightTopPost,
+            Icon = Build_TallWoodFence_StraightTopPost,
+        }
+    }
+}
+
+module Base
+{
+    xuiSkin default
+    {
+        entity ES_B47_WroughtIronFence_PlainSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_WroughtIronFence_PlainSection,
+            Icon = Build_WroughtIronFence_PlainSection,
+        }
+
+        entity ES_B47_WroughtIronFence_PostEndedSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_WroughtIronFence_PostEndedSection,
+            Icon = Build_WroughtIronFence_PostEndedSection,
+        }
+
+        entity ES_B47_WroughtIronFence_Corner
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_WroughtIronFence_Corner,
+            Icon = Build_WroughtIronFence_Corner,
+        }
+
+        entity ES_B47_WroughtIronFence_Post
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_WroughtIronFence_Post,
+            Icon = Build_WroughtIronFence_Post,
+        }
+    }
+}

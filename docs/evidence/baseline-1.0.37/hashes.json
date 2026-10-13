@@ -1,0 +1,98 @@
+[
+  {
+    "Path": "mod.info",
+    "SHA256": "0C5FE14FBCD7851153D365266545804F01933E26D7C6C6B85687B371E7046747"
+  },
+  {
+    "Path": "poster.png",
+    "SHA256": "626E52079E4DE4A1769E65AFC11FB492FE747408FD17BFA95F4787A900B949B0"
+  },
+  {
+    "Path": "README.txt",
+    "SHA256": "C6F190FD55616EE09ED5A76EC43868DB12DAE9D0E580D43E92BB7AB3575AF0C9"
+  },
+  {
+    "Path": "media\\lua\\client\\B47_NonBlockingPosts_Client.lua",
+    "SHA256": "E9BF3F071DD3871FE7C5D7082AE4432B2AEB894A8EBDCF0BF20DFBF96B846FBD"
+  },
+  {
+    "Path": "media\\lua\\server\\B47_NonBlockingPosts_Server.lua",
+    "SHA256": "A18CBC54FFCB7A9530AB80EB8690E44044949FCA9B2B9BC3645F7ADB199EDBAF"
+  },
+  {
+    "Path": "media\\scripts\\entities\\walls\\entity_b47_buildable_fences_xuiSkin.txt",
+    "SHA256": "A6722978DFB32AE861AF0B74E9ED5D912CF33068F6B0F712CA2210C93982C47D"
+  },
+  {
+    "Path": "media\\scripts\\generated\\entities\\walls\\entity_b47_buildable_fences.txt",
+    "SHA256": "44DF51B6344012635F815B47F5F5B5D142EC6B412BF7BAEE44148170BC5B0F2F"
+  },
+  {
+    "Path": "media\\textures\\Build_MilitaryFence_Corner.png",
+    "SHA256": "68C39EEFE029A053ED06C909269FA15F9605E0C23AC5F13874186EBAEDC69300"
+  },
+  {
+    "Path": "media\\textures\\Build_MilitaryFence_PlainSection.png",
+    "SHA256": "456D4D16D8BC731AC43DC59EAFFBC72ABD1603AC80122D24CCDF92CEC07667CD"
+  },
+  {
+    "Path": "media\\textures\\Build_MilitaryFence_Post.png",
+    "SHA256": "83954E6F7D9B995BC7A17875E89EAD274341445FD31B65389CF6BEF4894C3DBE"
+  },
+  {
+    "Path": "media\\textures\\Build_MilitaryFence_PostEndedSection.png",
+    "SHA256": "E9A94DD2C05589AE28166CB586D66B1633F63CFE87646EEAD31A4426FE3FB2C9"
+  },
+  {
+    "Path": "media\\textures\\Build_RazorWireSecurityFence_Corner.png",
+    "SHA256": "A989C85CC5D163FFE2280B75F9EB5DB5C6EE9F1550944D6C8A19841F17BF1CAD"
+  },
+  {
+    "Path": "media\\textures\\Build_RazorWireSecurityFence_PlainSection.png",
+    "SHA256": "93CCBF8ADAD0D83CF0BD24D43B5DE6C86A63411BF17A54603FDF64DCCDA74AD6"
+  },
+  {
+    "Path": "media\\textures\\Build_RazorWireSecurityFence_PostEndedSection.png",
+    "SHA256": "948959DBD289FCD500AF18127326BD4882EAD1A08B0DCE177B9860EDF1BB4661"
+  },
+  {
+    "Path": "media\\textures\\Build_SecurityFence_Corner.png",
+    "SHA256": "722FC5659C457B13686AAFD3C8E0A43E459B984670A00863B0C2E9768185F819"
+  },
+  {
+    "Path": "media\\textures\\Build_SecurityFence_PlainSection.png",
+    "SHA256": "4BFE51E0D11FC2149F7C02C234C86C9154CA007C06BE016F411A2559FD60BD70"
+  },
+  {
+    "Path": "media\\textures\\Build_SecurityFence_PostEndedSection.png",
+    "SHA256": "AC8E3018028925C06F97D5F4C07A84360DD07310F1874B294BBEB7DF716175BE"
+  },
+  {
+    "Path": "media\\textures\\Build_TallWoodFence_Continuous.png",
+    "SHA256": "E1CDBB81CAFB4B831A2274BC4B6D807169E35141D0880AC597CB09644B5EC702"
+  },
+  {
+    "Path": "media\\textures\\Build_TallWoodFence_Corner.png",
+    "SHA256": "7B4709FE0A24CE07CBB355FF095E30884656A6120C6194A66C594D453791B2DC"
+  },
+  {
+    "Path": "media\\textures\\Build_TallWoodFence_Post.png",
+    "SHA256": "F0AFD2B8ED494AEF102BC6CE99375B8CCB76330919083CA693C4130B0F706220"
+  },
+  {
+    "Path": "media\\textures\\Build_TallWoodFence_PostEnded.png",
+    "SHA256": "018DC28A0B120A86A146B7515E3F4EB1E7F511FED194BC9BAC59065195BE630C"
+  },
+  {
+    "Path": "media\\textures\\Build_TallWoodFence_StraightTop.png",
+    "SHA256": "A132A6383CC7A40A50308844B32A61764EE2CFA4EC7F375B4D7567BF150016A3"
+  },
+  {
+    "Path": "media\\textures\\Build_TallWoodFence_StraightTopCorner.png",
+    "SHA256": "EF1C8D2D0633EEE6EA927ECC67023A7E5ADC59A75D064FD24822116DC1CA62B9"
+  },
+  {
+    "Path": "media\\textures\\Build_TallWoodFence_StraightTopPost.png",
+    "SHA256": "817BF5DA40B111673E3117B63502303C14E2ED0F2439A89EF30D30950E9108B3"
+  }
+]

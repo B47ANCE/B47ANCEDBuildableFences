@@ -1,0 +1,23 @@
+{
+    "IGUI_B47_MilitaryFence_PlainSection": "Military Fence (Plain Section)",
+    "IGUI_B47_MilitaryFence_PostEndedSection": "Military Fence (Post-Ended Section)",
+    "IGUI_B47_MilitaryFence_Corner": "Military Fence (Corner)",
+    "IGUI_B47_MilitaryFence_Post": "Military Fence (Post)",
+    "IGUI_B47_SecurityFence_PlainSection": "Security Fence (Plain Section)",
+    "IGUI_B47_SecurityFence_PostEndedSection": "Security Fence (Post-Ended Section)",
+    "IGUI_B47_SecurityFence_Corner": "Security Fence (Corner)",
+    "IGUI_B47_RazorWireSecurityFence_PlainSection": "Razor-Wire Security Fence (Plain Section)",
+    "IGUI_B47_RazorWireSecurityFence_PostEndedSection": "Razor-Wire Security Fence (Post-Ended Section)",
+    "IGUI_B47_RazorWireSecurityFence_Corner": "Razor-Wire Security Fence (Corner)",
+    "IGUI_B47_TallWoodenFence_PostEnded": "Tall Wooden Fence (Sloped Top Post-Ended)",
+    "IGUI_B47_TallWoodenFence_Continuous": "Tall Wooden Fence (Sloped Top)",
+    "IGUI_B47_TallWoodenFence_Corner": "Tall Wooden Fence (Sloped Top Corner)",
+    "IGUI_B47_TallWoodenFence_Post": "Tall Wooden Fence (Sloped Top Post)",
+    "IGUI_B47_TallWoodenFence_StraightTop": "Tall Wooden Fence (Straight Top)",
+    "IGUI_B47_TallWoodenFence_StraightTopCorner": "Tall Wooden Fence (Straight Top Corner)",
+    "IGUI_B47_TallWoodenFence_StraightTopPost": "Tall Wooden Fence (Straight Top Post)",
+    "IGUI_B47_WroughtIronFence_PlainSection": "Wrought Iron Fence (Plain Section)",
+    "IGUI_B47_WroughtIronFence_PostEndedSection": "Wrought Iron Fence (Post-Ended Section)",
+    "IGUI_B47_WroughtIronFence_Corner": "Wrought Iron Fence (Corner)",
+    "IGUI_B47_WroughtIronFence_Post": "Wrought Iron Fence (Post)"
+}

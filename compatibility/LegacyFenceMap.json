@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "project_version": "1.1.0-dev.6",
+  "legacy_versions": [
+    "1.0.37"
+  ],
+  "mod_id": "B47ANCEDBuildableFences",
+  "workshop_id": "3810187215",
+  "world_mutations": false,
+  "custom_tile_id_remaps": {},
+  "recognition": "Exact entity plus face/sprite pairs only; unlabelled IsoObject posts are not identified by sprite alone.",
+  "lifecycle": "Native deserialization retains existing objects; no migration callback or marker.",
+  "entities": {
+    "B47_MilitaryFence_PlainSection": {
+      "current_entity": "B47_MilitaryFence_PlainSection",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "W": "fencing_01_50",
+        "N": "fencing_01_49"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_MilitaryFence_PlainSection",
+      "entity_style": "ES_B47_MilitaryFence_PlainSection"
+    },
+    "B47_MilitaryFence_PostEndedSection": {
+      "current_entity": "B47_MilitaryFence_PostEndedSection",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "W": "fencing_01_51",
+        "N": "fencing_01_48"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_MilitaryFence_PostEndedSection",
+      "entity_style": "ES_B47_MilitaryFence_PostEndedSection"
+    },
+    "B47_MilitaryFence_Corner": {
+      "current_entity": "B47_MilitaryFence_Corner",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "S": "fencing_01_52"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_MilitaryFence_Corner",
+      "entity_style": "ES_B47_MilitaryFence_Corner"
+    },
+    "B47_MilitaryFence_Post": {
+      "current_entity": "B47_MilitaryFence_Post",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "S": "fencing_01_53"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_MilitaryFence_Post",
+      "entity_style": "ES_B47_MilitaryFence_Post"
+    },
+    "B47_SecurityFence_PlainSection": {
+      "current_entity": "B47_SecurityFence_PlainSection",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "W": "fencing_01_82",
+        "N": "fencing_01_81"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_SecurityFence_PlainSection",
+      "entity_style": "ES_B47_SecurityFence_PlainSection"
+    },
+    "B47_SecurityFence_PostEndedSection": {
+      "current_entity": "B47_SecurityFence_PostEndedSection",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "W": "fencing_01_83",
+        "N": "fencing_01_80"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_SecurityFence_PostEndedSection",
+      "entity_style": "ES_B47_SecurityFence_PostEndedSection"
+    },
+    "B47_SecurityFence_Corner": {
+      "current_entity": "B47_SecurityFence_Corner",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "S": "fencing_01_84"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_SecurityFence_Corner",
+      "entity_style": "ES_B47_SecurityFence_Corner"
+    },
+    "B47_RazorWireSecurityFence_PlainSection": {
+      "current_entity": "B47_RazorWireSecurityFence_PlainSection",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "W": "fencing_01_90",
+        "N": "fencing_01_89"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_RazorWireSecurityFence_PlainSection",
+      "entity_style": "ES_B47_RazorWireSecurityFence_PlainSection"
+    },
+    "B47_RazorWireSecurityFence_PostEndedSection": {
+      "current_entity": "B47_RazorWireSecurityFence_PostEndedSection",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "W": "fencing_01_91",
+        "N": "fencing_01_88"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_RazorWireSecurityFence_PostEndedSection",
+      "entity_style": "ES_B47_RazorWireSecurityFence_PostEndedSection"
+    },
+    "B47_RazorWireSecurityFence_Corner": {
+      "current_entity": "B47_RazorWireSecurityFence_Corner",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "S": "fencing_01_92"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_RazorWireSecurityFence_Corner",
+      "entity_style": "ES_B47_RazorWireSecurityFence_Corner"
+    },
+    "B47_TallWoodenFence_PostEnded": {
+      "current_entity": "B47_TallWoodenFence_PostEnded",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "W": "fencing_01_11",
+        "N": "fencing_01_8"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_TallWoodenFence_PostEnded",
+      "entity_style": "ES_B47_TallWoodenFence_PostEnded"
+    },
+    "B47_TallWoodenFence_Continuous": {
+      "current_entity": "B47_TallWoodenFence_Continuous",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "W": "fencing_01_10",
+        "N": "fencing_01_9"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_TallWoodenFence_Continuous",
+      "entity_style": "ES_B47_TallWoodenFence_Continuous"
+    },
+    "B47_TallWoodenFence_Corner": {
+      "current_entity": "B47_TallWoodenFence_Corner",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "S": "fencing_01_12"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_TallWoodenFence_Corner",
+      "entity_style": "ES_B47_TallWoodenFence_Corner"
+    },
+    "B47_TallWoodenFence_Post": {
+      "current_entity": "B47_TallWoodenFence_Post",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "S": "fencing_01_13"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_TallWoodenFence_Post",
+      "entity_style": "ES_B47_TallWoodenFence_Post"
+    },
+    "B47_TallWoodenFence_StraightTop": {
+      "current_entity": "B47_TallWoodenFence_StraightTop",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "W": "fencing_01_72",
+        "N": "fencing_01_73"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_TallWoodenFence_StraightTop",
+      "entity_style": "ES_B47_TallWoodenFence_StraightTop"
+    },
+    "B47_TallWoodenFence_StraightTopCorner": {
+      "current_entity": "B47_TallWoodenFence_StraightTopCorner",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "S": "fencing_01_75"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_TallWoodenFence_StraightTopCorner",
+      "entity_style": "ES_B47_TallWoodenFence_StraightTopCorner"
+    },
+    "B47_TallWoodenFence_StraightTopPost": {
+      "current_entity": "B47_TallWoodenFence_StraightTopPost",
+      "strategy": "retain-existing-object",
+      "faces": {
+        "S": "fencing_01_74"
+      },
+      "recipe_definition": "Unchanged embedded component CraftRecipe in Base.B47_TallWoodenFence_StraightTopPost",
+      "entity_style": "ES_B47_TallWoodenFence_StraightTopPost"
+    }
+  }
+}

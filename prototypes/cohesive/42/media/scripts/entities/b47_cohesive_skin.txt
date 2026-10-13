@@ -1,0 +1,12 @@
+module Base
+{
+    xuiSkin default
+    {
+        entity ES_B47_WroughtIronGate
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_WroughtIronGate,
+            Icon = Build_WroughtIronFence_PostEndedSection,
+        }
+    }
+}

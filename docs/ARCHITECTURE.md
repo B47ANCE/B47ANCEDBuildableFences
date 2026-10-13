@@ -1,0 +1,92 @@
+# Architecture
+
+Project Version: 1.1.0-dev.6
+
+The active overlay contains a corrected variant-selection Wrought Iron source overlay outside
+src/. The production architecture below retains dev.2 behavior. Overlay state
+ownership, native orientation request/replication, marker persistence and
+runtime gates are documented in COHESIVE_PROTOTYPE_REPORT.md. Archived dev.3
+topology is not loaded. Q/E selects actual entity/recipe/face, not neighbors. It adds no
+client authority and is not enabled or generalized in this candidate.
+
+## Authority and persistence
+
+[VERIFIED] Native ISBuildAction.start uses createBuildAction and clients wait
+for accepted/rejected action state. Its perform method returns on clients;
+construction occurs on server/SP through ISBuildIsoEntity.create. The native
+builder creates the IsoThumpable, assigns entity components/health, adds it to
+the square, calls SpriteConfig OnCreate, recalculates neighbors and transmits
+the complete item. CraftRecipeData processes partial uses through ItemUser and
+sends item stats from the server. This is the reused authority/sync path.
+No new build command or client-owned inventory consumption is introduced.
+
+[VERIFIED] B47Fence.OnCreate is in server Lua and refuses isClient(). It checks
+actual IsoThumpable type and an exact name/sprite pair before setting per-object
+sound fields and interpreting the server sandbox value. Returning nil preserves
+the native one-object transmission path. IsoThumpable save/load includes health,
+thumpSound and breakSound; settings are evaluated at construction, not on load.
+No global sprite property/type, north flag, block-all flag or object replacement
+is touched by this callback. Default health causes no health writes.
+
+[VERIFIED] Standalone-post handling is the exact recovered baseline sequence,
+with only iron name/sprite added to each allowlist. Clients detect nearby
+eligible IsoThumpables, send intent, never remove objects in MP. Server checks
+sender, coordinates, same Z/proximity, actual square/class/name/sprite, removes
+the object, creates/adds an IsoObject and transmits it. Repeat requests see a
+non-IsoThumpable and cannot duplicate conversion. Single-player retains the
+same local sequence. No post health/material inventory is stored separately.
+
+Baseline caveats retained: client request cache has no retry until reload;
+server name and sprite allowlists are independent sets, not exact pairs;
+replacement does not transfer custom entity/name/modData state. This development
+slice does not rewrite the user-proven conversion. [RUNTIME GATE] Dedicated
+save/restart/late join, interrupted conversion and two-client collision must
+prove continued correctness. Source inspection cannot certify those outcomes.
+
+## Configuration candidates
+
+| Candidate | Decision and rationale |
+|---|---|
+| Fence durability | One server sandbox ConstructionHealthPercent, integer 10Ã¢â‚¬â€œ500, step 1, default 100; scales newly constructed section/corner health |
+| Recipe materials, uses, skill and time | Exact requested recipe contract and preserved B47 baseline; no per-input micro-settings. Runtime script recipes are shared server content |
+| Native construction bonus | Existing vanilla ConstructionBonusPoints is still interpreted by the native builder; B47 multiplier applies afterward |
+| Sprite axes, post conversion, material audio | Correctness invariants and material metadata, not gameplay alternatives; no disabling setting |
+| Detection interval, scan/proximity limits, protocol names | Preserved technical safety/implementation limits; not gameplay balance settings |
+| Wooden fade | Native local presentation; no arbitrary alpha or divergent gameplay state |
+
+Option identifier is B47ANCEDBuildableFences.ConstructionHealthPercent, grouped
+on B47's sandbox page with localized name/tooltip in all 29 folders. Authority
+rejects nonnumbers/NaN/out-of-range values to 100, floors fractional input to the
+integer format and never creates zero-health objects. Existing saves lacking
+the setting get 100; existing objects are not resized. Converted posts are
+excluded. Defaults preserve health behavior and schema compatibility.
+
+## Compatibility and scope
+
+The skill-only checkpoint changes three Straight Top requirements to Woodwork:4
+and six Security/Razor requirements to MetalWelding:4. Sloped Top, Military and
+Wrought Iron remain at 7. Recipe skill checks reuse the existing native build
+authority; no custom client-only eligibility or sandbox override is added.
+Exact progression tiers are the user-specified shared recipe contract, not
+new configurable per-variant knobs. Current IDs, persistence, synchronization,
+materials, XP and health configuration/code remain unchanged.
+
+Mod ID and Workshop ID remain unchanged. No required dependencies, custom Java,
+custom animations, gate entities, automatic neighbor rewriting or third-party
+tile assets. Iron recipes/health reuse the user's own military family template
+as the conservative initial B47 balance, not Badlands balance. New functionality
+is a compatible MINOR expansion targeting stable 1.1.0 after gates, with current
+development version recorded above. Wooden cutaway remains a separate blocker.
+
+## Current dev.6 checkpoint
+
+The developer test kit was removed from the active overlay: no kit menu, slash
+command, spawn handler or kit translation keys ship. Earlier kit instructions
+and native evidence describe historical dev.5 only. Construction, recipes,
+selector/gate behavior and authority are retained. G6/G7 NOT TESTED; G8 BLOCKED.
+
+## Current dev.6 checkpoint
+
+The developer test kit is removed: no kit menu, command, spawn handler or kit
+translation keys ship. Earlier kit instructions describe historical dev.5.
+Fence construction and the selector/gate are unchanged. G6/G7 NOT TESTED; G8 BLOCKED.
