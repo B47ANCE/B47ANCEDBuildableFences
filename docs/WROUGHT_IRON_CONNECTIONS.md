@@ -1,6 +1,6 @@
 # Wrought-iron native corner connections
 
-Project Version: 1.1.0-dev.9
+Project Version: 1.1.0-dev.10
 
 Compatible MINOR-scope feature in the existing 1.1.0 prerelease series. The user
 explicitly chose vanilla-style junction posts included in paid section costs.
@@ -44,9 +44,9 @@ existing health option preserved exactly. Added name/tooltip values use English
 fallback in the existing 29 language folders. No extra health/geometry settings
 are exposed; adjacency/orientation/occupancy rules are correctness constraints.
 
-## Validation and runtime boundary
+## Historical dev.9 validation and runtime boundary
 
-[TESTED Windows offline Python/Lupa, 2026-10-14] 44 available tests PASS, including
+[TESTED dev.9 Windows offline Python/Lupa, 2026-10-14] 44 available tests PASS, including
 7 new native-helper/connection tests. Five original installed-baseline checks
 remain BLOCKED because that download is absent. Tests execute the installed
 vanilla corner helper with mocked objects, not the game engine. Coverage includes
@@ -83,3 +83,38 @@ inventory. The preparer reads that declared output instead of a fixed old path.
 - media/lua/server/BuildingObjects/ISBuildIsoEntity.lua: `6f485b0a90b9b8583fc8112aeddcb3f50a50bf7d1c0c6bc369138ee781deda38`
 
 Exact loaded runtime build UNKNOWN: no game/server launched.
+
+## Additional fence-family connections (dev.10)
+
+Server-owned native junction posts now support military (fencing_01_53),
+sloped-top wood (fencing_01_13) and straight-top wood (fencing_01_74), alongside
+wrought iron. Only exact same-family perpendicular sections connect; the two
+wood styles remain separate. Independent server options MilitaryCornerPosts,
+SlopedWoodCornerPosts and StraightWoodCornerPosts default true. Missing old-save
+values use true; malformed values disable generation. All paid recipes, costs,
+skills, time, health and gates remain unchanged. Security and razor-wire remain
+unchanged by explicit user choice: neither has a matching vanilla standalone
+post. No retrofit, world scan, orphan cleanup or new client commands.
+49 available offline tests pass; five baseline checks remain blocked.
+G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.
+See docs/WROUGHT_IRON_CONNECTIONS.md (WROUGHT_IRON_CONNECTIONS.md within docs)
+for native authority and required runtime tests.
+
+Current validation commands/results are in TESTING.md. The original module name,
+installation flag and iron sandbox identifier remain stable. The family registry
+is internal asset identity; adjacency/orientation/occupancy rules are correctness
+constraints, not configuration candidates. Meaningful automatic-post behavior is
+controlled by per-family server booleans. Existing converted plain posts or paid
+corners of any supported family prevent a second post at the same junction.
+Native creation, complete-item sync and persistence paths are unchanged;
+SP/dedicated save-load, join/rejoin, restart, collision and damage remain gates.
+English option-name/tooltip fallback exists in all 29 language folders, preserving
+every prior translation and the original construction-health option.
+
+[VERIFIED installed asset definitions] media/newtiledefinitions.tiles.txt contains
+post sprites fencing_01_13,53,69,74; no fencing_01_85 or fencing_01_93 entries.
+Security/razor corner sprites84/92 are full wall corners, not standalone posts.
+The native helper hashes recorded above remain unchanged.
+Future authorized packages use dist/family-corner-development-current. Prior
+published dist/corner-development-current dev.9 packages/provenance remain
+untouched, classified historical in version-inventory.json. No artifact cleanup.

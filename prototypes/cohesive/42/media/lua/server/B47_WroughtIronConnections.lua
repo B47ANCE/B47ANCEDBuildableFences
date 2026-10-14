@@ -1,21 +1,32 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.9
+-- B47ANCE'd Buildable Fences v1.1.0-dev.10
 -- Newly constructed paid sections only. No scans, repairs or client commands.
 if isClient() then return end
 require "BuildingObjects/ISBuildUtil"
 if B47IronCornerConnectionsInstalled then return end
 
-local sections={
-    B47_WroughtIronFence_PlainSection={west="fencing_01_66",north="fencing_01_65"},
-    B47_WroughtIronFence_PostEndedSection={west="fencing_01_67",north="fencing_01_64"},
+-- Preserve the existing module/installation flag and wrought-iron option.
+local families={
+    iron={option="WroughtIronCornerPosts",post="fencing_01_69",corner="fencing_01_68"},
+    military={option="MilitaryCornerPosts",post="fencing_01_53",corner="fencing_01_52"},
+    sloped={option="SlopedWoodCornerPosts",post="fencing_01_13",corner="fencing_01_12"},
+    straight={option="StraightWoodCornerPosts",post="fencing_01_74",corner="fencing_01_75"},
 }
-local junctionSprite="fencing_01_69"
+local sections={
+    B47_WroughtIronFence_PlainSection={family=families.iron,west="fencing_01_66",north="fencing_01_65"},
+    B47_WroughtIronFence_PostEndedSection={family=families.iron,west="fencing_01_67",north="fencing_01_64"},
+    B47_MilitaryFence_PlainSection={family=families.military,west="fencing_01_50",north="fencing_01_49"},
+    B47_MilitaryFence_PostEndedSection={family=families.military,west="fencing_01_51",north="fencing_01_48"},
+    B47_TallWoodenFence_Continuous={family=families.sloped,west="fencing_01_10",north="fencing_01_9"},
+    B47_TallWoodenFence_PostEnded={family=families.sloped,west="fencing_01_11",north="fencing_01_8"},
+    B47_TallWoodenFence_StraightTop={family=families.straight,west="fencing_01_72",north="fencing_01_73"},
+}
 local original=buildUtil.checkCorner
 
-local function section(obj,north)
+local function section(obj,north,family)
     if not obj or not instanceof(obj,"IsoThumpable") or obj:getNorth()~=north then return false end
     local definition=sections[obj:getName()]
     local sprite=obj:getSprite()
-    return definition and sprite and sprite:getName()==definition[north and "north" or "west"]
+    return definition and (not family or definition.family==family) and sprite and sprite:getName()==definition[north and "north" or "west"]
 end
 
 function buildUtil.checkCorner(x,y,z,north,thumpable,item)
@@ -24,8 +35,10 @@ function buildUtil.checkCorner(x,y,z,north,thumpable,item)
         return original(x,y,z,north,thumpable,item)
     end
     if isClient() or not section(thumpable,north) then return end
+    local family=sections[thumpable:getName()].family
+    local junctionSprite=family.post
     local options=SandboxVars and SandboxVars.B47ANCEDBuildableFences
-    local enabled=options and options.WroughtIronCornerPosts
+    local enabled=options and options[family.option]
     -- Missing saves use the default; malformed values fail closed.
     if enabled~=nil and enabled~=true then return end
     local cell=getCell()
@@ -37,7 +50,7 @@ function buildUtil.checkCorner(x,y,z,north,thumpable,item)
     local connected=false
     local neighbors=opposite:getSpecialObjects()
     for i=0,neighbors:size()-1 do
-        if section(neighbors:get(i),not north) then connected=true; break end
+        if section(neighbors:get(i),not north,family) then connected=true; break end
     end
     if not connected then return end
     local objects=target:getObjects()
@@ -46,7 +59,11 @@ function buildUtil.checkCorner(x,y,z,north,thumpable,item)
         local sprite=obj and obj:getSprite()
         -- Includes paid posts already converted to a plain IsoObject, native
         -- junctions, and explicit two-edge corner pieces. Never replace them.
-        if sprite and (sprite:getName()==junctionSprite or sprite:getName()=="fencing_01_68") then return end
+        if sprite then
+            for _,definition in pairs(families) do
+                if sprite:getName()==definition.post or sprite:getName()==definition.corner then return end
+            end
+        end
     end
     -- Reuse vanilla creation, square recalculation and complete-item sync.
     -- The post is bundled in the paid section recipe by explicit user choice.

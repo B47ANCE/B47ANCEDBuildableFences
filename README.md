@@ -1,6 +1,6 @@
 # B47ANCE'd Buildable Fences
 
-Project Version: 1.1.0-dev.9
+Project Version: 1.1.0-dev.10
 
 Standalone Build 42 mod, technical ID B47ANCEDBuildableFences, Workshop ID
 3817174798. Editable source is `src/B47ANCEDBuildableFences/42`.
@@ -89,3 +89,19 @@ defaults on; disabling affects future generation only. No existing objects are
 scanned or rewritten. See docs/WROUGHT_IRON_CONNECTIONS.md for authority, configuration,
 regressions and native limitations. Future packages use the inventory-declared
 dist/corner-development-current directory; old dev.8 artifacts remain historical.
+
+## Additional fence-family connections (dev.10)
+
+Extends the dev.9 server-only native corner wrapper to military (post53),
+sloped-top wood (post13) and straight-top wood (post74), all fencing_01 sprites.
+Only exact same-family perpendicular sections connect; the two wooden styles
+remain separate. Server sandbox MilitaryCornerPosts, SlopedWoodCornerPosts and
+StraightWoodCornerPosts default true, independently of the existing iron option.
+Missing old-save options default true; invalid values disable future generation.
+All paid recipes, costs, skills, time, health and gates remain unchanged.
+Security and razor-wire stay unchanged by explicit user choice: their vanilla
+sets have no standalone post85/93; wall corners84/92 are not substitute posts.
+No old-save scan, retrofit, orphan cleanup, custom commands or client writes.
+49 available offline tests pass; five original-baseline checks remain blocked.
+G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.
+See WROUGHT_IRON_CONNECTIONS.md for native authority and runtime test matrix.

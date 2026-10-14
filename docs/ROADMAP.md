@@ -1,6 +1,6 @@
 # Roadmap
 
-Project Version: 1.1.0-dev.9
+Project Version: 1.1.0-dev.10
 
 See FAMILY_SELECTORS.md for the current six-family design, native authority,
 recipe preservation, configuration decision and runtime gates. The overlay is
@@ -76,3 +76,19 @@ defaults on; disabling affects future generation only. No existing objects are
 scanned or rewritten. See WROUGHT_IRON_CONNECTIONS.md for authority, configuration,
 regressions and native limitations. Future packages use the inventory-declared
 dist/corner-development-current directory; old dev.8 artifacts remain historical.
+
+## Additional fence-family connections (dev.10)
+
+Server-owned native junction posts now support military (fencing_01_53),
+sloped-top wood (fencing_01_13) and straight-top wood (fencing_01_74), alongside
+wrought iron. Only exact same-family perpendicular sections connect; the two
+wood styles remain separate. Independent server options MilitaryCornerPosts,
+SlopedWoodCornerPosts and StraightWoodCornerPosts default true. Missing old-save
+values use true; malformed values disable generation. All paid recipes, costs,
+skills, time, health and gates remain unchanged. Security and razor-wire remain
+unchanged by explicit user choice: neither has a matching vanilla standalone
+post. No retrofit, world scan, orphan cleanup or new client commands.
+49 available offline tests pass; five baseline checks remain blocked.
+G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.
+See docs/WROUGHT_IRON_CONNECTIONS.md (WROUGHT_IRON_CONNECTIONS.md within docs)
+for native authority and required runtime tests.

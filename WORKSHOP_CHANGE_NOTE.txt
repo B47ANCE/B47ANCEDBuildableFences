@@ -1,3 +1,3 @@
-[b]Version 1.1.0-dev.9[/b]
+[b]Version 1.1.0-dev.10[/b]
 MP testing build - dedicated multiplayer NOT TESTED
-Added vanilla-style junction posts for matching perpendicular wrought-iron sections, included in existing section costs. Added the server-authoritative Automatic wrought-iron junction posts setting, enabled by default. Existing fences are not retrofitted; orphan junction posts are not automatically removed. All paid part recipes remain unchanged.
+Extend vanilla-style junction posts to military, sloped-top wooden and straight-top wooden fences. Each uses its own vanilla post and a server-controlled setting, enabled by default. Existing part costs and server authority remain unchanged. Security and razor-wire remain unchanged. Single-player NOT TESTED. Existing fences are not retrofitted and orphan posts are not automatically removed.

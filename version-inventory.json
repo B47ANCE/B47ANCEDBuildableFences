@@ -98,7 +98,7 @@
   "packaging": {
     "artifacts": [
       {
-        "glob": "dist/corner-development-current/*.zip",
+        "glob": "dist/family-corner-development-current/*.zip",
         "pattern": "B47ANCEDBuildableFences-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?)\\.zip",
         "zip_members": [
           {
@@ -201,6 +201,10 @@
     {
       "reference": "docs/WORKSHOP_PREPARATION.md",
       "reason": "Exact dev.8 preparation/test report remains historical; see WROUGHT_IRON_CONNECTIONS.md for dev.9"
+    },
+    {
+      "reference": "dist/corner-development-current/*.zip; dist/workshop-candidates/1.1.0-dev.9",
+      "reason": "Published dev.9 package/provenance preserved unchanged; dev.10 has separate future output."
     }
   ]
 }

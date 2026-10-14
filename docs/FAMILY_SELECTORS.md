@@ -1,6 +1,6 @@
 # Fence family selectors
 
-Project Version: 1.1.0-dev.9
+Project Version: 1.1.0-dev.10
 
 Compatible MINOR-scope expansion within the current 1.1.0 prerelease series.
 The composed development candidate has six fence entries: straight-top wood,
@@ -67,6 +67,22 @@ Installed Steam build ID: 25485521. Exact loaded game version: UNKNOWN (not laun
 runnable tests PASS; five original-installed-baseline checks BLOCKED. Version
 checker PASS. These results do not pass native G6/G7 or stable G8.
 
-Current dev.9 adds bounded server-owned wrought-iron junction posts after paid
+The dev.9 addition introduced bounded server-owned wrought-iron junction posts after paid
 section construction; see WROUGHT_IRON_CONNECTIONS.md. This does not change
 selector recipes or add general end-texture respriting.
+
+## Additional fence-family connections (dev.10)
+
+Server-owned native junction posts now support military (fencing_01_53),
+sloped-top wood (fencing_01_13) and straight-top wood (fencing_01_74), alongside
+wrought iron. Only exact same-family perpendicular sections connect; the two
+wood styles remain separate. Independent server options MilitaryCornerPosts,
+SlopedWoodCornerPosts and StraightWoodCornerPosts default true. Missing old-save
+values use true; malformed values disable generation. All paid recipes, costs,
+skills, time, health and gates remain unchanged. Security and razor-wire remain
+unchanged by explicit user choice: neither has a matching vanilla standalone
+post. No retrofit, world scan, orphan cleanup or new client commands.
+49 available offline tests pass; five baseline checks remain blocked.
+G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.
+See docs/WROUGHT_IRON_CONNECTIONS.md (WROUGHT_IRON_CONNECTIONS.md within docs)
+for native authority and required runtime tests.

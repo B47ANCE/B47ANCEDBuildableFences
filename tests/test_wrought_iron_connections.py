@@ -64,14 +64,25 @@ buildUtil={}
         self.lua.globals().north = north
         self.lua.globals().incomingName = name
         self.lua.globals().neighborName = neighbor
+        sprites = {
+            'B47_WroughtIronFence_PlainSection': (66,65),
+            'B47_WroughtIronFence_PostEndedSection': (67,64),
+            'B47_MilitaryFence_PlainSection': (50,49),
+            'B47_MilitaryFence_PostEndedSection': (51,48),
+            'B47_TallWoodenFence_Continuous': (10,9),
+            'B47_TallWoodenFence_PostEnded': (11,8),
+            'B47_TallWoodenFence_StraightTop': (72,73),
+            'B47_SecurityFence_PlainSection': (82,81),
+            'B47_RazorWireSecurityFence_PlainSection': (90,89),
+        }
+        self.lua.globals().incomingSprite = 'fencing_01_' + str(sprites[name][int(north)])
+        self.lua.globals().neighborSprite = 'fencing_01_' + str(sprites[neighbor][int(not north)])
         self.lua.execute('''
 origin=square(10,10,0)
 opposite=square(10+(north and 1 or -1),10+(north and -1 or 1),0)
 target=square(10+(north and 1 or 0),10+(north and 0 or 1),0)
-local plain=incomingName=='B47_WroughtIronFence_PlainSection'
-incoming=section(origin,incomingName,north and (plain and 'fencing_01_65' or 'fencing_01_64') or (plain and 'fencing_01_66' or 'fencing_01_67'),north)
-local plainNeighbor=neighborName=='B47_WroughtIronFence_PlainSection'
-other=section(opposite,neighborName,not north and (plainNeighbor and 'fencing_01_65' or 'fencing_01_64') or (plainNeighbor and 'fencing_01_66' or 'fencing_01_67'),not north)
+incoming=section(origin,incomingName,incomingSprite,north)
+other=section(opposite,neighborName,neighborSprite,not north)
 action={corner=nil,recipe='unchanged'}
 ''')
 
@@ -139,5 +150,66 @@ action={corner=nil,recipe='unchanged'}
             previous = json.loads((source / 'lua/shared/Translate' / path.parent.name / 'Sandbox.json').read_text())
             self.assertTrue(actual.pop('Sandbox_B47_WroughtIronCornerPosts'))
             self.assertTrue(actual.pop('Sandbox_B47_WroughtIronCornerPosts_tooltip'))
+            for option in ('MilitaryCornerPosts','SlopedWoodCornerPosts','StraightWoodCornerPosts'):
+                self.assertTrue(actual.pop('Sandbox_B47_'+option))
+                self.assertTrue(actual.pop('Sandbox_B47_'+option+'_tooltip'))
             self.assertEqual(actual, previous)
         self.assertTrue((overlay / 'sandbox-options.txt').read_text().startswith((source / 'sandbox-options.txt').read_text()))
+
+    def test_all_supported_families_orders_parts_and_duplicate_prevention(self):
+        families = [
+            (('B47_MilitaryFence_PlainSection','B47_MilitaryFence_PostEndedSection'),53,'MilitaryCornerPosts'),
+            (('B47_TallWoodenFence_Continuous','B47_TallWoodenFence_PostEnded'),13,'SlopedWoodCornerPosts'),
+            (('B47_TallWoodenFence_StraightTop',),74,'StraightWoodCornerPosts'),
+        ]
+        for names, post, option in families:
+            for north in (True,False):
+                for name in names:
+                    for neighbor in names:
+                        with self.subTest(north=north,name=name,neighbor=neighbor):
+                            self.setUp(); self.setup_connection(north,name,neighbor); self.call(); self.call()
+                            self.assertEqual(self.lua.eval('#created'),1)
+                            self.assertEqual(self.lua.eval('sent'),1)
+                            self.assertEqual(self.lua.eval('created[1].sprite'),'fencing_01_'+str(post))
+                            self.lua.execute("assert(action.corner==nil and action.recipe=='unchanged')")
+                            for invalid in ('false',"'true'",'0'):
+                                self.setUp(); self.setup_connection(north,name,neighbor)
+                                self.lua.execute('SandboxVars.B47ANCEDBuildableFences.'+option+'='+invalid)
+                                self.call(); self.assertEqual(self.lua.eval('#created'),0)
+
+    def test_family_isolation_including_both_wood_styles(self):
+        names=('B47_WroughtIronFence_PlainSection','B47_MilitaryFence_PlainSection',
+               'B47_TallWoodenFence_Continuous','B47_TallWoodenFence_StraightTop')
+        for name in names:
+            for neighbor in names:
+                if name==neighbor: continue
+                for north in (True,False):
+                    with self.subTest(name=name,neighbor=neighbor,north=north):
+                        self.setUp(); self.setup_connection(north,name,neighbor); self.call()
+                        self.assertEqual(self.lua.eval('#created'),0)
+
+    def test_new_families_reject_occupied_targets_wrong_orientation_and_clients(self):
+        for name in ('B47_MilitaryFence_PlainSection','B47_TallWoodenFence_Continuous','B47_TallWoodenFence_StraightTop'):
+            for mutation in ('client=true','other.north=north',"other.sprite='invalid'",'target.wall=true',
+                             'target.solid=true','target.solidTrans=true',"other.class='IsoObject'",
+                             "section(target,'','fencing_01_69',false,'IsoObject');target.special={}",
+                             "section(target,'Other','anything',false)",'world={}'):
+                with self.subTest(name=name,mutation=mutation):
+                    self.setUp(); self.setup_connection(True,name,name)
+                    self.lua.execute(mutation); self.call(); self.assertEqual(self.lua.eval('#created'),0)
+
+    def test_security_razor_and_gate_are_unchanged(self):
+        for name in ('B47_SecurityFence_PlainSection','B47_RazorWireSecurityFence_PlainSection'):
+            self.setUp(); self.setup_connection(True,name,name); self.call()
+            self.lua.execute('assert(calls==1 and #created==0)')
+        self.setUp(); self.setup_connection()
+        self.lua.execute("incoming.name='B47_WroughtIronGate'; action.corner='native_gate_post'")
+        self.call(); self.lua.execute("assert(calls==1 and created[1].sprite=='native_gate_post')")
+
+    def test_new_options_are_independent_and_missing_save_values_default_on(self):
+        for name in ('B47_MilitaryFence_PlainSection','B47_TallWoodenFence_Continuous','B47_TallWoodenFence_StraightTop'):
+            self.setUp(); self.setup_connection(True,name,name)
+            self.lua.execute('SandboxVars.B47ANCEDBuildableFences.WroughtIronCornerPosts=false')
+            self.call(); self.assertEqual(self.lua.eval('#created'),1)
+            self.setUp(); self.setup_connection(False,name,name)
+            self.lua.execute('SandboxVars=nil'); self.call(); self.assertEqual(self.lua.eval('#created'),1)

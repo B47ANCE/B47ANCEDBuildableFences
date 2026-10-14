@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0-dev.10]
+
+Compatible MINOR-scope expansion within the 1.1.0 prerelease series: extend
+server-owned vanilla junction posts to straight-top wood, sloped-top wood and
+military fences using their own vanilla post sprites. Preserve all paid recipes,
+costs, health and iron configuration. Separate server sandbox toggles default on.
+Security and razor-wire stay unchanged by user choice: no matching standalone
+vanilla post exists in their sets. SP and dedicated MP remain NOT TESTED.
+
 ## [1.1.0-dev.9]
 
 Compatible MINOR-scope addition in the 1.1.0 prerelease series: server-owned,

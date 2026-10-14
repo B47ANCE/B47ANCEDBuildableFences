@@ -1,8 +1,8 @@
 # Current validation
 
-Project Version: 1.1.0-dev.9
+Project Version: 1.1.0-dev.10
 
-[TESTED Windows offline Python/Lupa, 2026-10-14] 44 available tests PASS.
+[TESTED Windows offline Python/Lupa, 2026-10-14] 49 available tests PASS.
 Five original-installed-baseline methods are explicitly BLOCKED because the
 old Workshop 3810187215 download is absent. They are not silently marked PASS.
 The full suite is not claimed to pass. Fresh-clone users need Python with Lupa;
@@ -205,3 +205,19 @@ Seven new tests execute vanilla corner helpers plus the server-only wrought-iron
 wrapper. See WROUGHT_IRON_CONNECTIONS.md for exact commands, authority/config
 contract, known native limitations and required SP/dedicated matrix. 44 runnable
 tests PASS; five missing-original-baseline gates remain BLOCKED.
+
+## dev.10 validation
+
+[TESTED Windows offline Python/Lupa, 2026-10-14] 49 available tests PASS,
+including 12 connection tests (five added for family expansion).
+Five original-installed-baseline comparisons remain BLOCKED; no runtime proof.
+Exact commands from repository root (Python/Lupa available):
+```
+python -m unittest discover -s tests -p test_wrought_iron_connections.py -v
+python scripts/test_current.py --available
+python scripts/check_versions.py --root .
+python scripts/prepare_workshop.py
+```
+All PASS; prepare_workshop is a read-only preflight reporting 95 runtime files,
+no shipped tests/diagnostics/Java/JAR. New package absent/deferred. No package,
+deploy, game/server launch or Workshop upload for this iteration.
