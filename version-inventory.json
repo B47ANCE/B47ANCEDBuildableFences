@@ -83,7 +83,11 @@
       "pattern": "^Project Version: (?P<version>\\S+)$"
     },
     {
-      "path": "docs/WORKSHOP_PREPARATION.md",
+      "path": "prototypes/cohesive/42/media/lua/server/B47_WroughtIronConnections.lua",
+      "pattern": "^-- B47ANCE'd Buildable Fences v(?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/WROUGHT_IRON_CONNECTIONS.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
@@ -94,7 +98,7 @@
   "packaging": {
     "artifacts": [
       {
-        "glob": "dist/development-current/*.zip",
+        "glob": "dist/corner-development-current/*.zip",
         "pattern": "B47ANCEDBuildableFences-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?)\\.zip",
         "zip_members": [
           {
@@ -189,6 +193,14 @@
     {
       "reference": "docs/GITHUB_PROVENANCE.md; docs/COHESIVE_PROTOTYPE_REPORT.md; docs/IMPLEMENTATION_REPORT.md",
       "reason": "Prior implementation/publication observations retain exact original version and evidence; see FAMILY_SELECTORS.md for current design"
+    },
+    {
+      "reference": "dist/development-current/*.zip; dist/workshop-candidates/1.1.0-dev.8",
+      "reason": "Published dev.8 package/provenance preserved unchanged; future corner candidates are separate"
+    },
+    {
+      "reference": "docs/WORKSHOP_PREPARATION.md",
+      "reason": "Exact dev.8 preparation/test report remains historical; see WROUGHT_IRON_CONNECTIONS.md for dev.9"
     }
   ]
 }

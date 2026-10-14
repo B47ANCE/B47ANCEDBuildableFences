@@ -1,4 +1,4 @@
-B47ANCE'd Buildable Fences — v1.1.0-dev.8
+B47ANCE'd Buildable Fences — v1.1.0-dev.9
 
 Standalone Project Zomboid Build 42 fence-building mod.
 

@@ -1,6 +1,6 @@
 # B47ANCE'd Buildable Fences
 
-Project Version: 1.1.0-dev.8
+Project Version: 1.1.0-dev.9
 
 Standalone Build 42 mod, technical ID B47ANCEDBuildableFences, Workshop ID
 3817174798. Editable source is `src/B47ANCEDBuildableFences/42`.
@@ -80,3 +80,12 @@ Offline tests stay in `tests/`; they are never included in the mod payload.
 Earlier version-pinned scripts remain historical checkpoint tools, not current
 build/deploy commands. No diagnostic startup print or test-only tooltip export
 is shipped. Required native and dedicated checks still block stable publication.
+
+## Wrought-iron corner connections (dev.9)
+
+New matching perpendicular wrought-iron sections can add a native junction post
+included in their existing section cost. Server sandbox WroughtIronCornerPosts
+defaults on; disabling affects future generation only. No existing objects are
+scanned or rewritten. See docs/WROUGHT_IRON_CONNECTIONS.md for authority, configuration,
+regressions and native limitations. Future packages use the inventory-declared
+dist/corner-development-current directory; old dev.8 artifacts remain historical.

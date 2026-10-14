@@ -1,6 +1,6 @@
 # Architecture
 
-Project Version: 1.1.0-dev.8
+Project Version: 1.1.0-dev.9
 
 See FAMILY_SELECTORS.md for the current six-family design, native authority,
 recipe preservation, configuration decision and runtime gates. The overlay is
@@ -113,3 +113,12 @@ selector/gate behavior and authority are retained. G6/G7 NOT TESTED; G8 BLOCKED.
 The developer test kit is removed: no kit menu, command, spawn handler or kit
 translation keys ship. Earlier kit instructions describe historical dev.5.
 Fence construction and the selector/gate are unchanged. G6/G7 NOT TESTED; G8 BLOCKED.
+
+## Wrought-iron corner connections (dev.9)
+
+New matching perpendicular wrought-iron sections can add a native junction post
+included in their existing section cost. Server sandbox WroughtIronCornerPosts
+defaults on; disabling affects future generation only. No existing objects are
+scanned or rewritten. See WROUGHT_IRON_CONNECTIONS.md for authority, configuration,
+regressions and native limitations. Future packages use the inventory-declared
+dist/corner-development-current directory; old dev.8 artifacts remain historical.

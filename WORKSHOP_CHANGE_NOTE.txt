@@ -1,2 +1,3 @@
-[b]Version 1.1.0-dev.8[/b]
-Removed shipped developer diagnostics. All six fence-family selectors and original per-part build requirements are retained. Native SP and dedicated multiplayer validation remain pending.
+[b]Version 1.1.0-dev.9[/b]
+MP testing build - dedicated multiplayer NOT TESTED
+Added vanilla-style junction posts for matching perpendicular wrought-iron sections, included in existing section costs. Added the server-authoritative Automatic wrought-iron junction posts setting, enabled by default. Existing fences are not retrofitted; orphan junction posts are not automatically removed. All paid part recipes remain unchanged.

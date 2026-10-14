@@ -1,8 +1,8 @@
 # Current validation
 
-Project Version: 1.1.0-dev.8
+Project Version: 1.1.0-dev.9
 
-[TESTED Windows offline Python/Lupa, 2026-10-14] 33 available tests PASS.
+[TESTED Windows offline Python/Lupa, 2026-10-14] 44 available tests PASS.
 Five original-installed-baseline methods are explicitly BLOCKED because the
 old Workshop 3810187215 download is absent. They are not silently marked PASS.
 The full suite is not claimed to pass. Fresh-clone users need Python with Lupa;
@@ -198,3 +198,10 @@ checks source composition, absence of runtime diagnostics/test hooks, case
 collisions and custom require casing, unexpected overrides, ZIP membership,
 path traversal, CRC and source/stage/archive parity. No historical test result
 is relabelled as dev.8 evidence. See WORKSHOP_PREPARATION.md for this iteration.
+
+## Current corner-connection coverage
+
+Seven new tests execute vanilla corner helpers plus the server-only wrought-iron
+wrapper. See WROUGHT_IRON_CONNECTIONS.md for exact commands, authority/config
+contract, known native limitations and required SP/dedicated matrix. 44 runnable
+tests PASS; five missing-original-baseline gates remain BLOCKED.

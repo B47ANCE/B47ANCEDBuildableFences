@@ -29,7 +29,7 @@ def runtime_files(root=ROOT):
             if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()):
                 raise ValueError('Linked/escaping source: ' + str(path))
             relative = path.relative_to(root / source).as_posix()
-            if relative in result and not re.fullmatch(r'media/lua/shared/Translate/[^/]+/IG_UI\.json', relative):
+            if relative in result and relative != 'media/sandbox-options.txt' and not re.fullmatch(r'media/lua/shared/Translate/[^/]+/(IG_UI|Sandbox)\.json', relative):
                 raise ValueError('Unexpected source override: ' + relative)
             result[relative] = path
     if not result or len(result) != len({name.casefold() for name in result}):
@@ -103,7 +103,11 @@ def main():
         raise ValueError('Runtime metadata mismatch')
     subprocess.run([sys.executable, str(ROOT / 'scripts/check_versions.py'), '--root', str(ROOT)], check=True)
     stage = ROOT / 'dist/workshop-candidates' / version
-    package = ROOT / 'dist/development-current' / (MOD + '-' + version + '.zip')
+    inventory = json.loads((ROOT / 'version-inventory.json').read_text())
+    package_directory = Path(inventory['packaging']['artifacts'][0]['glob']).parent
+    if package_directory.is_absolute() or '..' in package_directory.parts:
+        raise ValueError('Unsafe package output directory')
+    package = ROOT / package_directory / (MOD + '-' + version + '.zip')
     if stage.exists() or package.exists():
         raise ValueError('Candidate already exists; preserve prior output')
     payload = {MOD + '/42/' + name: path.read_bytes() for name, path in files.items()}

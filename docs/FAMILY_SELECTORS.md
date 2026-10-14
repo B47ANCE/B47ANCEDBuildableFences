@@ -1,6 +1,6 @@
 # Fence family selectors
 
-Project Version: 1.1.0-dev.8
+Project Version: 1.1.0-dev.9
 
 Compatible MINOR-scope expansion within the current 1.1.0 prerelease series.
 The composed development candidate has six fence entries: straight-top wood,
@@ -63,6 +63,10 @@ checkpoint scripts are historical and intentionally reject newer versions.
 
 Installed Steam build ID: 25485521. Exact loaded game version: UNKNOWN (not launched).
 
-[TESTED Windows offline, 2026-10-14] scripts/test_current.py --available: 33
+[Historical dev.7 TESTED Windows offline, 2026-10-14] scripts/test_current.py --available: 33
 runnable tests PASS; five original-installed-baseline checks BLOCKED. Version
 checker PASS. These results do not pass native G6/G7 or stable G8.
+
+Current dev.9 adds bounded server-owned wrought-iron junction posts after paid
+section construction; see WROUGHT_IRON_CONNECTIONS.md. This does not change
+selector recipes or add general end-texture respriting.
