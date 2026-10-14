@@ -17,3 +17,27 @@ option B47ANCEDBuildableFences.WroughtIronCornerPosts
     page = B47ANCEDBuildableFences,
     translation = B47_WroughtIronCornerPosts,
 }
+
+option B47ANCEDBuildableFences.MilitaryCornerPosts
+{
+    type = boolean,
+    default = true,
+    page = B47ANCEDBuildableFences,
+    translation = B47_MilitaryCornerPosts,
+}
+
+option B47ANCEDBuildableFences.SlopedWoodCornerPosts
+{
+    type = boolean,
+    default = true,
+    page = B47ANCEDBuildableFences,
+    translation = B47_SlopedWoodCornerPosts,
+}
+
+option B47ANCEDBuildableFences.StraightWoodCornerPosts
+{
+    type = boolean,
+    default = true,
+    page = B47ANCEDBuildableFences,
+    translation = B47_StraightWoodCornerPosts,
+}

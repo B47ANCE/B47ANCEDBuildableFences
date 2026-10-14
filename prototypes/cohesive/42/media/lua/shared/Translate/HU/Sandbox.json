@@ -3,5 +3,11 @@
   "Sandbox_B47_ConstructionHealthPercent": "Fence construction health (%)",
   "Sandbox_B47_ConstructionHealthPercent_tooltip": "Health of newly constructed B47 fence sections and corners, as a percentage of normal health. Default: 100. Range: 10 to 500. Existing fences and nonblocking standalone posts are unchanged. The server setting is authoritative.",
   "Sandbox_B47_WroughtIronCornerPosts": "Automatic wrought-iron junction posts",
-  "Sandbox_B47_WroughtIronCornerPosts_tooltip": "Add vanilla-style junction posts when newly built B47 wrought-iron sections form a matching perpendicular connection. Included in the section cost. Default: enabled. The server setting is authoritative; disabling it stops new automatic posts and does not remove existing objects."
+  "Sandbox_B47_WroughtIronCornerPosts_tooltip": "Add vanilla-style junction posts when newly built B47 wrought-iron sections form a matching perpendicular connection. Included in the section cost. Default: enabled. The server setting is authoritative; disabling it stops new automatic posts and does not remove existing objects.",
+  "Sandbox_B47_MilitaryCornerPosts": "Automatic military junction posts",
+  "Sandbox_B47_MilitaryCornerPosts_tooltip": "Add vanilla-style junction posts when newly built B47 military sections form a matching perpendicular connection. Included in the section cost. Default: enabled. The server setting is authoritative; disabling it stops new automatic posts and does not remove existing objects.",
+  "Sandbox_B47_SlopedWoodCornerPosts": "Automatic sloped-top wooden junction posts",
+  "Sandbox_B47_SlopedWoodCornerPosts_tooltip": "Add vanilla-style junction posts when newly built B47 sloped-top wooden sections form a matching perpendicular connection. Included in the section cost. Default: enabled. The server setting is authoritative; disabling it stops new automatic posts and does not remove existing objects.",
+  "Sandbox_B47_StraightWoodCornerPosts": "Automatic straight-top wooden junction posts",
+  "Sandbox_B47_StraightWoodCornerPosts_tooltip": "Add vanilla-style junction posts when newly built B47 straight-top wooden sections form a matching perpendicular connection. Included in the section cost. Default: enabled. The server setting is authoritative; disabling it stops new automatic posts and does not remove existing objects."
 }
