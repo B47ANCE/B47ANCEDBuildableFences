@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0-dev.9]
+
+Compatible MINOR-scope addition in the 1.1.0 prerelease series: server-owned,
+vanilla-style wrought-iron junction posts included in the unchanged section
+costs. Exact family/orientation checks and duplicate prevention; server sandbox
+option defaults on. Existing objects/recipes remain unchanged. Runtime untested.
+
+
 ## [1.1.0-dev.8]
 
 Compatible PATCH-scope Workshop preparation: remove runtime diagnostic logging

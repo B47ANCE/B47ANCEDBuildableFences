@@ -1,0 +1,19 @@
+VERSION = 1,
+
+option B47ANCEDBuildableFences.ConstructionHealthPercent
+{
+    type = integer,
+    min = 10,
+    max = 500,
+    default = 100,
+    page = B47ANCEDBuildableFences,
+    translation = B47_ConstructionHealthPercent,
+}
+
+option B47ANCEDBuildableFences.WroughtIronCornerPosts
+{
+    type = boolean,
+    default = true,
+    page = B47ANCEDBuildableFences,
+    translation = B47_WroughtIronCornerPosts,
+}
