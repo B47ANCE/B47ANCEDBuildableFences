@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.1.0-dev.8]
+
+Compatible PATCH-scope Workshop preparation: remove runtime diagnostic logging
+and test-only tooltip export, retain offline regressions, and add version-driven
+package preparation with an explicit shipped-file manifest. No balance, save,
+recipe or authority change. G6/G7 NOT TESTED; stable G8 BLOCKED.
+
+
+## [1.1.0-dev.7]
+
+Compatible MINOR-scope UI expansion within the existing 1.1.0 prerelease series:
+consolidate all six fence families while retaining original part entities, costs,
+skills and native server construction. Gate remains separate. Runtime untested.
+
+
 ## [1.1.0-dev.6]
 
 Removed developer test-kit Lua and translations from the active overlay.

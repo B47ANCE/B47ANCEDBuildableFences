@@ -1,6 +1,29 @@
 # Architecture
 
-Project Version: 1.1.0-dev.6
+Project Version: 1.1.0-dev.8
+
+See FAMILY_SELECTORS.md for the current six-family design, native authority,
+recipe preservation, configuration decision and runtime gates. The overlay is
+composed with production src/ as in the existing dev.6 test candidate.
+
+All 21 fence definitions and their original costs/skills persist. One menu
+entry per family cycles each real part/face; iron gate remains separate.
+No shared state, recipe, collision, migration or post-conversion rewrite.
+
+Next: native SP and dedicated two-client validation. G7 BLOCKED / NOT TESTED;
+G8 BLOCKED. Historical checkpoint reports retain their original versions.
+
+---
+
+## Historical dev.6 notes
+
+The following is retained for provenance, not current instructions or dev.7
+validation. Current family selection and test gates are described above and
+in docs/FAMILY_SELECTORS.md.
+
+# Architecture
+
+Historical Project Version: 1.1.0-dev.6
 
 The active overlay contains a corrected variant-selection Wrought Iron source overlay outside
 src/. The production architecture below retains dev.2 behavior. Overlay state
