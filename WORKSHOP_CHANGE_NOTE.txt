@@ -1,2 +1,2 @@
-[b]Version 1.1.0-dev.6[/b]
-Removed the developer fence test kit, including its menu entry, admin command and material spawning hooks. Fence construction and the wrought-iron selector/gate are unchanged. In-game and dedicated multiplayer validation remain pending.
+[b]Version 1.1.0-dev.7[/b]
+Consolidated each of the six fence families into one build-menu entry. Cycle parts and orientations with Q/E or controller bumpers; each part retains its own materials, tools, skill and build time. Wrought-iron gate remains separate. Native SP and dedicated multiplayer testing remain pending.

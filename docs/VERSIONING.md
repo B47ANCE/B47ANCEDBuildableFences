@@ -1,6 +1,6 @@
 # Version inventory and provenance
 
-Project Version: 1.1.0-dev.6
+Project Version: 1.1.0-dev.7
 
 Canonical VERSION migrated from downloaded mod.info 1.0.37 at the user's
 direction. MINOR classification: four compatible menu/entities added, no ID,
@@ -38,3 +38,7 @@ task, and exact SHA256 equality is checked against the baseline manifest.
 Dev.5 is a compatible startup fix and explicit 1.0.37 identity-retention audit
 within the same 1.1.0 MINOR target. See LEGACY_COMPATIBILITY.md. Actual local
 dev.4 deployment evidence is classified historical, never retagged as dev.5.
+
+Dev.7 adds compatible family selection within the same MINOR target. Current
+packaging is deferred to dist/development-current/*.zip; existing dist/current
+packages remain dev.6 historical evidence and are not relabelled or deleted.

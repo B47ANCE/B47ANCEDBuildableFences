@@ -1,4 +1,4 @@
-[b]Version 1.1.0-dev.6[/b]
+[b]Version 1.1.0-dev.7[/b]
 
 Build tall wooden, military, security, razor-wire and wrought-iron fences with vanilla Project Zomboid art. Choose sections, corners and standalone posts to suit your build, with a separate wrought-iron gate.
 
@@ -13,10 +13,10 @@ Build tall wooden, military, security, razor-wire and wrought-iron fences with v
 [/list]
 Security and razor-wire sections use mixed concrete: one use for straight or post-ended sections, two for corners. A full metal or carved mixed-concrete bucket contains four uses.
 
-[h2]Wrought-iron placement[/h2]
-The experimental Wrought Iron Fence entry groups the available pieces in one selector. Press [b]E[/b] to cycle forward and [b]Q[/b] to cycle back through plain sections, post-ended sections, corners and standalone posts. Each piece retains its own recipe and material cost.
+[h2]Choose your fence parts[/h2]
+Each fence family has one build-menu entry. Press [b]E[/b] or the right controller bumper to cycle forward, and [b]Q[/b] or the left bumper to cycle back through the family's available parts and orientations. Every part retains its own materials, tools and skill requirement. The selected part's requirements update as you cycle.
 
-The separate Wrought Iron Gate offers west and north placement. Use the normal gate controls to open it after construction.
+The separate Wrought Iron Gate offers west and north placement. Use normal gate controls to open it after construction.
 
 [h2]Sandbox setting[/h2]
 [b]Construction Health Percent[/b] controls the health of newly built fence sections and corners. The default is 100%; multiplayer uses the server setting. Changing it leaves existing fences unchanged.

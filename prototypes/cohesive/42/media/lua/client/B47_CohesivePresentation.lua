@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.6
+-- B47ANCE'd Buildable Fences v1.1.0-dev.7
 -- Client files load before the native server-side cursor directory is available.
 -- Install once after the complete world Lua load; never require it at boot.
 local function installPresentation()
@@ -7,12 +7,18 @@ require "B47_CohesiveCursor"
 require "Entity/ISUI/ISEntityBuildMenu"
 require "Entity/ISUI/BuildRecipe/ISBuildPanel"
 local V=B47Cohesive
-local hidden={}
-for i=2,#V.names do hidden[V.names[i]]=true end
+local hidden=V.hidden
 local function filtered(infos)
-    local result={}
+    local result,seen={},{}
     for _,info in ipairs(infos) do
-        if not hidden[info:getName()] then result[#result+1]=info end
+        local family=V.familyByName[info:getName()]
+        local entry=family and SpriteConfigManager.GetObjectInfo(family[1]) or info
+        -- Native available lists can contain only an affordable post/corner.
+        -- Represent that member by its root rather than dropping the family.
+        if entry and not seen[entry:getName()] then
+            seen[entry:getName()]=true
+            result[#result+1]=entry
+        end
     end
     return result
 end
@@ -29,7 +35,7 @@ function ISEntityBuildMenu.createToolTip(option,player,info)
     local tooltip=originalTooltip(option,player,info)
     -- The family entry is access to cheaper pieces too. Missing Plain inputs
     -- must not prevent entering the selector to choose the Post recipe.
-    if info:getName()==V.names[1] then
+    if V.roots[info:getName()] then
         option.onSelect=onSelect
         option.notAvailable=false
     end
@@ -164,6 +170,6 @@ function ISEntityBuildMenu.onBuildEntity(player,info)
 end
 V.description=description -- exposed for focused offline UI assertions
 B47Cohesive.presentationInstalled=true
-print("[B47ANCEDBuildableFences] cohesive selector 1.1.0-dev.6 initialized")
+print("[B47ANCEDBuildableFences] cohesive selector 1.1.0-dev.7 initialized")
 end
 Events.OnGameStart.Add(installPresentation)

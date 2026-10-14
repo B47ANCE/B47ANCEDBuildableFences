@@ -1,6 +1,6 @@
 # B47ANCE'd Buildable Fences
 
-Project Version: 1.1.0-dev.6
+Project Version: 1.1.0-dev.7
 
 Standalone Build 42 mod, technical ID B47ANCEDBuildableFences, Workshop ID
 3817174798. Editable source is `src/B47ANCEDBuildableFences/42`.
@@ -12,11 +12,13 @@ This establishes file provenance, not new runtime proof. User-provided collision
 evidence for the baseline remains historical. Dedicated multiplayer evidence is
 still required for the development candidate.
 
-See docs/BADLANDS_FENCE_REFERENCE_AUDIT.md for the corrected Privacy Fence audit.
-An isolated Wrought Iron cohesive overlay is in prototypes/cohesive/42; it is
-not loaded by this source candidate. It provides one fence entry, Q/E cycling
-through every original iron piece/face with its own recipe, and a native gate. See
-docs/COHESIVE_PROTOTYPE_REPORT.md. Native collision/save/MP testing is pending.
+The development overlay in prototypes/cohesive/42 consolidates all six fence
+families into one build-menu entry each. Q/E and controller bumpers select
+individual parts and orientations, retaining every part's original recipe,
+materials, skills and construction time. The iron gate remains separate.
+The source/overlay composition is unchanged from dev.6. See
+[family selectors](docs/FAMILY_SELECTORS.md) for implementation and validation.
+Native collision/save/dedicated testing is pending.
 
 The development source defines 21 buildable pieces, including four wrought-iron
 variants. Security and Razor recipes consume mixed concrete uses rather than
@@ -54,14 +56,14 @@ See [implementation report](docs/IMPLEMENTATION_REPORT.md),
 [concrete audit](docs/CONCRETE_RECIPE_AUDIT.md), and
 [sound audit](docs/MATERIAL_BEHAVIOR_AUDIT.md).
 
-## Current dev.6 checkpoint
+## Prior dev.6 checkpoint
 
 The developer test kit was removed from the active overlay: no kit menu, slash
 command, spawn handler or kit translation keys ship. Earlier kit instructions
 and native evidence describe historical dev.5 only. Construction, recipes,
 selector/gate behavior and authority are retained. G6/G7 NOT TESTED; G8 BLOCKED.
 
-## Current dev.6 checkpoint
+## Prior dev.6 checkpoint
 
 The developer test kit is removed: no kit menu, command, spawn handler or kit
 translation keys ship. Earlier kit instructions describe historical dev.5.

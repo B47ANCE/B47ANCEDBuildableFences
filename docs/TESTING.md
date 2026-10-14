@@ -1,6 +1,46 @@
+# Current validation
+
+Project Version: 1.1.0-dev.7
+
+[TESTED Windows offline Python/Lupa, 2026-10-14] 33 available tests PASS.
+Five original-installed-baseline methods are explicitly BLOCKED because the
+old Workshop 3810187215 download is absent. They are not silently marked PASS.
+The full suite is not claimed to pass. Fresh-clone users need Python with Lupa;
+local .test-dependencies is ignored and is not a runtime mod dependency.
+
+Commands from repository root:
+```powershell
+$env:PYTHONPATH=(Resolve-Path .test-dependencies).Path
+& 'C:/Users/willi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' -m unittest discover -s tests -p test_family_selectors.py -v
+& 'C:/Users/willi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' scripts/test_current.py --available
+& 'C:/Users/willi/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' scripts/check_versions.py --root .
+```
+
+Seven new tests execute Lua with source-derived recipes: six menu roots plus gate,
+all real parts/faces in both directions, per-part cost/skill/time/health, live
+Build-window selection, action freeze, selected-part rejection, controllers,
+missing-info handling, affordable-secondary context-menu access and fallback translation keys. Existing authority,
+concrete semantics, axes, legacy boot and kit-removal tests remain active.
+Mocks do not execute engine physics, native UI rendering or network actions.
+
+Native APIs/hashes, authority, configuration assessment and required runtime
+matrix are in FAMILY_SELECTORS.md. G6 SP NOT TESTED; G7 dedicated MP BLOCKED /
+NOT TESTED; G8 BLOCKED. No build/package, deployment, publication or native
+launch was performed. Release artifact/version validation is deferred until
+an explicitly authorized package is built after required gates; existing
+published dev.6 files remain historical, untouched and not current proof.
+
+---
+
+## Historical dev.6 notes
+
+The following is retained for provenance, not current instructions or dev.7
+validation. Current family selection and test gates are described above and
+in docs/FAMILY_SELECTORS.md.
+
 # Testing and operator handoff
 
-Project Version: 1.1.0-dev.6
+Historical Project Version: 1.1.0-dev.6
 
 Date: 2026-10-02. Environment: Windows offline Python/Lupa, installed vanilla
 42.21 source/bytecode. No Project Zomboid or server launched by this task.

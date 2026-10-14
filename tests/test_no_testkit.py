@@ -17,9 +17,9 @@ class KitRemoval(unittest.TestCase):
             for path in base.glob('media/lua/shared/Translate/*/IG_UI.json'):
                 self.assertFalse(any('TestKit' in key for key in json.loads(path.read_text(encoding='utf-8'))))
 
-    def test_existing_construction_and_selector_behavior_preserved(self):
+    def test_existing_production_construction_behavior_preserved(self):
         before = ROOT / 'docs/evidence/history/1.1.0-dev.5'
-        for folder in ('src/B47ANCEDBuildableFences/42', 'prototypes/cohesive/42'):
+        for folder in ('src/B47ANCEDBuildableFences/42',):
             for path in (ROOT / folder).rglob('*.lua'):
                 relative = path.relative_to(ROOT)
-                self.assertEqual(path.read_bytes().replace(b'1.1.0-dev.6', b'1.1.0-dev.5'), (before / relative).read_bytes(), str(relative))
+                self.assertEqual(path.read_bytes().replace((ROOT / 'VERSION').read_text().strip().encode(), b'1.1.0-dev.5'), (before / relative).read_bytes(), str(relative))

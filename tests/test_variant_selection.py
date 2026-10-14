@@ -11,18 +11,19 @@ ROOT=Path(__file__).resolve().parents[1]
 OVERLAY=ROOT/"prototypes/cohesive/42"
 LUA=OVERLAY/"media/lua"
 
-def definitions():
+def definitions(all_families=False):
     blocks=entities(MOD/ENTITY)
     blocks.update(entities(OVERLAY/"media/scripts/entities/b47_cohesive_gate.txt"))
     result={}
     for name,block in blocks.items():
-        if not name.startswith("B47_WroughtIron"): continue
+        if not all_families and not name.startswith("B47_WroughtIron"): continue
         inputs=[]
         for amount,names in re.findall(r"item (\d+) \[([^]]+)\]",block):
             inputs.append({"amount":int(amount),"names":names.split(";")})
         result[name]={"faces":dict(re.findall(r"face (\w+)\s*\{\s*layer\s*\{\s*row = (\w+)",block)),
           "inputs":inputs,"time":int(re.search(r"time = (\d+)",block)[1]),
-          "skill":int(re.search(r"SkillRequired = MetalWelding:(\d+)",block)[1]),
+          "perk":re.search(r"SkillRequired = (MetalWelding|Woodwork):",block)[1],
+          "skill":int(re.search(r"SkillRequired = (?:MetalWelding|Woodwork):(\d+)",block)[1]),
           "health":int(re.search(r"health = (\d+)",block)[1])}
     return result
 
@@ -49,7 +50,7 @@ function loadInfos(data)
   end
   local recipe={name=name,time=d.time,health=d.health,getToolBoth=function() end,getToolLeft=function() end,getToolRight=function() end,
    getInputs=function() return list(inputs) end,getRequiredSkillCount=function() return 1 end,
-   getRequiredSkill=function() return {getPerk=function() return {getName=function() return 'Welding' end} end,getLevel=function() return d.skill end} end}
+   getRequiredSkill=function() return {getPerk=function() return {getName=function() return d.perk=='Woodwork' and 'Carpentry' or 'Welding' end} end,getLevel=function() return d.skill end} end}
   local info={getName=function() return name end,getFace=function(self,i) return faces[i] end,
    getRecipe=function() return {getCraftRecipe=function() return recipe end} end}
   recipe.info=info; infos[name]=info; infoList[#infoList+1]=info
@@ -81,7 +82,7 @@ function ISBuildIsoEntity:getFace()
  for i=1,4 do local f=self.objectInfo:getFace(idx[self.nSprite]); if f then return f end; self.nSprite=self.nSprite%4+1 end
 end
 ISBuildIsoEntity.GetAllBuildableEntities=function() return infoList end
-ISBuildIsoEntity.GetBuildableEntities=function() return infoList,'items' end
+ISBuildIsoEntity.GetBuildableEntities=function() return availableInfos or infoList,'items' end
 ISEntityBuildMenu={onBuildEntity=function(p,i) drag=ISBuildIsoEntity:new(p,i,1,{}) end,
  createToolTip=function(option) option.onSelect=nil; option.notAvailable=true; return {} end,
  addToolTip=function() return {addToUIManager=function() end,setX=function() end,setY=function() end,setVisible=function() end,removeFromUIManager=function() end} end}

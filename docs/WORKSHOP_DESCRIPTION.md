@@ -1,6 +1,23 @@
+# Workshop candidate description
+
+Project Version: 1.1.0-dev.7
+
+Canonical BBCode: WORKSHOP_DESCRIPTION.txt. Candidate describes six fence-family
+selectors, each with native per-part recipes, plus a separate iron gate.
+No upload performed for this iteration. Preserve real newlines and current
+Workshop identity 3817174798. Native SP/dedicated acceptance remains pending.
+
+---
+
+## Historical dev.6 notes
+
+The following is retained for provenance, not current instructions or dev.7
+validation. Current family selection and test gates are described above and
+in docs/FAMILY_SELECTORS.md.
+
 # Current candidate Workshop documentation
 
-Project Version: 1.1.0-dev.6
+Historical Project Version: 1.1.0-dev.6
 
 Technical ID B47ANCEDBuildableFences; Workshop ID 3817174798.
 workshop-update.properties preserves workshopid=3817174798. The user explicitly

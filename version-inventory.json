@@ -35,14 +35,6 @@
       "pattern": "^Project Version: (?P<version>\\S+)$"
     },
     {
-      "path": "docs/CONCRETE_RECIPE_AUDIT.md",
-      "pattern": "^Project Version: (?P<version>\\S+)$"
-    },
-    {
-      "path": "docs/WROUGHT_IRON_SPRITE_AUDIT.md",
-      "pattern": "^Project Version: (?P<version>\\S+)$"
-    },
-    {
       "path": "WORKSHOP_CHANGE_NOTE.txt",
       "pattern": "^\\[b\\]Version (?P<version>[^\\[]+)\\[/b\\]$"
     },
@@ -63,14 +55,6 @@
       "pattern": "^Project Version: (?P<version>\\S+)$"
     },
     {
-      "path": "docs/IMPLEMENTATION_REPORT.md",
-      "pattern": "^Project Version: (?P<version>\\S+)$"
-    },
-    {
-      "path": "docs/SKILL_REBALANCE_REPORT.md",
-      "pattern": "^Project Version: (?P<version>\\S+)$"
-    },
-    {
       "path": "prototypes/cohesive/42/media/lua/client/B47_CohesivePresentation.lua",
       "pattern": "^-- B47ANCE'd Buildable Fences v(?P<version>\\S+)$"
     },
@@ -87,20 +71,8 @@
       "pattern": "^-- B47ANCE'd Buildable Fences v(?P<version>\\S+)$"
     },
     {
-      "path": "docs/COHESIVE_PROTOTYPE_REPORT.md",
-      "pattern": "^Project Version: (?P<version>\\S+)$"
-    },
-    {
       "path": "prototypes/cohesive/README.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
-    },
-    {
-      "path": "docs/LEGACY_COMPATIBILITY.md",
-      "pattern": "^Project Version: (?P<version>\\S+)$"
-    },
-    {
-      "path": "compatibility/LegacyFenceMap.json",
-      "pattern": "\"project_version\": \"(?P<version>[^\"]+)\""
     },
     {
       "path": "prototypes/cohesive/42/media/lua/client/B47_CohesivePresentation.lua",
@@ -111,11 +83,7 @@
       "pattern": "^\\[b\\]Version (?P<version>[^\\[]+)\\[/b\\]$"
     },
     {
-      "path": "docs/evidence/workshop-dev6-package.json",
-      "pattern": "\"version\": \"(?P<version>[^\\\"]+)\""
-    },
-    {
-      "path": "docs/TEST_KIT_REMOVAL.md",
+      "path": "docs/FAMILY_SELECTORS.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
@@ -126,7 +94,7 @@
   "packaging": {
     "artifacts": [
       {
-        "glob": "dist/current/*.zip",
+        "glob": "dist/development-current/*.zip",
         "pattern": "B47ANCEDBuildableFences-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?)\\.zip",
         "zip_members": [
           {
@@ -213,6 +181,14 @@
     {
       "reference": "docs/evidence/CHANGED_FILES.md; docs/evidence/offline-tests.txt; docs/evidence/version-check.txt; docs/evidence/development-hashes.json; docs/evidence/cohesive-hashes.json; prototypes/cohesive/42/media/lua/client/B47_FenceTestKitClient.lua; prototypes/cohesive/42/media/lua/server/B47_FenceTestKitServer.lua; prototypes/cohesive/42/media/lua/shared/B47_FenceTestKitPlan.lua; docs/FENCE_TEST_KIT.md; docs/evidence/legacy-identity-table.md; docs/evidence/legacy-checkpoint-changes.md; docs/evidence/legacy-live-observation.json; docs/DEPLOYMENT_DEV5.md; docs/evidence/test-deployment-dev.5.json; docs/WORKSHOP_DEV5_TEST_RELEASE.md; docs/evidence/workshop-test-package.json; docs/evidence/history/1.1.0-dev.5; dist/history/1.1.0-dev.5",
       "reason": "Original dev.5 evidence/test-kit remains historical; not dev.6 proof"
+    },
+    {
+      "reference": "docs/CONCRETE_RECIPE_AUDIT.md; docs/WROUGHT_IRON_SPRITE_AUDIT.md; docs/IMPLEMENTATION_REPORT.md; docs/SKILL_REBALANCE_REPORT.md; docs/COHESIVE_PROTOTYPE_REPORT.md; docs/LEGACY_COMPATIBILITY.md; compatibility/LegacyFenceMap.json; docs/evidence/workshop-dev6-package.json; docs/TEST_KIT_REMOVAL.md; dist/current/*.zip; scripts/prepare_no_kit_release.py",
+      "reason": "Immutable dev.6 and older records, artifacts and fixed checkpoint generators; not dev.7 evidence"
+    },
+    {
+      "reference": "docs/GITHUB_PROVENANCE.md; docs/COHESIVE_PROTOTYPE_REPORT.md; docs/IMPLEMENTATION_REPORT.md",
+      "reason": "Prior implementation/publication observations retain exact original version and evidence; see FAMILY_SELECTORS.md for current design"
     }
   ]
 }
