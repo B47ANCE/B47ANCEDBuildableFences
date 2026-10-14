@@ -124,7 +124,8 @@ class VariantTests(unittest.TestCase):
             self.assertEqual(self.lua.eval("drag.maxTime"),d["time"])
             self.assertEqual(self.lua.eval("drag.craftRecipe.health"),d["health"])
             self.assertEqual(self.lua.eval("drag.buildPanelLogic:getRecipe().name"),name)
-            text=self.lua.eval("B47Cohesive.description(drag)")
+            self.lua.execute("drag:render(0,0,0,{})")
+            text=self.lua.eval("drag.B47Requirements.description")
             for i in d["inputs"]:
                 self.assertIn(i["names"][0]+": "+str(i["amount"]),text)
             self.assertIn("Welding: 7",text)

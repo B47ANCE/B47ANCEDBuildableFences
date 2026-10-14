@@ -1,6 +1,6 @@
 # Current validation
 
-Project Version: 1.1.0-dev.7
+Project Version: 1.1.0-dev.8
 
 [TESTED Windows offline Python/Lupa, 2026-10-14] 33 available tests PASS.
 Five original-installed-baseline methods are explicitly BLOCKED because the
@@ -189,3 +189,12 @@ state-preservation claims. Current offline counts are in evidence/offline-tests.
 The developer test kit is removed: no kit menu, command, spawn handler or kit
 translation keys ship. Earlier kit instructions describe historical dev.5.
 Fence construction and the selector/gate are unchanged. G6/G7 NOT TESTED; G8 BLOCKED.
+
+## Current dev.8 cleanup verification
+
+The offline suite is retained. Tooltip assertions now inspect the rendered
+placement tooltip rather than a test-only exported function. Workshop preparation
+checks source composition, absence of runtime diagnostics/test hooks, case
+collisions and custom require casing, unexpected overrides, ZIP membership,
+path traversal, CRC and source/stage/archive parity. No historical test result
+is relabelled as dev.8 evidence. See WORKSHOP_PREPARATION.md for this iteration.

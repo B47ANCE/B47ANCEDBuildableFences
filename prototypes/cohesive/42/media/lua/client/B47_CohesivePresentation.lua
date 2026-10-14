@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.7
+-- B47ANCE'd Buildable Fences v1.1.0-dev.8
 -- Client files load before the native server-side cursor directory is available.
 -- Install once after the complete world Lua load; never require it at boot.
 local function installPresentation()
@@ -168,8 +168,6 @@ function ISEntityBuildMenu.onBuildEntity(player,info)
     local cursor=getCell():getDrag(player:getPlayerNum())
     if V.cursor(cursor) then cursor:getFace(); V.pin(cursor,cursor.nSprite) end
 end
-V.description=description -- exposed for focused offline UI assertions
 B47Cohesive.presentationInstalled=true
-print("[B47ANCEDBuildableFences] cohesive selector 1.1.0-dev.7 initialized")
 end
 Events.OnGameStart.Add(installPresentation)

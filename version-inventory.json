@@ -75,15 +75,15 @@
       "pattern": "^Project Version: (?P<version>\\S+)$"
     },
     {
-      "path": "prototypes/cohesive/42/media/lua/client/B47_CohesivePresentation.lua",
-      "pattern": "cohesive selector (?P<version>\\S+) initialized"
-    },
-    {
       "path": "WORKSHOP_DESCRIPTION.txt",
       "pattern": "^\\[b\\]Version (?P<version>[^\\[]+)\\[/b\\]$"
     },
     {
       "path": "docs/FAMILY_SELECTORS.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/WORKSHOP_PREPARATION.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],

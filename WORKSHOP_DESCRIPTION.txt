@@ -1,4 +1,4 @@
-[b]Version 1.1.0-dev.7[/b]
+[b]Version 1.1.0-dev.8[/b]
 
 Build tall wooden, military, security, razor-wire and wrought-iron fences with vanilla Project Zomboid art. Choose sections, corners and standalone posts to suit your build, with a separate wrought-iron gate.
 
@@ -28,6 +28,9 @@ The separate Wrought Iron Gate offers west and north placement. Use normal gate 
 [*]Collision, sounds, material consumption, save/reload and multiplayer synchronization still need in-game testing.
 [*]Legacy fence definitions are retained; compatibility with existing saves is untested.
 [/list]
+
+[h2]Source code and development[/h2]
+[url=https://github.com/B47ANCE/B47ANCEDBuildableFences]GitHub - Source Code & Issues[/url]
 
 [h2]Reporting a problem[/h2]
 Restart the server and clients after updating, and confirm that everyone loads the same version. Include your game build, mod list, steps to reproduce and relevant client/server logs when reporting a problem.

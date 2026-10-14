@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.7
+-- B47ANCE'd Buildable Fences v1.1.0-dev.8
 -- Gate initialization only. Fence variants use the unchanged native builder
 -- and B47Fence.OnCreate. No neighbor mutation or additional network commands.
 require "B47_CohesiveModel"

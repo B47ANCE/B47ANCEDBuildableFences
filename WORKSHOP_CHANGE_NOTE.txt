@@ -1,2 +1,2 @@
-[b]Version 1.1.0-dev.7[/b]
-Consolidated each of the six fence families into one build-menu entry. Cycle parts and orientations with Q/E or controller bumpers; each part retains its own materials, tools, skill and build time. Wrought-iron gate remains separate. Native SP and dedicated multiplayer testing remain pending.
+[b]Version 1.1.0-dev.8[/b]
+Removed shipped developer diagnostics. All six fence-family selectors and original per-part build requirements are retained. Native SP and dedicated multiplayer validation remain pending.

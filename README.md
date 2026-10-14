@@ -1,6 +1,6 @@
 # B47ANCE'd Buildable Fences
 
-Project Version: 1.1.0-dev.7
+Project Version: 1.1.0-dev.8
 
 Standalone Build 42 mod, technical ID B47ANCEDBuildableFences, Workshop ID
 3817174798. Editable source is `src/B47ANCEDBuildableFences/42`.
@@ -68,3 +68,15 @@ selector/gate behavior and authority are retained. G6/G7 NOT TESTED; G8 BLOCKED.
 The developer test kit is removed: no kit menu, command, spawn handler or kit
 translation keys ship. Earlier kit instructions describe historical dev.5.
 Fence construction and the selector/gate are unchanged. G6/G7 NOT TESTED; G8 BLOCKED.
+
+## Workshop preparation
+
+The current version-driven entry point is `scripts/prepare_workshop.py`.
+Run it without arguments for a read-only shipped-content preflight. After the
+intended release inputs are committed and pushed, `--prepare` creates an
+unpublished candidate under `dist/workshop-candidates/<VERSION>` and its ZIP
+under `dist/development-current`. See [preparation](docs/WORKSHOP_PREPARATION.md).
+Offline tests stay in `tests/`; they are never included in the mod payload.
+Earlier version-pinned scripts remain historical checkpoint tools, not current
+build/deploy commands. No diagnostic startup print or test-only tooltip export
+is shipped. Required native and dedicated checks still block stable publication.
