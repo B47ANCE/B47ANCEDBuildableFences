@@ -15,15 +15,18 @@ def render(catalog, version):
              'B47ExpandedCatalog={families={},policies={}}', 'local C=B47ExpandedCatalog']
     translations = {}
     for family in catalog['families']:
+        if family.get('kind') not in {'fence', 'gate'}:
+            raise ValueError('Only fence and gate families belong in this catalog')
         members = []
         for part in family['parts']:
+            sprites = [sprite for rows in part['faces'].values() for row in rows for sprite in row]
+            if part.get('decorative') or any(sprite.startswith('fixtures_railings_') for sprite in sprites):
+                raise ValueError('Railing/decorative components are outside project scope')
             name = part['name']
             members.append('"' + name + '"')
             label = family['label'] + ' - ' + part['label']
-            if part.get('decorative'):
-                label += ' (decorative component)'
             translations['IGUI_' + name] = label
-            translations['IGUI_B47_Variant_' + name.rsplit('_', 1)[1]] = part['label'] + (' (decorative component)' if part.get('decorative') else '')
+            translations['IGUI_B47_Variant_' + name.rsplit('_', 1)[1]] = part['label']
             entities += ['    entity ' + name, '    {', '        component UiConfig', '        {',
                          '            xuiSkin = default,', '            entityStyle = ES_' + name + ',',
                          '            uiEnabled = false,', '        }', '        component SpriteConfig', '        {',
@@ -80,10 +83,14 @@ def main():
     for path in (OVERLAY / 'media/lua/shared/Translate').glob('*/IG_UI.json'):
         data = json.loads(path.read_text(encoding='utf-8'))
         if args.write:
+            for key in catalog.get('retired_translation_keys', []):
+                data.pop(key, None)
             data.update(labels)
             path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         elif any(data.get(key) != value for key, value in labels.items()):
             raise ValueError('Translation fallback drift: ' + path.parent.name)
+        elif any(key in data for key in catalog.get('retired_translation_keys', [])):
+            raise ValueError('Retired out-of-scope translation remains: ' + path.parent.name)
     print('Catalog generation ' + ('WRITE' if args.write else 'CHECK') + ' PASS')
 
 

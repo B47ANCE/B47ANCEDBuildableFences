@@ -1,9 +1,10 @@
 # Workshop candidate description
 
-Project Version: 1.1.0-dev.13
+Project Version: 1.1.0-dev.14
 
-Canonical BBCode: WORKSHOP_DESCRIPTION.txt. Candidate describes six fence-family
-selectors, each with native per-part recipes, plus a separate iron gate.
+Canonical BBCode: WORKSHOP_DESCRIPTION.txt. Candidate describes the six original fence-family
+selectors and iron gate, plus 30 missing fence/gate entries in 13 additional
+groups. Architectural/stair railings and decorative props are outside scope.
 No upload performed for this iteration. Preserve real newlines and current
 Workshop identity 3817174798. Native SP/dedicated acceptance remains pending.
 

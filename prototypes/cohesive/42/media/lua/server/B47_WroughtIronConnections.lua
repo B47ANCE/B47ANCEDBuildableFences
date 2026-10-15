@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.13
+-- B47ANCE'd Buildable Fences v1.1.0-dev.14
 -- Newly constructed paid sections only. No scans, repairs or client commands.
 if isClient() then return end
 require "BuildingObjects/ISBuildUtil"

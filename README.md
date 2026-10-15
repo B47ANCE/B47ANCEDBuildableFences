@@ -1,6 +1,6 @@
 # B47ANCE'd Fences & Gates
 
-Project Version: 1.1.0-dev.13
+Project Version: 1.1.0-dev.14
 
 Standalone Build 42 mod, technical ID B47ANCEDBuildableFences, Workshop ID
 3817174798. Editable source is `src/B47ANCEDBuildableFences/42`.
@@ -106,15 +106,16 @@ No old-save scan, retrofit, orphan cleanup, custom commands or client writes.
 G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.
 See WROUGHT_IRON_CONNECTIONS.md for native authority and runtime test matrix.
 
-## Expanded intact vanilla catalog (dev.12)
+## Fence-and-gate expansion (dev.14)
 
-The current catalog adds 151 entries in 28 groups only where no vanilla recipe
-supplies that art. The original six families and iron gate retain their recipes.
-Vanilla gates/fences are not duplicated. New shared wooden gates serve both tall
-wood styles. Decorative stair components retain their original native flags.
-Four textureless fencing_01_116-119 definitions remain explicitly blocked.
-See docs/VANILLA_CATALOG.md (VANILLA_CATALOG.md within docs) for scope, costs,
-source fingerprints, authority and required native SP/dedicated testing.
+The current catalog adds 30 paid fence and gate entries in 13 groups only where
+no vanilla recipe supplies the artwork. Original mod families, costs and server
+authority remain unchanged. Shared wooden gates serve both tall fence styles.
+Architectural/stair railings, balustrades, loose decorative wire, gabion baskets
+and crowd-control barriers are excluded. The earlier broad catalog was never
+published or deployed. Four textureless fence definitions remain blocked.
+See docs/VANILLA_CATALOG.md (VANILLA_CATALOG.md within docs) for the current
+inventory, recipe costs, exclusions, source fingerprints and runtime gates.
 
 ## Display-name update (dev.13)
 

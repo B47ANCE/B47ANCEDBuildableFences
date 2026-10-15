@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.0-dev.14]
+
+Compatible PATCH correction to the unpublished expansion: restrict new content
+to 30 fence/gate parts in 13 groups. Remove architectural/stair railings,
+balustrades, decorative loose wire, gabion baskets and crowd-control barriers,
+including generated definitions, menu membership and stale labels. Add explicit
+out-of-scope inventory accounting and regression guards. Preserve the Fences &
+Gates display name, all original recipes, server authority and native gates.
+No package, deploy or upload; no new native runtime evidence.
+
 ## [1.1.0-dev.13]
 
 Compatible PATCH metadata iteration: rename the displayed project to B47ANCE'd

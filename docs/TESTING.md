@@ -1,6 +1,34 @@
 # Current validation
 
-Project Version: 1.1.0-dev.13
+Project Version: 1.1.0-dev.14
+
+
+## dev.14 scope correction
+
+Current expansion: 30 fence/gate parts in 13 groups. Architectural/stair railings,
+decorative wire, baskets and other freestanding barriers are removed from all
+runtime definitions, menus, policies and 29 translation maps. The generator and
+scope regression reject their return; source inventory retains explicit reasons.
+[TESTED Windows offline Python/Lupa, 2026-10-15] 60 available tests PASS,
+including 11 catalog tests. Five original-installed-baseline checks remain
+BLOCKED because the old installed Workshop download is absent.
+Exact commands from repository root:
+```
+python -m unittest discover -s tests -p test_expanded_catalog.py -v
+python scripts/test_current.py --available
+python scripts/generate_expanded_catalog.py
+python scripts/check_versions.py --root .
+python scripts/prepare_workshop.py
+```
+All PASS. Preflight checks 100 runtime files, no shipped tests/diagnostics or
+custom Java/JAR; package validation is deferred because no package was requested.
+G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.
+No package, deployment, Workshop upload or native launch.
+
+## Historical validation records
+
+The following dev.13/dev.12 observations retain their original scope and are not
+current validation or feature claims.
 
 
 ## dev.13 rename validation
@@ -16,7 +44,7 @@ The dev.12 record below is historical at its tested version. G6 NOT TESTED;
 G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED. No packaging or upload.
 
 
-## dev.12 current validation
+## dev.12 historical validation
 
 [TESTED Windows offline Python/Lupa, 2026-10-15] 59 available tests PASS,
 including ten catalog regressions over all 151 new entries. Five missing

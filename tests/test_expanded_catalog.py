@@ -1,5 +1,6 @@
 """Vanilla-recipe exclusion, catalog completeness and authority; offline only."""
 import hashlib
+import copy
 import json
 import re
 import sys
@@ -52,6 +53,27 @@ class ExpandedCatalog(unittest.TestCase):
             data = json.loads(path.read_text(encoding='utf-8'))
             for key, label in labels.items():
                 self.assertEqual(data[key], label)
+            self.assertFalse(set(CATALOG['retired_translation_keys']) & set(data))
+
+    def test_only_fences_and_gates_are_in_scope(self):
+        allowed = {'OrnamentalIron','WhitePicket','PostAndWire','ShortChainLink',
+                   'LowWood','MetalPanel','TallChainLink','RazorCoil','RoundPicket',
+                   'OrnamentalIronGate','WhitePicketGate','TallWoodGate','FieldGate'}
+        self.assertEqual({f['id'] for f in CATALOG['families']}, allowed)
+        self.assertEqual(len(PARTS), 30)
+        for family in CATALOG['families']:
+            self.assertIn(family['kind'], ('fence','gate'))
+        actual = {s for p in PARTS for rows in p['faces'].values() for row in rows for s in row}
+        self.assertFalse(actual & set(AVAILABILITY['out_of_scope_sprites']))
+        self.assertFalse(any(s.startswith('fixtures_railings_') for s in actual))
+        self.assertFalse(any(p.get('decorative') for p in PARTS))
+        for mutation in ('kind', 'decorative', 'railing'):
+            invalid = copy.deepcopy(CATALOG)
+            if mutation == 'kind': invalid['families'][0]['kind'] = 'railing'
+            elif mutation == 'decorative': invalid['families'][0]['parts'][0]['decorative'] = True
+            else: invalid['families'][0]['parts'][0]['faces']['W'] = [['fixtures_railings_01_0']]
+            with self.assertRaises(ValueError):
+                render(invalid, '1.1.0-dev.14')
 
     def test_no_added_sprite_already_supplied_by_vanilla_recipe(self):
         vanilla = set(AVAILABILITY['vanilla_supplied_sprites'])
@@ -70,7 +92,8 @@ class ExpandedCatalog(unittest.TestCase):
         expected = {n for n in actual if n.startswith(('fencing_01_', 'fixtures_railings_01_', 'fixtures_doors_fences_01_'))}
         self.assertEqual(expected, set(AVAILABILITY['all_intact_sprites']))
         combined = set().union(*(set(AVAILABILITY[k]) for k in
-                               ('vanilla_supplied_sprites','existing_mod_sprites','added_sprites','blocked_missing_texture')))
+                               ('vanilla_supplied_sprites','existing_mod_sprites','added_sprites',
+                                'out_of_scope_sprites','blocked_missing_texture')))
         self.assertEqual(combined, expected)
         self.assertEqual(set(AVAILABILITY['blocked_missing_texture']), {f'fencing_01_{i}' for i in range(116,120)})
         self.assertFalse(any('damaged' in n or 'burnt' in n for n in combined))

@@ -1,39 +1,35 @@
-# Expanded intact vanilla fence catalog
+# Fence and gate catalog
 
-Project Version: 1.1.0-dev.13
+Project Version: 1.1.0-dev.14
 
-Compatible MINOR feature within the unreleased 1.1.0 development series.
-User scope: all intact fences, railings and gates, but only assets that do not
-already have vanilla recipes. No deployment, package, upload or game launch.
+Scope: intact fence sections, their paid corners/posts and gates without vanilla
+recipes. This is a PATCH correction to the unpublished 1.1.0 catalog expansion;
+the overall PR remains a compatible MINOR feature within the unreleased series.
+Display name: B47ANCE'd Fences & Gates. No package/deploy/upload/game launch.
 
-## Inventory and exclusion
+## Inventory and exclusions
 
-[VERIFIED installed source/art, Steam build 25485521; full runtime version UNKNOWN]
-The bounded collections are fencing_01, fixtures_railings_01 and
-fixtures_doors_fences_01. Burnt/damaged sets are excluded. Existing mod art and
-vanilla recipe art are excluded from additions. The snapshot
-catalog/vanilla-availability.json records exact vanilla entity-script paths and
-SHA-256 fingerprints, tile/atlas fingerprints and every asset disposition.
-Vanilla corner/post helpers and implicit double-gate opening states are counted
-as already supplied. No base-game files are changed.
+[VERIFIED installed source/art] Steam build 25485521; full runtime version UNKNOWN.
+The expansion has 30 separately paid entities in 13 grouped menu entries.
+The original 21 fences and iron gate, their recipes/costs and automatic junction
+behavior remain unchanged. Vanilla recipe artwork, including corner/post helpers
+and implicit double-gate opening states, is excluded from new recipes.
 
-Four fencing_01_116-119 definitions have no matching texture name in any
-installed texture pack: [UNKNOWN artwork], blocked from construction. No
-placeholder or invisible build recipe substitutes for them. No matching
-military-top-bar or razor-coil gate artwork exists in the inspected gate sheet;
-no invented variants are added. Vanilla chain-link gates remain available.
+Architectural railings, stair fragments, handrails, stone balustrades, loose
+nonfunctional wire, gabion baskets and crowd-control barriers are out of scope.
+They have no new runtime entity, menu entry, callback policy or translation key.
+The earlier 151-entry catalog was never packaged, deployed or published.
+Burnt/damaged scenery is also excluded. Four textureless fencing_01_116-119
+entries remain blocked. Military-top-bar and razor-topped gate art was not found;
+no substitute artwork is invented. Existing vanilla chain-link gates remain.
 
-The new catalog has 151 separately paid entities in 28 grouped menu entries,
-including small support and stair components, not 151 full fence styles.
-The original 21 fence entities and iron gate remain unchanged. Native wooden,
-wire and pole gate recipes remain untouched and are not cloned. New single gates
-supply W/N closed/open faces; wide gates reuse the verified vanilla four-tile
-layout and DoubleDoor sprite offsets. All 106 intact railing entries are
-accounted for. Stair fragments and loose wire without complete barrier flags
-are labelled decorative components, retain vanilla geometry and require manual
-placement. No automatic stair assembly or extra collision is promised.
+catalog/vanilla-availability.json keeps the broader inspected tile inventory for
+explicit disposition accounting: vanilla recipe, original mod, new fence/gate,
+out of scope, or missing art. Excluded inventory entries are evidence, not
+shipped content. Exact vanilla entity-script paths and SHA-256 fingerprints,
+tile/atlas fingerprints and native builder fingerprints are retained.
 
-| Menu group | Added parts | Skill |
+| Menu group | New parts | Skill |
 |---|---:|---|
 | Ornamental iron fence | 3 | MetalWelding 3 |
 | White picket fence | 3 | Woodwork 2 |
@@ -42,56 +38,38 @@ placement. No automatic stair assembly or extra collision is promised.
 | Low wooden fence | 4 | Woodwork 3 |
 | Sheet-metal panel fence | 4 | MetalWelding 5 |
 | Tall chain-link fence | 2 | MetalWelding 3 |
-| Stone balustrade | 3 | Masonry 5 |
-| Razor-wire coil | 3 | MetalWelding 4 |
-| Crowd-control barrier | 2 | MetalWelding 3 |
+| Razor-wire coil | 1 | MetalWelding 4 |
 | Round-top picket fence | 3 | Woodwork 2 |
-| Military gabion barrier | 8 | MetalWelding 4 |
-| Slim wooden railing | 8 | Woodwork 2 |
-| Slim metal stair railing | 8 | MetalWelding 3 |
-| Wooden baluster railing | 7 | Woodwork 2 |
-| Slim wooden level railing | 3 | Woodwork 2 |
-| Slim metal level railing | 3 | MetalWelding 3 |
-| Brown wooden handrail | 18 | Woodwork 2 |
-| White baluster railing | 15 | Woodwork 2 |
-| Dark wooden handrail | 13 | Woodwork 2 |
-| White slim railing | 8 | MetalWelding 3 |
-| White panel railing | 4 | MetalWelding 3 |
-| Dark panel railing | 4 | MetalWelding 3 |
-| White wooden handrail | 15 | Woodwork 2 |
 | Ornamental iron gate | 2 | MetalWelding 5 |
 | White picket gate | 1 | Woodwork 4 |
 | Tall wooden gate (both fence tops) | 2 | Woodwork 4 |
 | Green field gate | 1 | MetalWelding 5 |
 
-## Authoring and recipes
+## Authoring and recipe invariants
 
-catalog/vanilla-expansion.json is the reviewed source for new parts, faces,
-materials, skills, time and health. scripts/generate_expanded_catalog.py renders
-only the separate overlay entity/skin/catalog files and 29 IG_UI fallback maps.
-Its default mode checks drift; --write updates those declared outputs. It never
-builds a package, connects to Steam or touches installed mods. Existing manual
-poster/branding are preserved; menu icons reuse the verified fallback icon.
+catalog/vanilla-expansion.json is the reviewed source for new faces, materials,
+skills, time and health. scripts/generate_expanded_catalog.py renders separate
+entity/skin/Lua files and 29 English-fallback translation maps. Default mode
+checks drift. --write updates only those outputs and removes the explicitly
+listed retired labels; unknown/custom labels are preserved. The generator
+rejects non-fence/gate families, decorative components and railing textures.
+Scope regressions also enforce the exact approved family set and asset exclusions.
 
-New wood recipes use a reusable hammer, planks and nails; metal/wire recipes use
-native torch/rod uses, pipes and scrap/wire. Stone uses a reusable mason's trowel,
-stone blocks and mixed concrete uses. Gates add hinges and doorknobs; wide gates
-cost twice the single-sized material quantities. Smaller posts/decorative pieces
-have smaller paid material requirements. Post-and-wire uses wood, nails and wire. Paid two-edge corners cost twice the
-straight section materials. Gabions consume torch/rod uses, wire, sheets, a sack
-and appropriate fill uses (empty versions have no fill). Item identities and
-consumable forms are checked against installed item definitions. Balance is an
-initial proposal requiring playtesting; no old recipe cost/skill/time/health is
-changed. catalog/existing-contracts.json fingerprints existing recipes/callbacks
-independently of the version header.
+Each part retains an independent paid recipe. Wood uses a reusable hammer,
+planks/nails; post-and-wire adds wire. Metal/wire uses native torch/rod uses,
+pipes and scrap/wire. Gates add hinges and doorknobs. Wide gates and two-edge
+corners use twice the corresponding single section material quantities.
+Supports use smaller paid quantities. No original mod or vanilla cost is changed.
+Item identities are checked against installed definitions. New balance still
+requires playtesting. catalog/existing-contracts.json fingerprints original
+recipes/callbacks independently of the project version.
 
-Configuration assessment: parts are explicit build choices; recipes, material
-identity and footprint are fixed content rather than hidden behavioral options.
-The existing server ConstructionHealthPercent setting applies to new sections,
-gates and barriers with the existing bounds/default; standalone supports keep
-their declared health, matching current post policy. No per-sprite microsettings
-are added. Existing automatic junction settings apply only to their original
-four families; expansion pieces use paid explicit corners and posts.
+Configuration assessment: recipe identity and native footprint define content,
+not hidden behavioral options. Existing server ConstructionHealthPercent applies
+to new sections/gates with its existing bounds and default. Posts keep their
+baseline health. Existing corner-post options apply only to their original four
+families; new families use their paid explicit corners/posts. No microsettings,
+new art, custom geometry or client preferences affect shared state.
 
 ## Authority, persistence and compatibility
 
@@ -113,19 +91,17 @@ Downgrading cannot be assumed to remove placed objects or preserve unfamiliar
 entity definitions; use backed-up disposable test saves. Old packages/provenance
 remain protected; future authorized output is dist/full-catalog-development-current.
 
-## Validation and remaining runtime gates
+## Validation and native gates
 
-Exact commands and current offline results are recorded in TESTING.md.
-Offline Python/Lupa tests execute selection and callback behavior, check all
-new recipes/labels, prevent vanilla duplicates, verify double-gate layouts and
-fingerprint old recipes. Mock objects are not PZ physics or multiplayer proof.
+Exact offline commands/results are in TESTING.md. Tests cover scope rejection,
+retired label removal in 29 languages, complete inventory dispositions, vanilla
+recipe exclusion, real paid inputs, native double-gate layout, both-axis cycling,
+affordability/action freeze, exact server callback validation and unchanged
+original contracts. Tests use Python/Lupa mocks, not the game engine.
 
-[RUNTIME GATE] All new styles: placement/orientation, native recipe payment and
-cancellation, skill/tool restrictions and health settings. Level/stair railings:
-correct height/alignment, collision/hopping, supports and placement near stairs.
-Single/wide gates: both axes, clearance, complete open/close, all leaves, locks,
-damage, dismantling and occupied-square rejection. Gabions and wire components:
-footprint, fill use accounting and collision. SP save/reload and dedicated
-two-client placement, visibility, join/rejoin, duplication, persistence and
-restart testing remain required. G6 SP NOT TESTED; G7 dedicated BLOCKED /
-NOT TESTED; stable-release G8 BLOCKED. No stable/readiness claim.
+[RUNTIME GATE] New fences: placement, orientation, collision/hopping, costs,
+tool use, cancellation, skills, damage and health settings. Single/wide gates:
+clearance, all leaves opening/closing, locks, damage/dismantling, occupied squares
+and both axes. SP save/reload plus dedicated two-client build visibility,
+join/rejoin, duplicate prevention, persistence and restart remain required.
+G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.

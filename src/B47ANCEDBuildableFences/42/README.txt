@@ -1,4 +1,4 @@
-B47ANCE'd Fences & Gates — v1.1.0-dev.13
+B47ANCE'd Fences & Gates — v1.1.0-dev.14
 
 Standalone Project Zomboid Build 42 fence-building mod.
 
@@ -36,4 +36,4 @@ Skill rebalance preserves materials, XP rewards, health fields, sprites and runt
 
 Status: development source only. Wooden cutaway work is blocked pending paired runtime evidence. SP, dedicated two-client collision/audio/concrete tests, reconnect and restart are required. No release-ready claim, deployment or packaging.
 
-Current development overlay adds missing intact vanilla fence/railing/gate recipes. Existing vanilla recipes are excluded. Native SP and dedicated MP validation is pending.
+Current development overlay adds missing intact vanilla fence and gate recipes only. Existing vanilla recipes are excluded. Native SP and dedicated MP validation is pending.
