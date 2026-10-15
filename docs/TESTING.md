@@ -1,6 +1,37 @@
 # Current validation
 
-Project Version: 1.1.0-dev.11
+Project Version: 1.1.0-dev.12
+
+
+## dev.12 current validation
+
+[TESTED Windows offline Python/Lupa, 2026-10-15] 59 available tests PASS,
+including ten catalog regressions over all 151 new entries. Five missing
+original-installed-baseline methods remain explicitly BLOCKED, not PASS.
+Coverage: no vanilla recipe duplicates; complete bounded asset disposition;
+real item IDs and paid inputs; generated entity/skin/Lua/29-language parity;
+family cycling both directions; recipe/action freeze and affordability;
+closed/open and native double-gate layout; exact server name/sprite/orientation
+validation, client/malformed-object rejection, health bounds/defaults and
+unchanged original recipe/callback fingerprints. Offline mocks are not PZ.
+
+Exact commands from repository root (local Python/Lupa):
+```
+python -m unittest discover -s tests -p test_expanded_catalog.py -v
+python scripts/test_current.py --available
+python scripts/generate_expanded_catalog.py
+python scripts/check_versions.py --root .
+python scripts/prepare_workshop.py
+```
+All PASS. Read-only preparation checks 100 runtime files, no shipped tests,
+diagnostics or custom Java/JAR; case/require and source composition checks PASS.
+Version check defers absent new packages. No package, deploy, game/server launch
+or Workshop upload. G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED;
+stable-release G8 BLOCKED. Native matrix: VANILLA_CATALOG.md.
+
+## Historical validation from earlier iterations
+
+The observations below retain their original scope and are not dev.12 proof.
 
 [TESTED Windows offline Python/Lupa, 2026-10-14] 49 available tests PASS.
 Five original-installed-baseline methods are explicitly BLOCKED because the

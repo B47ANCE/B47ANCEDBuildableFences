@@ -1,0 +1,6166 @@
+{
+  "schema": 1,
+  "families": [
+    {
+      "id": "OrnamentalIron",
+      "label": "Ornamental iron fence",
+      "parts": [
+        {
+          "name": "B47_OrnamentalIron_PlainSection",
+          "label": "Plain Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_2"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_1"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_OrnamentalIron_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_3"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_OrnamentalIron_Post",
+          "label": "Standalone Post",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_0"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "WhitePicket",
+      "label": "White picket fence",
+      "parts": [
+        {
+          "name": "B47_WhitePicket_PlainSection",
+          "label": "Plain Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_4"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_5"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhitePicket_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_6"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhitePicket_Post",
+          "label": "Standalone Post",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_7"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "PostAndWire",
+      "label": "Post and wire fence",
+      "parts": [
+        {
+          "name": "B47_PostAndWire_PlainSection",
+          "label": "Plain Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_16"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_17"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_PostAndWire_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_18"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "ShortChainLink",
+      "label": "Short chain-link fence",
+      "parts": [
+        {
+          "name": "B47_ShortChainLink_PostEndedSection",
+          "label": "Post-Ended Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_27"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_24"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_ShortChainLink_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_28"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "LowWood",
+      "label": "Low wooden fence",
+      "parts": [
+        {
+          "name": "B47_LowWood_PlainSection",
+          "label": "Plain Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_34"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_33"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 3,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_LowWood_PostEndedSection",
+          "label": "Post-Ended Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_35"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_32"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 3,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_LowWood_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_36"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 3,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_LowWood_Post",
+          "label": "Standalone Post",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_37"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 3,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "MetalPanel",
+      "label": "Sheet-metal panel fence",
+      "parts": [
+        {
+          "name": "B47_MetalPanel_PlainSection",
+          "label": "Plain Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_40"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_41"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 5,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_MetalPanel_WindowSection",
+          "label": "Window Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_44"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_45"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 5,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_MetalPanel_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_42"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 5,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_MetalPanel_Post",
+          "label": "Standalone Post",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_43"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 5,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "TallChainLink",
+      "label": "Tall chain-link fence",
+      "parts": [
+        {
+          "name": "B47_TallChainLink_PostEndedSection",
+          "label": "Post-Ended Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_59"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_56"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_TallChainLink_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_60"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "StoneBalustrade",
+      "label": "Stone balustrade",
+      "parts": [
+        {
+          "name": "B47_StoneBalustrade_PlainSection",
+          "label": "Plain Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_105"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_104"
+              ]
+            ]
+          },
+          "material": "stone",
+          "perk": "Masonry",
+          "skill": 5,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:masonstrowel]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.StoneBlock]"
+            },
+            {
+              "amount": 1,
+              "selector": "tags[base:concrete]",
+              "suffix": " flags[DontRecordInput]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_StoneBalustrade_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_106"
+              ]
+            ]
+          },
+          "material": "stone",
+          "perk": "Masonry",
+          "skill": 5,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:masonstrowel]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeLight]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.StoneBlock]"
+            },
+            {
+              "amount": 2,
+              "selector": "tags[base:concrete]",
+              "suffix": " flags[DontRecordInput]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_StoneBalustrade_Post",
+          "label": "Standalone Post",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_107"
+              ]
+            ]
+          },
+          "material": "stone",
+          "perk": "Masonry",
+          "skill": 5,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:masonstrowel]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.StoneBlock]"
+            },
+            {
+              "amount": 1,
+              "selector": "tags[base:concrete]",
+              "suffix": " flags[DontRecordInput]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "RazorCoil",
+      "label": "Razor-wire coil",
+      "parts": [
+        {
+          "name": "B47_RazorCoil_PlainSection",
+          "label": "Plain Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_109"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_108"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 4,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_RazorCoil_LooseCoilA",
+          "label": "Loose Coil A",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_110"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 4,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": true,
+          "gate": false
+        },
+        {
+          "name": "B47_RazorCoil_LooseCoilB",
+          "label": "Loose Coil B",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_111"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 4,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": true,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "CrowdBarrier",
+      "label": "Crowd-control barrier",
+      "parts": [
+        {
+          "name": "B47_CrowdBarrier_PlainSection",
+          "label": "Plain Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_112"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_114"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_CrowdBarrier_EndSection",
+          "label": "End Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_113"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_115"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "RoundPicket",
+      "label": "Round-top picket fence",
+      "parts": [
+        {
+          "name": "B47_RoundPicket_PlainSection",
+          "label": "Plain Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_121"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_120"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_RoundPicket_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_122"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_RoundPicket_Post",
+          "label": "Standalone Post",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_123"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "MilitaryBarrier",
+      "label": "Military gabion barrier",
+      "parts": [
+        {
+          "name": "B47_MilitaryBarrier_Basket96",
+          "label": "Low filled basket",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_96"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 4,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.SheetMetal]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.EmptySandbag]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Sandbag]",
+              "suffix": " flags[DontRecordInput]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_MilitaryBarrier_Basket97",
+          "label": "Tall filled basket",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_97"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 4,
+          "health": 800,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.SheetMetal]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.EmptySandbag]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Sandbag]",
+              "suffix": " flags[DontRecordInput]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_MilitaryBarrier_Basket98",
+          "label": "Low empty basket",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_98"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 4,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.SheetMetal]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.EmptySandbag]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_MilitaryBarrier_Basket99",
+          "label": "Tall empty basket",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_99"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 4,
+          "health": 800,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.SheetMetal]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.EmptySandbag]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_MilitaryBarrier_Basket100",
+          "label": "Low soil basket",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_100"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 4,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.SheetMetal]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.EmptySandbag]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Dirtbag]",
+              "suffix": " flags[DontRecordInput]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_MilitaryBarrier_Basket101",
+          "label": "Tall soil basket",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_101"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 4,
+          "health": 800,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.SheetMetal]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.EmptySandbag]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Dirtbag]",
+              "suffix": " flags[DontRecordInput]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_MilitaryBarrier_Basket102",
+          "label": "Low gravel basket",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_102"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 4,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.SheetMetal]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.EmptySandbag]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Gravelbag]",
+              "suffix": " flags[DontRecordInput]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_MilitaryBarrier_Basket103",
+          "label": "Tall gravel basket",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_103"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 4,
+          "health": 800,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.SheetMetal]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.EmptySandbag]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Gravelbag]",
+              "suffix": " flags[DontRecordInput]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "SlimWoodRail",
+      "label": "Slim wooden railing",
+      "parts": [
+        {
+          "name": "B47_SlimWoodRail_Piece0",
+          "label": "Rail segment 0",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_0"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimWoodRail_Piece1",
+          "label": "Rail segment 1",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_1"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimWoodRail_Piece2",
+          "label": "Post / support 2",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_2"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimWoodRail_Piece3",
+          "label": "Rail segment 3",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_3"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimWoodRail_Piece4",
+          "label": "Rail segment 4",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_4"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimWoodRail_Piece5",
+          "label": "Post / support 5",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_5"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimWoodRail_Piece6",
+          "label": "Rail segment 6",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_6"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimWoodRail_Piece7",
+          "label": "Rail segment 7",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_7"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "SlimMetalStairRail",
+      "label": "Slim metal stair railing",
+      "parts": [
+        {
+          "name": "B47_SlimMetalStairRail_Piece16",
+          "label": "Rail segment 16",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_16"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimMetalStairRail_Piece17",
+          "label": "Rail segment 17",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_17"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimMetalStairRail_Piece18",
+          "label": "Post / support 18",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_18"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimMetalStairRail_Piece19",
+          "label": "Rail segment 19",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_19"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimMetalStairRail_Piece20",
+          "label": "Rail segment 20",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_20"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimMetalStairRail_Piece21",
+          "label": "Post / support 21",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_21"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimMetalStairRail_Piece22",
+          "label": "Rail segment 22",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_22"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimMetalStairRail_Piece23",
+          "label": "Rail segment 23",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_23"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "WoodBalusterRail",
+      "label": "Wooden baluster railing",
+      "parts": [
+        {
+          "name": "B47_WoodBalusterRail_Piece24",
+          "label": "Rail segment 24",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_24"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WoodBalusterRail_Piece25",
+          "label": "Rail segment 25",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_25"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WoodBalusterRail_Piece26",
+          "label": "Corner 26",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_26"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WoodBalusterRail_Piece27",
+          "label": "Post / support 27",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_27"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        },
+        {
+          "name": "B47_WoodBalusterRail_Piece33",
+          "label": "Post / support 33",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_33"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        },
+        {
+          "name": "B47_WoodBalusterRail_Piece34",
+          "label": "Corner 34",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_34"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WoodBalusterRail_Piece35",
+          "label": "Post / support 35",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_35"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "SlimWoodLevelRail",
+      "label": "Slim wooden level railing",
+      "parts": [
+        {
+          "name": "B47_SlimWoodLevelRail_Piece28",
+          "label": "Rail segment 28",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_28"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimWoodLevelRail_Piece29",
+          "label": "Rail segment 29",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_29"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimWoodLevelRail_Piece30",
+          "label": "Corner 30",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_30"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "SlimMetalLevelRail",
+      "label": "Slim metal level railing",
+      "parts": [
+        {
+          "name": "B47_SlimMetalLevelRail_Piece36",
+          "label": "Rail segment 36",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_36"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimMetalLevelRail_Piece37",
+          "label": "Rail segment 37",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_37"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_SlimMetalLevelRail_Piece38",
+          "label": "Corner 38",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_38"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "BrownHandrail",
+      "label": "Brown wooden handrail",
+      "parts": [
+        {
+          "name": "B47_BrownHandrail_Piece40",
+          "label": "Rail segment 40",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_40"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece41",
+          "label": "Rail segment 41",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_41"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece42",
+          "label": "Post / support 42",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_42"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece44",
+          "label": "Rail segment 44",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_44"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece45",
+          "label": "Post / support 45",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_45"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece46",
+          "label": "Post / support 46",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_46"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece48",
+          "label": "Rail segment 48",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_48"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece49",
+          "label": "Rail segment 49",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_49"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece50",
+          "label": "Post / support 50",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_50"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece51",
+          "label": "Rail segment 51",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_51"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece52",
+          "label": "Corner 52",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_52"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece53",
+          "label": "Rail segment 53",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_53"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece54",
+          "label": "Rail segment 54",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_54"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece56",
+          "label": "Rail segment 56",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_56"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece57",
+          "label": "Rail segment 57",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_57"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece59",
+          "label": "Post / support 59",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_59"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece60",
+          "label": "Rail segment 60",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_60"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_BrownHandrail_Piece61",
+          "label": "Rail segment 61",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_61"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "WhiteBalusterRail",
+      "label": "White baluster railing",
+      "parts": [
+        {
+          "name": "B47_WhiteBalusterRail_Piece64",
+          "label": "Rail segment 64",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_64"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteBalusterRail_Piece65",
+          "label": "Rail segment 65",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_65"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteBalusterRail_Piece66",
+          "label": "Corner 66",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_66"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteBalusterRail_Piece67",
+          "label": "Post / support 67",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_67"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteBalusterRail_Piece68",
+          "label": "Rail segment 68",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_68"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteBalusterRail_Piece69",
+          "label": "Post / support 69",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_69"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteBalusterRail_Piece70",
+          "label": "Rail segment 70",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_70"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteBalusterRail_Piece71",
+          "label": "Rail segment 71",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_71"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteBalusterRail_Piece72",
+          "label": "Post / support 72",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_72"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteBalusterRail_Piece73",
+          "label": "Post / support 73",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_73"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteBalusterRail_Piece74",
+          "label": "Corner 74",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_74"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteBalusterRail_Piece75",
+          "label": "Post / support 75",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_75"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteBalusterRail_Piece76",
+          "label": "Post / support 76",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_76"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteBalusterRail_Piece78",
+          "label": "Post / support 78",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_78"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteBalusterRail_Piece79",
+          "label": "Post / support 79",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_79"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "DarkWoodHandrail",
+      "label": "Dark wooden handrail",
+      "parts": [
+        {
+          "name": "B47_DarkWoodHandrail_Piece80",
+          "label": "Rail segment 80",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_80"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_DarkWoodHandrail_Piece81",
+          "label": "Rail segment 81",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_81"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_DarkWoodHandrail_Piece82",
+          "label": "Post / support 82",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_82"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_DarkWoodHandrail_Piece84",
+          "label": "Rail segment 84",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_84"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_DarkWoodHandrail_Piece85",
+          "label": "Rail segment 85",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_85"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_DarkWoodHandrail_Piece88",
+          "label": "Rail segment 88",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_88"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_DarkWoodHandrail_Piece89",
+          "label": "Rail segment 89",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_89"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_DarkWoodHandrail_Piece90",
+          "label": "Corner 90",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_90"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_DarkWoodHandrail_Piece91",
+          "label": "Post / support 91",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_91"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        },
+        {
+          "name": "B47_DarkWoodHandrail_Piece92",
+          "label": "Rail segment 92",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_92"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_DarkWoodHandrail_Piece93",
+          "label": "Rail segment 93",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_93"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_DarkWoodHandrail_Piece100",
+          "label": "Post / support 100",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_100"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_DarkWoodHandrail_Piece101",
+          "label": "Rail segment 101",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_101"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "WhiteSlimRail",
+      "label": "White slim railing",
+      "parts": [
+        {
+          "name": "B47_WhiteSlimRail_Piece86",
+          "label": "Rail segment 86",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_86"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteSlimRail_Piece87",
+          "label": "Rail segment 87",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_87"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteSlimRail_Piece94",
+          "label": "Post / support 94",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_94"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteSlimRail_Piece95",
+          "label": "Rail segment 95",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_95"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteSlimRail_Piece97",
+          "label": "Post / support 97",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_97"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteSlimRail_Piece108",
+          "label": "Rail segment 108",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_108"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteSlimRail_Piece109",
+          "label": "Rail segment 109",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_109"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteSlimRail_Piece110",
+          "label": "Corner 110",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_110"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "WhitePanelRail",
+      "label": "White panel railing",
+      "parts": [
+        {
+          "name": "B47_WhitePanelRail_Piece112",
+          "label": "Rail segment 112",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_112"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhitePanelRail_Piece113",
+          "label": "Rail segment 113",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_113"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhitePanelRail_Piece114",
+          "label": "Corner 114",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_114"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhitePanelRail_Piece115",
+          "label": "Post / support 115",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_115"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "DarkPanelRail",
+      "label": "Dark panel railing",
+      "parts": [
+        {
+          "name": "B47_DarkPanelRail_Piece116",
+          "label": "Rail segment 116",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_116"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_DarkPanelRail_Piece117",
+          "label": "Rail segment 117",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_117"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_DarkPanelRail_Piece118",
+          "label": "Corner 118",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_118"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_DarkPanelRail_Piece119",
+          "label": "Post / support 119",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_119"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "WhiteHeavyRail",
+      "label": "White wooden handrail",
+      "parts": [
+        {
+          "name": "B47_WhiteHeavyRail_Piece120",
+          "label": "Rail segment 120",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_120"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteHeavyRail_Piece121",
+          "label": "Rail segment 121",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_121"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteHeavyRail_Piece122",
+          "label": "Post / support 122",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_122"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteHeavyRail_Piece124",
+          "label": "Rail segment 124",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_124"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteHeavyRail_Piece125",
+          "label": "Rail segment 125",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_125"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteHeavyRail_Piece128",
+          "label": "Rail segment 128",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_128"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteHeavyRail_Piece129",
+          "label": "Rail segment 129",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_129"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteHeavyRail_Piece130",
+          "label": "Corner 130",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_130"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteHeavyRail_Piece131",
+          "label": "Post / support 131",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_131"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": true,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteHeavyRail_Piece132",
+          "label": "Rail segment 132",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_132"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteHeavyRail_Piece133",
+          "label": "Rail segment 133",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_133"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteHeavyRail_Piece136",
+          "label": "Rail segment 136",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_136"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteHeavyRail_Piece137",
+          "label": "Rail segment 137",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_137"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteHeavyRail_Piece140",
+          "label": "Post / support 140",
+          "faces": {
+            "W": [
+              [
+                "fixtures_railings_01_140"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhiteHeavyRail_Piece141",
+          "label": "Rail segment 141",
+          "faces": {
+            "N": [
+              [
+                "fixtures_railings_01_141"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ]
+    },
+    {
+      "id": "OrnamentalIronGate",
+      "label": "Ornamental iron gate",
+      "parts": [
+        {
+          "name": "B47_OrnamentalIronGate_SingleGate",
+          "label": "Single gate",
+          "faces": {
+            "W": [
+              [
+                "fixtures_doors_fences_01_0"
+              ]
+            ],
+            "N": [
+              [
+                "fixtures_doors_fences_01_1"
+              ]
+            ],
+            "W_OPEN": [
+              [
+                "fixtures_doors_fences_01_2"
+              ]
+            ],
+            "N_OPEN": [
+              [
+                "fixtures_doors_fences_01_3"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 5,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Hinge]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Doorknob]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": true
+        },
+        {
+          "name": "B47_OrnamentalIronGate_DoubleGate",
+          "label": "Wide double gate",
+          "faces": {
+            "W": [
+              [
+                "fixtures_doors_fences_01_33"
+              ],
+              [
+                "fixtures_doors_fences_01_32"
+              ],
+              [
+                "fixtures_doors_fences_01_41"
+              ],
+              [
+                "fixtures_doors_fences_01_40"
+              ]
+            ],
+            "N": [
+              [
+                "fixtures_doors_fences_01_34",
+                "fixtures_doors_fences_01_35",
+                "fixtures_doors_fences_01_42",
+                "fixtures_doors_fences_01_43"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 5,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.ScrapMetal]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Hinge]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Doorknob]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": true
+        }
+      ]
+    },
+    {
+      "id": "WhitePicketGate",
+      "label": "White picket gate",
+      "parts": [
+        {
+          "name": "B47_WhitePicketGate_SingleGate",
+          "label": "Single gate",
+          "faces": {
+            "W": [
+              [
+                "fixtures_doors_fences_01_8"
+              ]
+            ],
+            "N": [
+              [
+                "fixtures_doors_fences_01_9"
+              ]
+            ],
+            "W_OPEN": [
+              [
+                "fixtures_doors_fences_01_10"
+              ]
+            ],
+            "N_OPEN": [
+              [
+                "fixtures_doors_fences_01_11"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 4,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Hinge]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Doorknob]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": true
+        }
+      ]
+    },
+    {
+      "id": "TallWoodGate",
+      "label": "Tall wooden gate (both fence tops)",
+      "parts": [
+        {
+          "name": "B47_TallWoodGate_SingleGate",
+          "label": "Single gate",
+          "faces": {
+            "W": [
+              [
+                "fixtures_doors_fences_01_12"
+              ]
+            ],
+            "N": [
+              [
+                "fixtures_doors_fences_01_13"
+              ]
+            ],
+            "W_OPEN": [
+              [
+                "fixtures_doors_fences_01_14"
+              ]
+            ],
+            "N_OPEN": [
+              [
+                "fixtures_doors_fences_01_15"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 4,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Hinge]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Doorknob]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": true
+        },
+        {
+          "name": "B47_TallWoodGate_DoubleGate",
+          "label": "Wide double gate",
+          "faces": {
+            "W": [
+              [
+                "fixtures_doors_fences_01_49"
+              ],
+              [
+                "fixtures_doors_fences_01_48"
+              ],
+              [
+                "fixtures_doors_fences_01_57"
+              ],
+              [
+                "fixtures_doors_fences_01_56"
+              ]
+            ],
+            "N": [
+              [
+                "fixtures_doors_fences_01_50",
+                "fixtures_doors_fences_01_51",
+                "fixtures_doors_fences_01_58",
+                "fixtures_doors_fences_01_59"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 4,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Nails]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Hinge]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Doorknob]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": true
+        }
+      ]
+    },
+    {
+      "id": "FieldGate",
+      "label": "Green field gate",
+      "parts": [
+        {
+          "name": "B47_FieldGate_DoubleGate",
+          "label": "Wide double gate",
+          "faces": {
+            "W": [
+              [
+                "fixtures_doors_fences_01_113"
+              ],
+              [
+                "fixtures_doors_fences_01_112"
+              ],
+              [
+                "fixtures_doors_fences_01_121"
+              ],
+              [
+                "fixtures_doors_fences_01_120"
+              ]
+            ],
+            "N": [
+              [
+                "fixtures_doors_fences_01_114",
+                "fixtures_doors_fences_01_115",
+                "fixtures_doors_fences_01_122",
+                "fixtures_doors_fences_01_123"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 5,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.ScrapMetal]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Hinge]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Doorknob]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": true
+        }
+      ]
+    }
+  ]
+}

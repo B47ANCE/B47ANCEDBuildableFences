@@ -89,6 +89,18 @@
     {
       "path": "docs/WROUGHT_IRON_CONNECTIONS.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "prototypes/cohesive/42/media/lua/shared/B47_ExpandedCatalog.lua",
+      "pattern": "^-- B47ANCE'd Buildable Fences v(?P<version>\\S+)$"
+    },
+    {
+      "path": "prototypes/cohesive/42/media/lua/server/B47_ExpandedConstruction.lua",
+      "pattern": "^-- B47ANCE'd Buildable Fences v(?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/VANILLA_CATALOG.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
   "changelog": {
@@ -98,7 +110,7 @@
   "packaging": {
     "artifacts": [
       {
-        "glob": "dist/family-corner-development-current/*.zip",
+        "glob": "dist/full-catalog-development-current/*.zip",
         "pattern": "B47ANCEDBuildableFences-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?)\\.zip",
         "zip_members": [
           {
@@ -205,6 +217,10 @@
     {
       "reference": "dist/corner-development-current/*.zip; dist/workshop-candidates/1.1.0-dev.9",
       "reason": "Published dev.9 package/provenance preserved unchanged; dev.10 has separate future output."
+    },
+    {
+      "reference": "dist/family-corner-development-current/*.zip; dist/workshop-candidates/1.1.0-dev.10; dev.11 branding iteration",
+      "reason": "Preserved prior published packages/provenance and validation, never current proof."
     }
   ]
 }

@@ -1,4 +1,4 @@
-B47ANCE'd Buildable Fences — v1.1.0-dev.11
+B47ANCE'd Buildable Fences — v1.1.0-dev.12
 
 Standalone Project Zomboid Build 42 fence-building mod.
 
@@ -35,3 +35,5 @@ Construction skill requirements (all variants in each family)
 Skill rebalance preserves materials, XP rewards, health fields, sprites and runtime logic.
 
 Status: development source only. Wooden cutaway work is blocked pending paired runtime evidence. SP, dedicated two-client collision/audio/concrete tests, reconnect and restart are required. No release-ready claim, deployment or packaging.
+
+Current development overlay adds missing intact vanilla fence/railing/gate recipes. Existing vanilla recipes are excluded. Native SP and dedicated MP validation is pending.

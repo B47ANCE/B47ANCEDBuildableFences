@@ -1,5 +1,6 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.11
+-- B47ANCE'd Buildable Fences v1.1.0-dev.12
 -- UI selection model only. No topology, world scans or permanent state writes.
+require "B47_ExpandedCatalog"
 B47Cohesive = B47Cohesive or {}
 local V=B47Cohesive
 -- Group identifiers are UI membership only; recipes remain owned by ObjectInfo.
@@ -11,6 +12,9 @@ V.families={
     {"B47_RazorWireSecurityFence_PlainSection","B47_RazorWireSecurityFence_PostEndedSection","B47_RazorWireSecurityFence_Corner"},
     {"B47_WroughtIronFence_PlainSection","B47_WroughtIronFence_PostEndedSection","B47_WroughtIronFence_Corner","B47_WroughtIronFence_Post"},
 }
+if B47ExpandedCatalog then
+    for _,family in ipairs(B47ExpandedCatalog.families) do V.families[#V.families+1]=family end
+end
 V.names=V.families[6] -- retained iron alias for existing integrations
 V.gateName="B47_WroughtIronGate"
 V.variantNames={}; V.familyByName={}; V.roots={}; V.hidden={}

@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.11
+-- B47ANCE'd Buildable Fences v1.1.0-dev.12
 -- MP client detector for standalone posts.
 -- In multiplayer the client never mutates authoritative world objects. It asks
 -- the server to perform the same replacement proven by v1.0.33/v1.0.35.

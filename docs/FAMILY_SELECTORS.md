@@ -1,6 +1,6 @@
 # Fence family selectors
 
-Project Version: 1.1.0-dev.11
+Project Version: 1.1.0-dev.12
 
 Compatible MINOR-scope expansion within the current 1.1.0 prerelease series.
 The composed development candidate has six fence entries: straight-top wood,
@@ -86,3 +86,13 @@ post. No retrofit, world scan, orphan cleanup or new client commands.
 G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.
 See docs/WROUGHT_IRON_CONNECTIONS.md (WROUGHT_IRON_CONNECTIONS.md within docs)
 for native authority and required runtime tests.
+
+## Expanded intact vanilla catalog (dev.12)
+
+The current catalog adds 151 entries in 28 groups only where no vanilla recipe
+supplies that art. The original six families and iron gate retain their recipes.
+Vanilla gates/fences are not duplicated. New shared wooden gates serve both tall
+wood styles. Decorative stair components retain their original native flags.
+Four textureless fencing_01_116-119 definitions remain explicitly blocked.
+See docs/VANILLA_CATALOG.md (VANILLA_CATALOG.md within docs) for scope, costs,
+source fingerprints, authority and required native SP/dedicated testing.

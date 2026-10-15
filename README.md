@@ -1,6 +1,6 @@
 # B47ANCE'd Buildable Fences
 
-Project Version: 1.1.0-dev.11
+Project Version: 1.1.0-dev.12
 
 Standalone Build 42 mod, technical ID B47ANCEDBuildableFences, Workshop ID
 3817174798. Editable source is `src/B47ANCEDBuildableFences/42`.
@@ -105,3 +105,13 @@ No old-save scan, retrofit, orphan cleanup, custom commands or client writes.
 49 available offline tests pass; five original-baseline checks remain blocked.
 G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.
 See WROUGHT_IRON_CONNECTIONS.md for native authority and runtime test matrix.
+
+## Expanded intact vanilla catalog (dev.12)
+
+The current catalog adds 151 entries in 28 groups only where no vanilla recipe
+supplies that art. The original six families and iron gate retain their recipes.
+Vanilla gates/fences are not duplicated. New shared wooden gates serve both tall
+wood styles. Decorative stair components retain their original native flags.
+Four textureless fencing_01_116-119 definitions remain explicitly blocked.
+See docs/VANILLA_CATALOG.md (VANILLA_CATALOG.md within docs) for scope, costs,
+source fingerprints, authority and required native SP/dedicated testing.

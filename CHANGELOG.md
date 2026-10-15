@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0-dev.12]
+
+Compatible MINOR-scope expansion within the unreleased 1.1.0 series: add 151
+construction entries across 28 groups for intact vanilla fence, railing and gate
+art that has no vanilla recipe. Existing vanilla recipes, prior mod recipes,
+server construction and automatic junction behavior are retained. Each part has
+its own paid recipe. Decorative railing fragments retain native geometry; four
+tile definitions with missing textures are explicitly blocked. Runtime untested.
+
 ## [1.1.0-dev.11]
 - Add user-supplied fallback icon/thumbnail; preserve manually supplied artwork. Asset-only iteration; gameplay unchanged.
 - Offline branding/version checks only; earlier validation remains historical at 1.1.0-dev.10. No new SP/dedicated MP evidence.
