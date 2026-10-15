@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.14
+-- B47ANCE'd Buildable Fences v1.1.0-dev.15
 -- Client files load before the native server-side cursor directory is available.
 -- Install once after the complete world Lua load; never require it at boot.
 local function installPresentation()

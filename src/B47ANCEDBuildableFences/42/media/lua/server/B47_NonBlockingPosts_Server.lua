@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.14
+-- B47ANCE'd Buildable Fences v1.1.0-dev.15
 -- Server-authoritative MP replacement for standalone B47 fence posts.
 -- The server validates every request against the actual square/object before
 -- changing world state. No client-supplied object is trusted.

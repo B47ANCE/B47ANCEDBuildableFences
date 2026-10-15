@@ -57,10 +57,10 @@ class ExpandedCatalog(unittest.TestCase):
 
     def test_only_fences_and_gates_are_in_scope(self):
         allowed = {'OrnamentalIron','WhitePicket','PostAndWire','ShortChainLink',
-                   'LowWood','MetalPanel','TallChainLink','RazorCoil','RoundPicket',
+                   'MetalPanel','TallChainLink','RazorCoil','RoundPicket',
                    'OrnamentalIronGate','WhitePicketGate','TallWoodGate','FieldGate'}
         self.assertEqual({f['id'] for f in CATALOG['families']}, allowed)
-        self.assertEqual(len(PARTS), 30)
+        self.assertEqual(len(PARTS), 25)
         for family in CATALOG['families']:
             self.assertIn(family['kind'], ('fence','gate'))
         actual = {s for p in PARTS for rows in p['faces'].values() for row in rows for s in row}
@@ -93,7 +93,7 @@ class ExpandedCatalog(unittest.TestCase):
         self.assertEqual(expected, set(AVAILABILITY['all_intact_sprites']))
         combined = set().union(*(set(AVAILABILITY[k]) for k in
                                ('vanilla_supplied_sprites','existing_mod_sprites','added_sprites',
-                                'out_of_scope_sprites','blocked_missing_texture')))
+                                'vanilla_equivalent_sprites','out_of_scope_sprites','blocked_missing_texture')))
         self.assertEqual(combined, expected)
         self.assertEqual(set(AVAILABILITY['blocked_missing_texture']), {f'fencing_01_{i}' for i in range(116,120)})
         self.assertFalse(any('damaged' in n or 'burnt' in n for n in combined))

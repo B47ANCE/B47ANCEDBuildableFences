@@ -1,10 +1,10 @@
 {
   "schema": 1,
-  "project_version": "1.1.0-dev.14",
+  "project_version": "1.1.0-dev.15",
   "steam_build": "25485521",
   "game_version": "UNKNOWN",
   "runtime_status": "NOT TESTED",
-  "catalog_sha256": "0cf7521321f2a586549e9e265af77e7bbc6cdfdef72a420650d14b5758203f60",
+  "catalog_sha256": "56eb01f5f60b9692a4de06983762da2f903de6221c25c694b46ecdb9bfea07b6",
   "script_files_scanned": 1004,
   "script_index_sha256": "0c0db67f71b760a3f5bb84ffba625656b3eee412545568cd8fa0a3265d1a9376",
   "lua_files_scanned": 1407,
@@ -64,6 +64,171 @@
       "sha256": "142a6bfae839f55024983b5666bcc18486f807a6d3c9b5de0ec74cd90fd4f071"
     }
   ],
+  "reviewed_functional_exclusions": [
+    {
+      "part_names": [
+        "B47_LowWood_PlainSection",
+        "B47_LowWood_PostEndedSection",
+        "B47_LowWood_Corner",
+        "B47_LowWood_Post"
+      ],
+      "sprites": [
+        "fencing_01_32",
+        "fencing_01_33",
+        "fencing_01_34",
+        "fencing_01_35",
+        "fencing_01_36",
+        "fencing_01_37"
+      ],
+      "native_entities": [
+        "Base.WoodFenceLvl1",
+        "Base.WoodFenceLvl2",
+        "Base.WoodFenceLvl3"
+      ],
+      "reason": "User-confirmed vanilla low wooden fence availability; omit these practical duplicates even though artwork differs.",
+      "native_recipe_proofs": [
+        {
+          "entity": "Base.WoodFenceLvl1",
+          "sources": [
+            {
+              "path": "media/scripts/generated/entities/walls/entity_wood_fencelvl1.txt",
+              "sha256": "18c6a0a6e24d7b6221103c0551e0526543a36fff883c9a0494ff5708cd5548be"
+            }
+          ],
+          "sprites": [
+            "carpentry_02_40",
+            "carpentry_02_41",
+            "carpentry_02_43"
+          ],
+          "skill": [
+            "Woodwork:3"
+          ],
+          "requires_learning": false,
+          "menu_callbacks": [
+            "woodenFenceLvl1Test"
+          ]
+        },
+        {
+          "entity": "Base.WoodFenceLvl2",
+          "sources": [
+            {
+              "path": "media/scripts/generated/entities/walls/entity_wood_fencelvl2.txt",
+              "sha256": "86f07c4534ee3743ff18742281f1dba731cd88abda9931dd7758f26e9f5d1436"
+            }
+          ],
+          "sprites": [
+            "carpentry_02_44",
+            "carpentry_02_45",
+            "carpentry_02_47"
+          ],
+          "skill": [
+            "Woodwork:5"
+          ],
+          "requires_learning": false,
+          "menu_callbacks": [
+            "woodenFenceLvl2Test"
+          ]
+        },
+        {
+          "entity": "Base.WoodFenceLvl3",
+          "sources": [
+            {
+              "path": "media/scripts/generated/entities/walls/entity_wood_fencelvl3.txt",
+              "sha256": "6491b6808dad86faa93f583f7c5fb79320e4fc51c5bf7c85a3993696038e1aa5"
+            }
+          ],
+          "sprites": [
+            "carpentry_02_48",
+            "carpentry_02_49",
+            "carpentry_02_51"
+          ],
+          "skill": [
+            "Woodwork:7"
+          ],
+          "requires_learning": false,
+          "menu_callbacks": [
+            "woodenFenceLvl3Test"
+          ]
+        }
+      ]
+    },
+    {
+      "part_names": [
+        "B47_TallWoodGate_DoubleGate"
+      ],
+      "sprites": [
+        "fixtures_doors_fences_01_48",
+        "fixtures_doors_fences_01_49",
+        "fixtures_doors_fences_01_50",
+        "fixtures_doors_fences_01_51",
+        "fixtures_doors_fences_01_52",
+        "fixtures_doors_fences_01_53",
+        "fixtures_doors_fences_01_54",
+        "fixtures_doors_fences_01_55",
+        "fixtures_doors_fences_01_56",
+        "fixtures_doors_fences_01_57",
+        "fixtures_doors_fences_01_58",
+        "fixtures_doors_fences_01_59",
+        "fixtures_doors_fences_01_60",
+        "fixtures_doors_fences_01_61",
+        "fixtures_doors_fences_01_62",
+        "fixtures_doors_fences_01_63"
+      ],
+      "native_entities": [
+        "Base.DoubleDoor"
+      ],
+      "reason": "User-confirmed vanilla wide wooden gate availability; omit this practical duplicate even though artwork differs.",
+      "native_recipe_proofs": [
+        {
+          "entity": "Base.DoubleDoor",
+          "sources": [
+            {
+              "path": "media/scripts/generated/entities/walls/entity_wood_doubledoor.txt",
+              "sha256": "b349e724495b91f6b0a3f423ab720f099999e8bee29fea46ef3dbc9e611ea821"
+            }
+          ],
+          "sprites": [
+            "fixtures_doors_fences_01_104",
+            "fixtures_doors_fences_01_105",
+            "fixtures_doors_fences_01_106",
+            "fixtures_doors_fences_01_107",
+            "fixtures_doors_fences_01_96",
+            "fixtures_doors_fences_01_97",
+            "fixtures_doors_fences_01_98",
+            "fixtures_doors_fences_01_99"
+          ],
+          "skill": [
+            "Woodwork:4"
+          ],
+          "requires_learning": false,
+          "menu_callbacks": []
+        }
+      ]
+    }
+  ],
+  "white_picket_review": {
+    "sprites": [
+      "fencing_01_4",
+      "fencing_01_5",
+      "fencing_01_6",
+      "fencing_01_7"
+    ],
+    "finding": "No construction recipe or paint conversion located for this white picket fence set. WoodPicket constructs a cemetery marker post; white tint is not a picket sprite conversion.",
+    "sources": [
+      {
+        "path": "media/scripts/generated/entities/outdoors/entity_wood_picket.txt",
+        "sha256": "55226bbf6b3e3590a3a0aeb3106be126eec3ca6d1cff617d6a440c8bb94b1793"
+      },
+      {
+        "path": "media/lua/server/BuildingObjects/PaintingReference.lua",
+        "sha256": "2d439997da31c3055d3fb68e2f74b66f8e06f9d862fb6a8e89af6497b6c13591"
+      },
+      {
+        "path": "media/lua/shared/BuildingObjects/TimedActions/ISPaintAction.lua",
+        "sha256": "04817f15f6d94b847ee4c3174a056410b09d93b9be11c90925f62972f46d9e5c"
+      }
+    ]
+  },
   "vanilla_fence_gate_recipes": [
     {
       "entity": "Base.BarbedWireFence",
@@ -629,48 +794,6 @@
       "identical_art_matches": []
     },
     {
-      "name": "B47_LowWood_PlainSection",
-      "family": "Low wooden fence",
-      "part": "Plain Section",
-      "sprites": [
-        "fencing_01_33",
-        "fencing_01_34"
-      ],
-      "exact_matches": [],
-      "identical_art_matches": []
-    },
-    {
-      "name": "B47_LowWood_PostEndedSection",
-      "family": "Low wooden fence",
-      "part": "Post-Ended Section",
-      "sprites": [
-        "fencing_01_32",
-        "fencing_01_35"
-      ],
-      "exact_matches": [],
-      "identical_art_matches": []
-    },
-    {
-      "name": "B47_LowWood_Corner",
-      "family": "Low wooden fence",
-      "part": "Corner",
-      "sprites": [
-        "fencing_01_36"
-      ],
-      "exact_matches": [],
-      "identical_art_matches": []
-    },
-    {
-      "name": "B47_LowWood_Post",
-      "family": "Low wooden fence",
-      "part": "Standalone Post",
-      "sprites": [
-        "fencing_01_37"
-      ],
-      "exact_matches": [],
-      "identical_art_matches": []
-    },
-    {
       "name": "B47_MetalPanel_PlainSection",
       "family": "Sheet-metal panel fence",
       "part": "Plain Section",
@@ -827,23 +950,6 @@
         "fixtures_doors_fences_01_13",
         "fixtures_doors_fences_01_14",
         "fixtures_doors_fences_01_15"
-      ],
-      "exact_matches": [],
-      "identical_art_matches": []
-    },
-    {
-      "name": "B47_TallWoodGate_DoubleGate",
-      "family": "Tall wooden gate (both fence tops)",
-      "part": "Wide double gate",
-      "sprites": [
-        "fixtures_doors_fences_01_48",
-        "fixtures_doors_fences_01_49",
-        "fixtures_doors_fences_01_50",
-        "fixtures_doors_fences_01_51",
-        "fixtures_doors_fences_01_56",
-        "fixtures_doors_fences_01_57",
-        "fixtures_doors_fences_01_58",
-        "fixtures_doors_fences_01_59"
       ],
       "exact_matches": [],
       "identical_art_matches": []

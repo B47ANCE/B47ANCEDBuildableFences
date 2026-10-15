@@ -7,7 +7,20 @@ ROOT = Path(__file__).resolve().parents[1]
 OVERLAY = ROOT / 'prototypes/cohesive/42'
 
 
+def validate_vanilla_equivalents(catalog):
+    """Reviewed practical overlaps remain excluded even when art differs."""
+    exclusions = catalog.get('vanilla_equivalent_exclusions', [])
+    names = {n for entry in exclusions for n in entry['part_names']}
+    excluded_sprites = {s for entry in exclusions for s in entry['sprites']}
+    for family in catalog['families']:
+        for part in family['parts']:
+            sprites = {s for rows in part['faces'].values() for row in rows for s in row}
+            if part['name'] in names or sprites & excluded_sprites:
+                raise ValueError('Reviewed vanilla functional duplicate: ' + part['name'])
+
+
 def render(catalog, version):
+    validate_vanilla_equivalents(catalog)
     entities = ['module Base\n{']
     skins = ['module Base\n{\n    xuiSkin default\n    {']
     model = ["-- B47ANCE'd Buildable Fences v" + version,

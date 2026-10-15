@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.14
+-- B47ANCE'd Buildable Fences v1.1.0-dev.15
 -- Native BuildingObjects are server-phase files (also loaded by SP/clients).
 -- Shared-phase requires cannot resolve that directory during initial boot.
 require "B47_CohesiveModel"

@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.14
+-- B47ANCE'd Buildable Fences v1.1.0-dev.15
 -- Generated from catalog/vanilla-expansion.json; no world access.
 B47ExpandedCatalog={families={},policies={}}
 local C=B47ExpandedCatalog
@@ -16,11 +16,6 @@ C.families[#C.families+1]={"B47_PostAndWire_PlainSection","B47_PostAndWire_Corne
 C.policies["B47_ShortChainLink_PostEndedSection"]={material="wire",post=false,gate=false,allowed={["false:fencing_01_27"]=true,["true:fencing_01_24"]=true}}
 C.policies["B47_ShortChainLink_Corner"]={material="wire",post=false,gate=false,allowed={["false:fencing_01_28"]=true}}
 C.families[#C.families+1]={"B47_ShortChainLink_PostEndedSection","B47_ShortChainLink_Corner"}
-C.policies["B47_LowWood_PlainSection"]={material="wood",post=false,gate=false,allowed={["false:fencing_01_34"]=true,["true:fencing_01_33"]=true}}
-C.policies["B47_LowWood_PostEndedSection"]={material="wood",post=false,gate=false,allowed={["false:fencing_01_35"]=true,["true:fencing_01_32"]=true}}
-C.policies["B47_LowWood_Corner"]={material="wood",post=false,gate=false,allowed={["false:fencing_01_36"]=true}}
-C.policies["B47_LowWood_Post"]={material="wood",post=true,gate=false,allowed={["false:fencing_01_37"]=true}}
-C.families[#C.families+1]={"B47_LowWood_PlainSection","B47_LowWood_PostEndedSection","B47_LowWood_Corner","B47_LowWood_Post"}
 C.policies["B47_MetalPanel_PlainSection"]={material="metal",post=false,gate=false,allowed={["false:fencing_01_40"]=true,["true:fencing_01_41"]=true}}
 C.policies["B47_MetalPanel_WindowSection"]={material="metal",post=false,gate=false,allowed={["false:fencing_01_44"]=true,["true:fencing_01_45"]=true}}
 C.policies["B47_MetalPanel_Corner"]={material="metal",post=false,gate=false,allowed={["false:fencing_01_42"]=true}}
@@ -41,7 +36,6 @@ C.families[#C.families+1]={"B47_OrnamentalIronGate_SingleGate","B47_OrnamentalIr
 C.policies["B47_WhitePicketGate_SingleGate"]={material="wood",post=false,gate=true,allowed={["false:fixtures_doors_fences_01_8"]=true,["true:fixtures_doors_fences_01_9"]=true}}
 C.families[#C.families+1]={"B47_WhitePicketGate_SingleGate"}
 C.policies["B47_TallWoodGate_SingleGate"]={material="wood",post=false,gate=true,allowed={["false:fixtures_doors_fences_01_12"]=true,["true:fixtures_doors_fences_01_13"]=true}}
-C.policies["B47_TallWoodGate_DoubleGate"]={material="wood",post=false,gate=true,allowed={["false:fixtures_doors_fences_01_49"]=true,["false:fixtures_doors_fences_01_48"]=true,["false:fixtures_doors_fences_01_57"]=true,["false:fixtures_doors_fences_01_56"]=true,["true:fixtures_doors_fences_01_50"]=true,["true:fixtures_doors_fences_01_51"]=true,["true:fixtures_doors_fences_01_58"]=true,["true:fixtures_doors_fences_01_59"]=true}}
-C.families[#C.families+1]={"B47_TallWoodGate_SingleGate","B47_TallWoodGate_DoubleGate"}
+C.families[#C.families+1]={"B47_TallWoodGate_SingleGate"}
 C.policies["B47_FieldGate_DoubleGate"]={material="metal",post=false,gate=true,allowed={["false:fixtures_doors_fences_01_113"]=true,["false:fixtures_doors_fences_01_112"]=true,["false:fixtures_doors_fences_01_121"]=true,["false:fixtures_doors_fences_01_120"]=true,["true:fixtures_doors_fences_01_114"]=true,["true:fixtures_doors_fences_01_115"]=true,["true:fixtures_doors_fences_01_122"]=true,["true:fixtures_doors_fences_01_123"]=true}}
 C.families[#C.families+1]={"B47_FieldGate_DoubleGate"}

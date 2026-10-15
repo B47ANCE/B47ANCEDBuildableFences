@@ -264,12 +264,6 @@
     "fencing_01_27",
     "fencing_01_28",
     "fencing_01_3",
-    "fencing_01_32",
-    "fencing_01_33",
-    "fencing_01_34",
-    "fencing_01_35",
-    "fencing_01_36",
-    "fencing_01_37",
     "fencing_01_4",
     "fencing_01_40",
     "fencing_01_41",
@@ -325,22 +319,6 @@
     "fixtures_doors_fences_01_45",
     "fixtures_doors_fences_01_46",
     "fixtures_doors_fences_01_47",
-    "fixtures_doors_fences_01_48",
-    "fixtures_doors_fences_01_49",
-    "fixtures_doors_fences_01_50",
-    "fixtures_doors_fences_01_51",
-    "fixtures_doors_fences_01_52",
-    "fixtures_doors_fences_01_53",
-    "fixtures_doors_fences_01_54",
-    "fixtures_doors_fences_01_55",
-    "fixtures_doors_fences_01_56",
-    "fixtures_doors_fences_01_57",
-    "fixtures_doors_fences_01_58",
-    "fixtures_doors_fences_01_59",
-    "fixtures_doors_fences_01_60",
-    "fixtures_doors_fences_01_61",
-    "fixtures_doors_fences_01_62",
-    "fixtures_doors_fences_01_63",
     "fixtures_doors_fences_01_8",
     "fixtures_doors_fences_01_9"
   ],
@@ -832,5 +810,80 @@
     "fencing_01_104-107": "Stone architectural balustrade.",
     "fencing_01_110-111": "Loose decorative wire without a complete fence edge.",
     "fencing_01_112-115": "Freestanding crowd-control barriers."
-  }
+  },
+  "vanilla_equivalent_sprites": [
+    "fencing_01_32",
+    "fencing_01_33",
+    "fencing_01_34",
+    "fencing_01_35",
+    "fencing_01_36",
+    "fencing_01_37",
+    "fixtures_doors_fences_01_48",
+    "fixtures_doors_fences_01_49",
+    "fixtures_doors_fences_01_50",
+    "fixtures_doors_fences_01_51",
+    "fixtures_doors_fences_01_52",
+    "fixtures_doors_fences_01_53",
+    "fixtures_doors_fences_01_54",
+    "fixtures_doors_fences_01_55",
+    "fixtures_doors_fences_01_56",
+    "fixtures_doors_fences_01_57",
+    "fixtures_doors_fences_01_58",
+    "fixtures_doors_fences_01_59",
+    "fixtures_doors_fences_01_60",
+    "fixtures_doors_fences_01_61",
+    "fixtures_doors_fences_01_62",
+    "fixtures_doors_fences_01_63"
+  ],
+  "vanilla_equivalent_exclusions": [
+    {
+      "part_names": [
+        "B47_LowWood_PlainSection",
+        "B47_LowWood_PostEndedSection",
+        "B47_LowWood_Corner",
+        "B47_LowWood_Post"
+      ],
+      "sprites": [
+        "fencing_01_32",
+        "fencing_01_33",
+        "fencing_01_34",
+        "fencing_01_35",
+        "fencing_01_36",
+        "fencing_01_37"
+      ],
+      "native_entities": [
+        "Base.WoodFenceLvl1",
+        "Base.WoodFenceLvl2",
+        "Base.WoodFenceLvl3"
+      ],
+      "reason": "User-confirmed vanilla low wooden fence availability; omit these practical duplicates even though artwork differs."
+    },
+    {
+      "part_names": [
+        "B47_TallWoodGate_DoubleGate"
+      ],
+      "sprites": [
+        "fixtures_doors_fences_01_48",
+        "fixtures_doors_fences_01_49",
+        "fixtures_doors_fences_01_50",
+        "fixtures_doors_fences_01_51",
+        "fixtures_doors_fences_01_52",
+        "fixtures_doors_fences_01_53",
+        "fixtures_doors_fences_01_54",
+        "fixtures_doors_fences_01_55",
+        "fixtures_doors_fences_01_56",
+        "fixtures_doors_fences_01_57",
+        "fixtures_doors_fences_01_58",
+        "fixtures_doors_fences_01_59",
+        "fixtures_doors_fences_01_60",
+        "fixtures_doors_fences_01_61",
+        "fixtures_doors_fences_01_62",
+        "fixtures_doors_fences_01_63"
+      ],
+      "native_entities": [
+        "Base.DoubleDoor"
+      ],
+      "reason": "User-confirmed vanilla wide wooden gate availability; omit this practical duplicate even though artwork differs."
+    }
+  ]
 }

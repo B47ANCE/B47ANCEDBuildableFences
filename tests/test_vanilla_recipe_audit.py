@@ -1,5 +1,6 @@
 """Independent recipe bindings, aliases and audit freshness; offline only."""
 import io
+import copy
 import json
 import struct
 import sys
@@ -11,6 +12,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 from audit_vanilla_recipes import audit, blocks, construction_inventory, art_fingerprints, part_findings, REPORT
+from generate_expanded_catalog import render
 
 
 class VanillaRecipeAudit(unittest.TestCase):
@@ -85,11 +87,40 @@ class VanillaRecipeAudit(unittest.TestCase):
     def test_installed_audit_matches_report_and_all_proposed_parts_remain_distinct(self):
         current=audit()
         self.assertEqual(current,json.loads(REPORT.read_text(encoding='utf-8')))
-        self.assertEqual(len(current['parts']),30)
+        self.assertEqual(len(current['parts']),25)
         self.assertFalse(current['candidate_missing_art'])
         self.assertFalse(current['native_missing_art'])
         self.assertTrue(all(not p['exact_matches'] and not p['identical_art_matches'] for p in current['parts']))
         self.assertTrue(all(r['classification']!='REVIEW' for r in current['literal_lua_asset_references']))
+
+    def test_reviewed_vanilla_duplicates_cannot_return_by_name_or_sprite(self):
+        catalog=json.loads((ROOT/'catalog/vanilla-expansion.json').read_text(encoding='utf-8'))
+        expected={'B47_LowWood_'+p for p in ('PlainSection','PostEndedSection','Corner','Post')}
+        expected.add('B47_TallWoodGate_DoubleGate')
+        exclusions=catalog['vanilla_equivalent_exclusions']
+        self.assertEqual({n for e in exclusions for n in e['part_names']},expected)
+        for entry in exclusions:
+            for name in entry['part_names']:
+                invalid=copy.deepcopy(catalog)
+                invalid['families'][0]['parts'][0]['name']=name
+                with self.assertRaisesRegex(ValueError,'functional duplicate'):
+                    render(invalid,'1.1.0-dev.15')
+            for sprite in entry['sprites']:
+                invalid=copy.deepcopy(catalog)
+                invalid['families'][0]['parts'][0]['faces']['W']=[[sprite]]
+                with self.assertRaisesRegex(ValueError,'functional duplicate'):
+                    render(invalid,'1.1.0-dev.15')
+
+    def test_white_picket_marker_and_paint_sources_do_not_build_picket_fence(self):
+        from audit_tiles import GAME
+        marker=(GAME/'media/scripts/generated/entities/outdoors/entity_wood_picket.txt').read_text(encoding='utf-8-sig')
+        paint=(GAME/'media/lua/server/BuildingObjects/PaintingReference.lua').read_text(encoding='utf-8-sig')
+        action=(GAME/'media/lua/shared/BuildingObjects/TimedActions/ISPaintAction.lua').read_text(encoding='utf-8-sig')
+        self.assertIn('location_community_cemetary_01_31',marker)
+        self.assertNotIn('fencing_01_',marker)
+        self.assertNotIn('fencing_01_',paint)
+        self.assertIn('OtherPainting["crates"]["PaintWhite"]',paint)
+        self.assertIn('setCustomColor',action)
 
 
 if __name__ == '__main__':

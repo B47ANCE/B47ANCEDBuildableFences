@@ -62,30 +62,6 @@ module Base
             DisplayName = IGUI_B47_ShortChainLink_Corner,
             Icon = B47ANCEDBuildableFences_icon,
         }
-        entity ES_B47_LowWood_PlainSection
-        {
-            LuaWindowClass = ISEntityWindow,
-            DisplayName = IGUI_B47_LowWood_PlainSection,
-            Icon = B47ANCEDBuildableFences_icon,
-        }
-        entity ES_B47_LowWood_PostEndedSection
-        {
-            LuaWindowClass = ISEntityWindow,
-            DisplayName = IGUI_B47_LowWood_PostEndedSection,
-            Icon = B47ANCEDBuildableFences_icon,
-        }
-        entity ES_B47_LowWood_Corner
-        {
-            LuaWindowClass = ISEntityWindow,
-            DisplayName = IGUI_B47_LowWood_Corner,
-            Icon = B47ANCEDBuildableFences_icon,
-        }
-        entity ES_B47_LowWood_Post
-        {
-            LuaWindowClass = ISEntityWindow,
-            DisplayName = IGUI_B47_LowWood_Post,
-            Icon = B47ANCEDBuildableFences_icon,
-        }
         entity ES_B47_MetalPanel_PlainSection
         {
             LuaWindowClass = ISEntityWindow,
@@ -168,12 +144,6 @@ module Base
         {
             LuaWindowClass = ISEntityWindow,
             DisplayName = IGUI_B47_TallWoodGate_SingleGate,
-            Icon = B47ANCEDBuildableFences_icon,
-        }
-        entity ES_B47_TallWoodGate_DoubleGate
-        {
-            LuaWindowClass = ISEntityWindow,
-            DisplayName = IGUI_B47_TallWoodGate_DoubleGate,
             Icon = B47ANCEDBuildableFences_icon,
         }
         entity ES_B47_FieldGate_DoubleGate

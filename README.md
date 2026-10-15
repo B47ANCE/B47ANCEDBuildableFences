@@ -1,6 +1,6 @@
 # B47ANCE'd Fences & Gates
 
-Project Version: 1.1.0-dev.14
+Project Version: 1.1.0-dev.15
 
 Standalone Build 42 mod, technical ID B47ANCEDBuildableFences, Workshop ID
 3817174798. Editable source is `src/B47ANCEDBuildableFences/42`.
@@ -106,9 +106,9 @@ No old-save scan, retrofit, orphan cleanup, custom commands or client writes.
 G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.
 See WROUGHT_IRON_CONNECTIONS.md for native authority and runtime test matrix.
 
-## Fence-and-gate expansion (dev.14)
+## Fence-and-gate expansion (dev.15)
 
-The current catalog adds 30 paid fence and gate entries in 13 groups only where
+The current catalog adds 25 paid fence and gate entries in 12 groups only where
 no vanilla recipe supplies the artwork. Original mod families, costs and server
 authority remain unchanged. Shared wooden gates serve both tall fence styles.
 Architectural/stair railings, balustrades, loose decorative wire, gabion baskets
@@ -127,10 +127,9 @@ artwork is preserved. This metadata change does not publish or deploy anything.
 
 ## Vanilla recipe audit
 
-The follow-up [vanilla recipe audit](docs/VANILLA_RECIPE_AUDIT.md) checks all
-installed construction definitions, skill/learning gates, Lua menu routes and
-identical-art aliases. All 30 proposed fence/gate parts remain distinct from
-vanilla recipe artwork. Existing vanilla recipes are retained; equivalent
-mechanical functions in other visual styles already exist. Run
+The [vanilla recipe audit](docs/VANILLA_RECIPE_AUDIT.md) checks construction
+scripts, skill/learning gates, Lua routes, identical-art aliases and reviewed
+functional overlaps. Low wooden fences and the wide wooden gate are excluded
+because vanilla already builds them. No vanilla recipe or paint conversion was
+found for the white picket fence set; WoodPicket is a marker post. Run
 `python scripts/audit_vanilla_recipes.py` before changing the expansion catalog.
-No runtime content changed in this audit-only follow-up.

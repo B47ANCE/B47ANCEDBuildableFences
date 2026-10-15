@@ -9,6 +9,7 @@ from pathlib import Path
 from PIL import Image
 from audit_tiles import GAME, read_tiles
 from inspect_wrought_sprites import integer, string
+from generate_expanded_catalog import validate_vanilla_equivalents
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / 'catalog/vanilla-recipe-audit.json'
@@ -134,7 +135,12 @@ def part_findings(catalog, supplied, art):
 def audit(game=GAME):
     catalog_path = ROOT / 'catalog/vanilla-expansion.json'
     catalog = json.loads(catalog_path.read_text(encoding='utf-8'))
+    validate_vanilla_equivalents(catalog)
     records, supplied, upgrades, script_index = construction_inventory(game)
+    by_name = {r['entity']: r for r in records}
+    equivalents = []
+    for entry in catalog.get('vanilla_equivalent_exclusions', []):
+        equivalents.append({**entry, 'native_recipe_proofs':[by_name[name] for name in entry['native_entities']]})
     candidates = {s for f in catalog['families'] for p in f['parts'] for rows in p['faces'].values() for row in rows for s in row}
     pack = game / 'media/texturepacks/Tiles2x.pack'
     art = art_fingerprints(pack, candidates | set(supplied))
@@ -157,6 +163,9 @@ def audit(game=GAME):
                     'media/lua/client/Entity/ISUI/ISEntityBuildMenu.lua',
                     'media/lua/server/BuildingObjects/ISBuildIsoEntity.lua',
                     'media/lua/server/CraftRecipeCode/CraftRecipe_BuildMenu.lua']
+    picket_sources = ['media/scripts/generated/entities/outdoors/entity_wood_picket.txt',
+                      'media/lua/server/BuildingObjects/PaintingReference.lua',
+                      'media/lua/shared/BuildingObjects/TimedActions/ISPaintAction.lua']
     report = {'schema':1,'project_version':(ROOT/'VERSION').read_text().strip(),'steam_build':build,'game_version':'UNKNOWN',
               'runtime_status':'NOT TESTED','catalog_sha256':sha(catalog_path.read_bytes()),
               'script_files_scanned':len(script_index),'script_index_sha256':sha(json.dumps(script_index,sort_keys=True).encode()),
@@ -167,6 +176,11 @@ def audit(game=GAME):
               'candidate_missing_art':sorted(candidates-art.keys()),'native_missing_art':sorted(supplied.keys()-art.keys()),
               'legacy_upgrade_definitions':upgrades,'literal_lua_asset_references':references,
               'build_menu_sources':[{'path':r,'sha256':sha((game/r).read_bytes())} for r in source_paths],
+              'reviewed_functional_exclusions':equivalents,
+              'white_picket_review':{
+                  'sprites':[f'fencing_01_{i}' for i in range(4,8)],
+                  'finding':'No construction recipe or paint conversion located for this white picket fence set. WoodPicket constructs a cemetery marker post; white tint is not a picket sprite conversion.',
+                  'sources':[{'path':r,'sha256':sha((game/r).read_bytes())} for r in picket_sources]},
               'vanilla_fence_gate_recipes':focused,'parts':part_findings(catalog,supplied,art)}
     return report
 

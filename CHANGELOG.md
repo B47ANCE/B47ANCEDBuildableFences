@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.0-dev.15]
+
+Compatible PATCH correction to the unpublished expansion: remove the four low
+wooden fence pieces (preview 11-14) and wide wooden gate (29), already covered
+by vanilla building. Keep 25 additions in 12 groups and the shared single tall
+wood gate. Guard reviewed functional duplicates in addition to exact/identical
+art matches. White picket fence has no located vanilla construction or paint
+conversion; WoodPicket creates a marker post. Preserve remaining part costs,
+original recipes and server authority. Offline tests only; runtime NOT TESTED.
+No package, deployment or Workshop upload.
+
 ## [1.1.0-dev.14]
 
 - Audit-only follow-up: compare all 30 additions against all installed construction scripts, Lua routes and pixel-identical art aliases. No duplicate recipe art found; add repeatable checker and regressions. Runtime payload and recipes unchanged.

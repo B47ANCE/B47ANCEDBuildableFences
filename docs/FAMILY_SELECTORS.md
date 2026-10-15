@@ -1,6 +1,6 @@
 # Fence family selectors
 
-Project Version: 1.1.0-dev.14
+Project Version: 1.1.0-dev.15
 
 Compatible MINOR-scope expansion within the current 1.1.0 prerelease series.
 The composed development candidate has six fence entries: straight-top wood,
@@ -87,9 +87,9 @@ G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.
 See docs/WROUGHT_IRON_CONNECTIONS.md (WROUGHT_IRON_CONNECTIONS.md within docs)
 for native authority and required runtime tests.
 
-## Fence-and-gate expansion (dev.14)
+## Fence-and-gate expansion (dev.15)
 
-The current catalog adds 30 paid fence and gate entries in 13 groups only where
+The current catalog adds 25 paid fence and gate entries in 12 groups only where
 no vanilla recipe supplies the artwork. Original mod families, costs and server
 authority remain unchanged. Shared wooden gates serve both tall fence styles.
 Architectural/stair railings, balustrades, loose decorative wire, gabion baskets

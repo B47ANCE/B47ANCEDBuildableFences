@@ -1,6 +1,6 @@
 # Workshop candidate description
 
-Project Version: 1.1.0-dev.14
+Project Version: 1.1.0-dev.15
 
 Canonical BBCode: WORKSHOP_DESCRIPTION.txt. Candidate describes the six original fence-family
 selectors and iron gate, plus 30 missing fence/gate entries in 13 additional

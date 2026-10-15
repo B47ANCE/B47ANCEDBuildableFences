@@ -443,167 +443,6 @@
       "kind": "fence"
     },
     {
-      "id": "LowWood",
-      "label": "Low wooden fence",
-      "parts": [
-        {
-          "name": "B47_LowWood_PlainSection",
-          "label": "Plain Section",
-          "faces": {
-            "W": [
-              [
-                "fencing_01_34"
-              ]
-            ],
-            "N": [
-              [
-                "fencing_01_33"
-              ]
-            ]
-          },
-          "material": "wood",
-          "perk": "Woodwork",
-          "skill": 3,
-          "health": 400,
-          "skill_bonus": 50,
-          "time": 200,
-          "action": "BuildWallHammer",
-          "inputs": [
-            {
-              "amount": 1,
-              "selector": "tags[base:hammer]",
-              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
-            },
-            {
-              "amount": 2,
-              "selector": "[Base.Plank]"
-            },
-            {
-              "amount": 4,
-              "selector": "[Base.Nails]"
-            }
-          ],
-          "post": false,
-          "decorative": false,
-          "gate": false
-        },
-        {
-          "name": "B47_LowWood_PostEndedSection",
-          "label": "Post-Ended Section",
-          "faces": {
-            "W": [
-              [
-                "fencing_01_35"
-              ]
-            ],
-            "N": [
-              [
-                "fencing_01_32"
-              ]
-            ]
-          },
-          "material": "wood",
-          "perk": "Woodwork",
-          "skill": 3,
-          "health": 400,
-          "skill_bonus": 50,
-          "time": 200,
-          "action": "BuildWallHammer",
-          "inputs": [
-            {
-              "amount": 1,
-              "selector": "tags[base:hammer]",
-              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
-            },
-            {
-              "amount": 2,
-              "selector": "[Base.Plank]"
-            },
-            {
-              "amount": 4,
-              "selector": "[Base.Nails]"
-            }
-          ],
-          "post": false,
-          "decorative": false,
-          "gate": false
-        },
-        {
-          "name": "B47_LowWood_Corner",
-          "label": "Corner",
-          "faces": {
-            "W": [
-              [
-                "fencing_01_36"
-              ]
-            ]
-          },
-          "material": "wood",
-          "perk": "Woodwork",
-          "skill": 3,
-          "health": 400,
-          "skill_bonus": 50,
-          "time": 400,
-          "action": "BuildWallHammer",
-          "inputs": [
-            {
-              "amount": 1,
-              "selector": "tags[base:hammer]",
-              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
-            },
-            {
-              "amount": 4,
-              "selector": "[Base.Plank]"
-            },
-            {
-              "amount": 8,
-              "selector": "[Base.Nails]"
-            }
-          ],
-          "post": false,
-          "decorative": false,
-          "gate": false
-        },
-        {
-          "name": "B47_LowWood_Post",
-          "label": "Standalone Post",
-          "faces": {
-            "W": [
-              [
-                "fencing_01_37"
-              ]
-            ]
-          },
-          "material": "wood",
-          "perk": "Woodwork",
-          "skill": 3,
-          "health": 100,
-          "skill_bonus": 50,
-          "time": 100,
-          "action": "BuildWallHammer",
-          "inputs": [
-            {
-              "amount": 1,
-              "selector": "tags[base:hammer]",
-              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
-            },
-            {
-              "amount": 1,
-              "selector": "[Base.Plank]"
-            },
-            {
-              "amount": 2,
-              "selector": "[Base.Nails]"
-            }
-          ],
-          "post": true,
-          "decorative": false,
-          "gate": false
-        }
-      ],
-      "kind": "fence"
-    },
-    {
       "id": "MetalPanel",
       "label": "Sheet-metal panel fence",
       "parts": [
@@ -1316,67 +1155,6 @@
           "post": false,
           "decorative": false,
           "gate": true
-        },
-        {
-          "name": "B47_TallWoodGate_DoubleGate",
-          "label": "Wide double gate",
-          "faces": {
-            "W": [
-              [
-                "fixtures_doors_fences_01_49"
-              ],
-              [
-                "fixtures_doors_fences_01_48"
-              ],
-              [
-                "fixtures_doors_fences_01_57"
-              ],
-              [
-                "fixtures_doors_fences_01_56"
-              ]
-            ],
-            "N": [
-              [
-                "fixtures_doors_fences_01_50",
-                "fixtures_doors_fences_01_51",
-                "fixtures_doors_fences_01_58",
-                "fixtures_doors_fences_01_59"
-              ]
-            ]
-          },
-          "material": "wood",
-          "perk": "Woodwork",
-          "skill": 4,
-          "health": 400,
-          "skill_bonus": 50,
-          "time": 400,
-          "action": "BuildWallHammer",
-          "inputs": [
-            {
-              "amount": 1,
-              "selector": "tags[base:hammer]",
-              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
-            },
-            {
-              "amount": 4,
-              "selector": "[Base.Plank]"
-            },
-            {
-              "amount": 8,
-              "selector": "[Base.Nails]"
-            },
-            {
-              "amount": 4,
-              "selector": "[Base.Hinge]"
-            },
-            {
-              "amount": 2,
-              "selector": "[Base.Doorknob]"
-            }
-          ],
-          "post": false,
-          "decorative": false,
-          "gate": true
         }
       ],
       "kind": "gate"
@@ -1493,6 +1271,10 @@
     "IGUI_B47_DarkWoodHandrail_Piece91",
     "IGUI_B47_DarkWoodHandrail_Piece92",
     "IGUI_B47_DarkWoodHandrail_Piece93",
+    "IGUI_B47_LowWood_Corner",
+    "IGUI_B47_LowWood_PlainSection",
+    "IGUI_B47_LowWood_Post",
+    "IGUI_B47_LowWood_PostEndedSection",
     "IGUI_B47_MilitaryBarrier_Basket100",
     "IGUI_B47_MilitaryBarrier_Basket101",
     "IGUI_B47_MilitaryBarrier_Basket102",
@@ -1528,6 +1310,7 @@
     "IGUI_B47_StoneBalustrade_Corner",
     "IGUI_B47_StoneBalustrade_PlainSection",
     "IGUI_B47_StoneBalustrade_Post",
+    "IGUI_B47_TallWoodGate_DoubleGate",
     "IGUI_B47_Variant_Basket100",
     "IGUI_B47_Variant_Basket101",
     "IGUI_B47_Variant_Basket102",
@@ -1695,5 +1478,56 @@
     "IGUI_B47_WoodBalusterRail_Piece34",
     "IGUI_B47_WoodBalusterRail_Piece35"
   ],
-  "scope": "Intact fence sections, their paid corners/posts and gates without vanilla recipes. No architectural railings, stair components, decorative wire, baskets or freestanding barriers."
+  "scope": "Intact fence sections, their paid corners/posts and gates without vanilla recipes. No architectural railings, stair components, decorative wire, baskets or freestanding barriers.",
+  "vanilla_equivalent_exclusions": [
+    {
+      "part_names": [
+        "B47_LowWood_PlainSection",
+        "B47_LowWood_PostEndedSection",
+        "B47_LowWood_Corner",
+        "B47_LowWood_Post"
+      ],
+      "sprites": [
+        "fencing_01_32",
+        "fencing_01_33",
+        "fencing_01_34",
+        "fencing_01_35",
+        "fencing_01_36",
+        "fencing_01_37"
+      ],
+      "native_entities": [
+        "Base.WoodFenceLvl1",
+        "Base.WoodFenceLvl2",
+        "Base.WoodFenceLvl3"
+      ],
+      "reason": "User-confirmed vanilla low wooden fence availability; omit these practical duplicates even though artwork differs."
+    },
+    {
+      "part_names": [
+        "B47_TallWoodGate_DoubleGate"
+      ],
+      "sprites": [
+        "fixtures_doors_fences_01_48",
+        "fixtures_doors_fences_01_49",
+        "fixtures_doors_fences_01_50",
+        "fixtures_doors_fences_01_51",
+        "fixtures_doors_fences_01_52",
+        "fixtures_doors_fences_01_53",
+        "fixtures_doors_fences_01_54",
+        "fixtures_doors_fences_01_55",
+        "fixtures_doors_fences_01_56",
+        "fixtures_doors_fences_01_57",
+        "fixtures_doors_fences_01_58",
+        "fixtures_doors_fences_01_59",
+        "fixtures_doors_fences_01_60",
+        "fixtures_doors_fences_01_61",
+        "fixtures_doors_fences_01_62",
+        "fixtures_doors_fences_01_63"
+      ],
+      "native_entities": [
+        "Base.DoubleDoor"
+      ],
+      "reason": "User-confirmed vanilla wide wooden gate availability; omit this practical duplicate even though artwork differs."
+    }
+  ]
 }

@@ -1,6 +1,6 @@
 # Fence and gate catalog
 
-Project Version: 1.1.0-dev.14
+Project Version: 1.1.0-dev.15
 
 Scope: intact fence sections, their paid corners/posts and gates without vanilla
 recipes. This is a PATCH correction to the unpublished 1.1.0 catalog expansion;
@@ -10,15 +10,15 @@ Display name: B47ANCE'd Fences & Gates. No package/deploy/upload/game launch.
 ## Follow-up vanilla recipe audit
 
 See [VANILLA_RECIPE_AUDIT.md](VANILLA_RECIPE_AUDIT.md) for the broader per-entity,
-all-script, skill/learning, Lua-route and identical-art comparison. None of the
-30 planned parts duplicates exact vanilla recipe art or a pixel-identical alias.
-The scoped list is unchanged. Vanilla has equivalent mechanical fence/gate
-functions in different styles; the additions supply unavailable artwork.
+all-script, skill/learning, Lua-route, identical-art and functional-overlap
+checks. Preview parts 11-14 (low wooden fence) and 29 (wide wooden gate) are
+removed because vanilla already builds them. White picket remains: no matching
+construction recipe or paint conversion was located; WoodPicket is a marker.
 
 ## Inventory and exclusions
 
 [VERIFIED installed source/art] Steam build 25485521; full runtime version UNKNOWN.
-The expansion has 30 separately paid entities in 13 grouped menu entries.
+The expansion has 25 separately paid entities in 12 grouped menu entries.
 The original 21 fences and iron gate, their recipes/costs and automatic junction
 behavior remain unchanged. Vanilla recipe artwork, including corner/post helpers
 and implicit double-gate opening states, is excluded from new recipes.
@@ -33,7 +33,7 @@ no substitute artwork is invented. Existing vanilla chain-link gates remain.
 
 catalog/vanilla-availability.json keeps the broader inspected tile inventory for
 explicit disposition accounting: vanilla recipe, original mod, new fence/gate,
-out of scope, or missing art. Excluded inventory entries are evidence, not
+reviewed vanilla functional equivalent, out of scope, or missing art. Excluded inventory entries are evidence, not
 shipped content. Exact vanilla entity-script paths and SHA-256 fingerprints,
 tile/atlas fingerprints and native builder fingerprints are retained.
 
@@ -43,14 +43,13 @@ tile/atlas fingerprints and native builder fingerprints are retained.
 | White picket fence | 3 | Woodwork 2 |
 | Post and wire fence | 2 | Woodwork 2 |
 | Short chain-link fence | 2 | MetalWelding 3 |
-| Low wooden fence | 4 | Woodwork 3 |
 | Sheet-metal panel fence | 4 | MetalWelding 5 |
 | Tall chain-link fence | 2 | MetalWelding 3 |
 | Razor-wire coil | 1 | MetalWelding 4 |
 | Round-top picket fence | 3 | Woodwork 2 |
 | Ornamental iron gate | 2 | MetalWelding 5 |
 | White picket gate | 1 | Woodwork 4 |
-| Tall wooden gate (both fence tops) | 2 | Woodwork 4 |
+| Tall wooden gate (both fence tops) | 1 | Woodwork 4 |
 | Green field gate | 1 | MetalWelding 5 |
 
 ## Authoring and recipe invariants
