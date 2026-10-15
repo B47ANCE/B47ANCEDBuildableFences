@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0-dev.13]
+
+Compatible PATCH metadata iteration: rename the displayed project to B47ANCE'd
+Fences & Gates in mod.info, the sandbox page, current README and future Workshop
+metadata. Workshop preparation derives the title from the reviewed mod.info
+name, including it in the upload VDF. Technical Mod ID, Workshop ID, repository,
+existing art, recipes, save identity and gameplay remain unchanged. No upload.
+
 ## [1.1.0-dev.12]
 
 Compatible MINOR-scope expansion within the unreleased 1.1.0 series: add 151

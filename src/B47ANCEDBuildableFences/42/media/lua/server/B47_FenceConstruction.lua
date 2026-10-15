@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.12
+-- B47ANCE'd Buildable Fences v1.1.0-dev.13
 -- Called by vanilla ISBuildIsoEntity before complete-object transmission.
 -- Never changes sprites, collision flags, orientation or post conversion.
 

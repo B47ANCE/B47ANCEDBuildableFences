@@ -1,6 +1,6 @@
 # Wrought-iron native corner connections
 
-Project Version: 1.1.0-dev.12
+Project Version: 1.1.0-dev.13
 
 Compatible MINOR-scope feature in the existing 1.1.0 prerelease series. The user
 explicitly chose vanilla-style junction posts included in paid section costs.

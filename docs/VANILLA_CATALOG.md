@@ -1,6 +1,6 @@
 # Expanded intact vanilla fence catalog
 
-Project Version: 1.1.0-dev.12
+Project Version: 1.1.0-dev.13
 
 Compatible MINOR feature within the unreleased 1.1.0 development series.
 User scope: all intact fences, railings and gates, but only assets that do not

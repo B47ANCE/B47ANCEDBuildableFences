@@ -101,6 +101,10 @@ def main():
     info = files['mod.info'].read_text(encoding='utf-8')
     if not re.search(r'^id=' + MOD + r'\r?$', info, re.M) or not re.search(r'^modversion=' + re.escape(version) + r'\r?$', info, re.M):
         raise ValueError('Runtime metadata mismatch')
+    names = re.findall(r'^name=([^\r\n]+)\r?$', info, re.M)
+    if len(names) != 1 or not names[0].strip():
+        raise ValueError('One nonempty mod display name required')
+    title = names[0].strip()
     subprocess.run([sys.executable, str(ROOT / 'scripts/check_versions.py'), '--root', str(ROOT)], check=True)
     stage = ROOT / 'dist/workshop-candidates' / version
     inventory = json.loads((ROOT / 'version-inventory.json').read_text())
@@ -119,7 +123,7 @@ def main():
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(data)
     (stage / 'preview.png').write_bytes(files['poster.png'].read_bytes())
-    (stage / 'workshop.txt').write_text('version=1\nid=' + item + "\ntitle=B47ANCE'd Buildable Fences\n" +
+    (stage / 'workshop.txt').write_text('version=1\nid=' + item + '\ntitle=' + title + '\n' +
         ''.join('description=' + line + '\n' for line in description.splitlines()), encoding='utf-8')
     with zipfile.ZipFile(package, 'x', zipfile.ZIP_DEFLATED) as archive:
         archive.writestr(MOD + '/common/', '')
@@ -130,12 +134,12 @@ def main():
         if (stage / 'Contents/mods' / name).read_bytes() != data:
             raise ValueError('Stage/source mismatch: ' + name)
     fields = {'appid': '108600', 'publishedfileid': item, 'contentfolder': str(stage / 'Contents'),
-              'description': description, 'changenote': note}
-    # Omit title/preview/visibility changes; publication must verify existing metadata.
+              'title': title, 'description': description, 'changenote': note}
+    # Title follows the reviewed mod.info name; preserve preview and visibility.
     (stage / 'upload.vdf').write_text('"workshopitem"\n{\n' + ''.join(
         '    "' + key + '" "' + vdf_string(value) + '"\n' for key, value in fields.items()) + '}\n', encoding='utf-8')
     manifest = {'version': version, 'commit': commit, 'mod_id': MOD, 'workshop_id': item,
-        'appid': 108600, 'game_minimum': '42.0', 'exact_runtime_build': 'UNKNOWN / NOT TESTED',
+        'display_name': title, 'appid': 108600, 'game_minimum': '42.0', 'exact_runtime_build': 'UNKNOWN / NOT TESTED',
         'publish_ready': False, 'G6_SP': 'NOT TESTED', 'G7_dedicated_MP': 'BLOCKED / NOT TESTED',
         'G8_release': 'BLOCKED', 'package_sha256': hashlib.sha256(package.read_bytes()).hexdigest(),
         'files': [{'path': name, 'sha256': hashlib.sha256(data).hexdigest()} for name, data in payload.items()]}

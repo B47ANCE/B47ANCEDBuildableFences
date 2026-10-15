@@ -1,3 +1,4 @@
-[b]Version 1.1.0-dev.12[/b]
+[b]Version 1.1.0-dev.13[/b]
 MP testing build - dedicated multiplayer NOT TESTED
+Project display name changed to B47ANCE'd Fences & Gates. Technical Mod ID and Workshop item remain unchanged.
 Added missing intact vanilla fence, railing and gate styles: 151 construction entries in 28 grouped menu choices. Only assets without vanilla recipes are added; existing vanilla and mod costs remain unchanged. Includes tall wooden, white picket, ornate iron and green field gates. Stair fragments are decorative components with native geometry. Four defined fence sprites lack installed textures and remain unavailable. Single-player NOT TESTED. Native placement, collision, wide-gate operation, save/reload and dedicated synchronization still require testing.

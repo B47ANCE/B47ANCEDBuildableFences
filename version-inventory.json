@@ -12,7 +12,7 @@
     },
     {
       "path": "src/B47ANCEDBuildableFences/42/README.txt",
-      "pattern": "^B47ANCE\\u0027d Buildable Fences \\u2014 v(?P<version>\\S+)$"
+      "pattern": "^B47ANCE\\u0027d Fences & Gates \\u2014 v(?P<version>\\S+)$"
     },
     {
       "path": "src/B47ANCEDBuildableFences/42/media/lua/client/B47_NonBlockingPosts_Client.lua",

@@ -1,6 +1,6 @@
-# B47ANCE'd Buildable Fences
+# B47ANCE'd Fences & Gates
 
-Project Version: 1.1.0-dev.12
+Project Version: 1.1.0-dev.13
 
 Standalone Build 42 mod, technical ID B47ANCEDBuildableFences, Workshop ID
 3817174798. Editable source is `src/B47ANCEDBuildableFences/42`.
@@ -115,3 +115,11 @@ wood styles. Decorative stair components retain their original native flags.
 Four textureless fencing_01_116-119 definitions remain explicitly blocked.
 See docs/VANILLA_CATALOG.md (VANILLA_CATALOG.md within docs) for scope, costs,
 source fingerprints, authority and required native SP/dedicated testing.
+
+## Display-name update (dev.13)
+
+The next authorized upload is titled B47ANCE'd Fences & Gates. The mod.info name
+is authoritative for future Workshop title metadata and the sandbox page uses
+the same display name. Technical ID B47ANCEDBuildableFences, Workshop item
+3817174798, repository and source directories remain unchanged. Existing manual
+artwork is preserved. This metadata change does not publish or deploy anything.

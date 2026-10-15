@@ -1,6 +1,6 @@
 # Workshop candidate description
 
-Project Version: 1.1.0-dev.12
+Project Version: 1.1.0-dev.13
 
 Canonical BBCode: WORKSHOP_DESCRIPTION.txt. Candidate describes six fence-family
 selectors, each with native per-part recipes, plus a separate iron gate.
@@ -81,3 +81,11 @@ workshop-description-final-20261010.txt for publication evidence.
 The developer test kit is removed: no kit menu, command, spawn handler or kit
 translation keys ship. Earlier kit instructions describe historical dev.5.
 Fence construction and the selector/gate are unchanged. G6/G7 NOT TESTED; G8 BLOCKED.
+
+## Display-name update (dev.13)
+
+The next authorized upload is titled B47ANCE'd Fences & Gates. The mod.info name
+is authoritative for future Workshop title metadata and the sandbox page uses
+the same display name. Technical ID B47ANCEDBuildableFences, Workshop item
+3817174798, repository and source directories remain unchanged. Existing manual
+artwork is preserved. This metadata change does not publish or deploy anything.

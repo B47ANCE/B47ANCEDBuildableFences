@@ -153,6 +153,8 @@ action={corner=nil,recipe='unchanged'}
             for option in ('MilitaryCornerPosts','SlopedWoodCornerPosts','StraightWoodCornerPosts'):
                 self.assertTrue(actual.pop('Sandbox_B47_'+option))
                 self.assertTrue(actual.pop('Sandbox_B47_'+option+'_tooltip'))
+            self.assertEqual(actual['Sandbox_B47ANCEDBuildableFences'], "B47ANCE'd Fences & Gates")
+            actual['Sandbox_B47ANCEDBuildableFences'] = previous['Sandbox_B47ANCEDBuildableFences']
             self.assertEqual(actual, previous)
         self.assertTrue((overlay / 'sandbox-options.txt').read_text().startswith((source / 'sandbox-options.txt').read_text()))
 

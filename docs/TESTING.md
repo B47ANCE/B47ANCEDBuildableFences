@@ -1,6 +1,19 @@
 # Current validation
 
-Project Version: 1.1.0-dev.12
+Project Version: 1.1.0-dev.13
+
+
+## dev.13 rename validation
+
+[TESTED Windows offline Python/Lupa, 2026-10-15] Metadata-only PATCH iteration:
+59 available regressions PASS; five missing original-baseline checks BLOCKED.
+`python scripts/test_current.py --available`,
+`python scripts/generate_expanded_catalog.py`,
+`python scripts/check_versions.py --root .` and
+`python scripts/prepare_workshop.py` (read-only preflight) all PASS.
+Native SP/dedicated evidence remains absent.
+The dev.12 record below is historical at its tested version. G6 NOT TESTED;
+G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED. No packaging or upload.
 
 
 ## dev.12 current validation
