@@ -1,6 +1,6 @@
 # Version inventory and provenance
 
-Project Version: 1.1.0-dev.10
+Project Version: 1.1.0-dev.11
 
 Canonical VERSION migrated from downloaded mod.info 1.0.37 at the user's
 direction. MINOR classification: four compatible menu/entities added, no ID,

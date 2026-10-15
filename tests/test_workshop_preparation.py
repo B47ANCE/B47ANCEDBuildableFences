@@ -13,7 +13,8 @@ from prepare_workshop import MOD, runtime_files, verify_zip
 class WorkshopPreparation(unittest.TestCase):
     def test_actual_payload_has_no_test_exports_or_diagnostics(self):
         files = runtime_files()
-        self.assertEqual(len(files), 95)
+        self.assertEqual(len(files), 96)
+        self.assertEqual(files["media/ui/B47ANCEDBuildableFences_icon.png"].read_bytes(), (ROOT/"assets/branding/B47_ICON_SMALL.png").read_bytes())
         self.assertIn('media/lua/shared/B47_CohesiveModel.lua', files)
         presentation = files['media/lua/client/B47_CohesivePresentation.lua'].read_text()
         self.assertNotIn('V.description=', presentation)

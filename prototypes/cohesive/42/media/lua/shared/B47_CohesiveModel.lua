@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.10
+-- B47ANCE'd Buildable Fences v1.1.0-dev.11
 -- UI selection model only. No topology, world scans or permanent state writes.
 B47Cohesive = B47Cohesive or {}
 local V=B47Cohesive

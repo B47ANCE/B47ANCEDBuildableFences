@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.0-dev.11]
+- Add user-supplied fallback icon/thumbnail; preserve manually supplied artwork. Asset-only iteration; gameplay unchanged.
+- Offline branding/version checks only; earlier validation remains historical at 1.1.0-dev.10. No new SP/dedicated MP evidence.
+
 ## [1.1.0-dev.10]
 
 Compatible MINOR-scope expansion within the 1.1.0 prerelease series: extend

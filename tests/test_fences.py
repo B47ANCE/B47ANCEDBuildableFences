@@ -164,12 +164,14 @@ class SourceContracts(unittest.TestCase):
         version = (ROOT / "VERSION").read_text(encoding="utf-8").strip().encode()
         before = json.loads((SKILL_HISTORY / "source-hashes.json").read_text(encoding="utf-8"))
         paths = {p.relative_to(MOD).as_posix() for p in MOD.rglob("*") if p.is_file()}
-        self.assertEqual(paths, {r["path"] for r in before})
+        self.assertEqual(paths - {"media/ui/B47ANCEDBuildableFences_icon.png"}, {r["path"] for r in before})
         for record in before:
             if record["path"] in (ENTITY, "README.txt"):
                 continue
             path = MOD / record["path"]
             raw = path.read_bytes()
+            if path.name == "mod.info":
+                raw = re.sub(rb"(?:\r?\n)?icon=media/ui/B47ANCEDBuildableFences_icon.png\r?\n", b"", raw)
             if path.suffix == ".lua" or path.name == "mod.info":
                 raw = raw.replace(version, b"CURRENT_VERSION")
             self.assertEqual(hashlib.sha256(raw).hexdigest(), record["version_neutral_sha256"], record["path"])
