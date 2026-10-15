@@ -1,6 +1,6 @@
 # Current validation
 
-Project Version: 1.1.0-dev.10
+Project Version: 1.1.0-dev.11
 
 [TESTED Windows offline Python/Lupa, 2026-10-14] 49 available tests PASS.
 Five original-installed-baseline methods are explicitly BLOCKED because the

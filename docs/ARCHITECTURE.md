@@ -1,6 +1,6 @@
 # Architecture
 
-Project Version: 1.1.0-dev.10
+Project Version: 1.1.0-dev.11
 
 See FAMILY_SELECTORS.md for the current six-family design, native authority,
 recipe preservation, configuration decision and runtime gates. The overlay is

@@ -1,6 +1,6 @@
 # B47ANCE'd Buildable Fences
 
-Project Version: 1.1.0-dev.10
+Project Version: 1.1.0-dev.11
 
 Standalone Build 42 mod, technical ID B47ANCEDBuildableFences, Workshop ID
 3817174798. Editable source is `src/B47ANCEDBuildableFences/42`.
