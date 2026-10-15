@@ -124,3 +124,13 @@ is authoritative for future Workshop title metadata and the sandbox page uses
 the same display name. Technical ID B47ANCEDBuildableFences, Workshop item
 3817174798, repository and source directories remain unchanged. Existing manual
 artwork is preserved. This metadata change does not publish or deploy anything.
+
+## Vanilla recipe audit
+
+The follow-up [vanilla recipe audit](docs/VANILLA_RECIPE_AUDIT.md) checks all
+installed construction definitions, skill/learning gates, Lua menu routes and
+identical-art aliases. All 30 proposed fence/gate parts remain distinct from
+vanilla recipe artwork. Existing vanilla recipes are retained; equivalent
+mechanical functions in other visual styles already exist. Run
+`python scripts/audit_vanilla_recipes.py` before changing the expansion catalog.
+No runtime content changed in this audit-only follow-up.

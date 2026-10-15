@@ -101,6 +101,14 @@
     {
       "path": "docs/VANILLA_CATALOG.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/VANILLA_RECIPE_AUDIT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "catalog/vanilla-recipe-audit.json",
+      "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\",$"
     }
   ],
   "changelog": {

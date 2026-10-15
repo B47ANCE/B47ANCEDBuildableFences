@@ -7,6 +7,14 @@ recipes. This is a PATCH correction to the unpublished 1.1.0 catalog expansion;
 the overall PR remains a compatible MINOR feature within the unreleased series.
 Display name: B47ANCE'd Fences & Gates. No package/deploy/upload/game launch.
 
+## Follow-up vanilla recipe audit
+
+See [VANILLA_RECIPE_AUDIT.md](VANILLA_RECIPE_AUDIT.md) for the broader per-entity,
+all-script, skill/learning, Lua-route and identical-art comparison. None of the
+30 planned parts duplicates exact vanilla recipe art or a pixel-identical alias.
+The scoped list is unchanged. Vanilla has equivalent mechanical fence/gate
+functions in different styles; the additions supply unavailable artwork.
+
 ## Inventory and exclusions
 
 [VERIFIED installed source/art] Steam build 25485521; full runtime version UNKNOWN.

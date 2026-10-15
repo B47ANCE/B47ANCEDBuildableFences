@@ -2,6 +2,8 @@
 
 ## [1.1.0-dev.14]
 
+- Audit-only follow-up: compare all 30 additions against all installed construction scripts, Lua routes and pixel-identical art aliases. No duplicate recipe art found; add repeatable checker and regressions. Runtime payload and recipes unchanged.
+
 Compatible PATCH correction to the unpublished expansion: restrict new content
 to 30 fence/gate parts in 13 groups. Remove architectural/stair railings,
 balustrades, decorative loose wire, gabion baskets and crowd-control barriers,

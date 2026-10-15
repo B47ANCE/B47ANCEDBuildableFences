@@ -3,6 +3,26 @@
 Project Version: 1.1.0-dev.14
 
 
+## dev.14 vanilla-recipe re-audit
+
+[TESTED Windows offline Python/Lupa/Pillow, 2026-10-15] 66 available tests PASS,
+including six new recipe-audit regressions. Five missing original-installed-
+baseline checks remain BLOCKED. Current candidate recipe count stays 30 in 13
+groups. No runtime file or gameplay recipe changed in this audit-only follow-up.
+`python scripts/audit_vanilla_recipes.py` PASS: all 1,004 script files, 1,407 Lua
+files, 194 construction entities and their 986 supplied sprite identities;
+no exact/identical-art duplicates and no unresolved relevant Lua literal routes.
+The checker includes both main and floor 2x atlases, skill/learning conditions,
+implicit gate opening states, split entity definitions and legacy upgrade data.
+Exact additional commands: `python -m unittest discover -s tests -p test_vanilla_recipe_audit.py -v`,
+`python scripts/test_current.py --available`, `python scripts/check_versions.py --root .`,
+`python scripts/generate_expanded_catalog.py`, `python scripts/prepare_workshop.py`.
+All PASS; the last is a read-only preflight of the unchanged 100-file payload.
+Source availability is not actual PZ runtime proof. G6/G7 remain NOT TESTED,
+with dedicated G7 and stable G8 BLOCKED. No package, deploy or publish.
+Detailed results: VANILLA_RECIPE_AUDIT.md and catalog/vanilla-recipe-audit.json.
+
+
 ## dev.14 scope correction
 
 Current expansion: 30 fence/gate parts in 13 groups. Architectural/stair railings,
