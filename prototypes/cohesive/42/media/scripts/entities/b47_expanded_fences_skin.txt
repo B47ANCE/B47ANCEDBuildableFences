@@ -1,0 +1,156 @@
+module Base
+{
+    xuiSkin default
+    {
+        entity ES_B47_OrnamentalIron_PlainSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_OrnamentalIron_PlainSection,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_OrnamentalIron_Corner
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_OrnamentalIron_Corner,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_OrnamentalIron_Post
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_OrnamentalIron_Post,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_WhitePicket_PlainSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_WhitePicket_PlainSection,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_WhitePicket_Corner
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_WhitePicket_Corner,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_WhitePicket_Post
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_WhitePicket_Post,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_PostAndWire_PlainSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_PostAndWire_PlainSection,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_PostAndWire_Corner
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_PostAndWire_Corner,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_ShortChainLink_PostEndedSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_ShortChainLink_PostEndedSection,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_ShortChainLink_Corner
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_ShortChainLink_Corner,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_MetalPanel_PlainSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_MetalPanel_PlainSection,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_MetalPanel_WindowSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_MetalPanel_WindowSection,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_MetalPanel_Corner
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_MetalPanel_Corner,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_MetalPanel_Post
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_MetalPanel_Post,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_TallChainLink_PostEndedSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_TallChainLink_PostEndedSection,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_TallChainLink_Corner
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_TallChainLink_Corner,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_RazorCoil_PlainSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_RazorCoil_PlainSection,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_RoundPicket_PlainSection
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_RoundPicket_PlainSection,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_RoundPicket_Corner
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_RoundPicket_Corner,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_RoundPicket_Post
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_RoundPicket_Post,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_OrnamentalIronGate_SingleGate
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_OrnamentalIronGate_SingleGate,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_OrnamentalIronGate_DoubleGate
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_OrnamentalIronGate_DoubleGate,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_WhitePicketGate_SingleGate
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_WhitePicketGate_SingleGate,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_TallWoodGate_SingleGate
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_TallWoodGate_SingleGate,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+        entity ES_B47_FieldGate_DoubleGate
+        {
+            LuaWindowClass = ISEntityWindow,
+            DisplayName = IGUI_B47_FieldGate_DoubleGate,
+            Icon = B47ANCEDBuildableFences_icon,
+        }
+    }
+}

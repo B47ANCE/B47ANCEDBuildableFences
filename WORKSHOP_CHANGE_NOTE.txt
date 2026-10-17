@@ -1,3 +1,3 @@
-[b]Version 1.1.0-dev.11[/b]
+[b]Version 1.1.0-dev.15[/b]
 MP testing build - dedicated multiplayer NOT TESTED
-Extend vanilla-style junction posts to military, sloped-top wooden and straight-top wooden fences. Each uses its own vanilla post and a server-controlled setting, enabled by default. Existing part costs and server authority remain unchanged. Security and razor-wire remain unchanged. Single-player NOT TESTED. Existing fences are not retrofitted and orphan posts are not automatically removed.
+Project display name: B47ANCE'd Fences & Gates. Add 25 missing intact fence and gate parts in 12 grouped menu entries, excluding vanilla recipe artwork and reviewed functional duplicates. Low wooden fence pieces and the wide wooden gate are omitted because vanilla already builds them. Preserve original mod recipes, costs and server authority. Includes shared tall wooden gates for both fence tops, white picket, ornamental iron and green field gates. This expansion contains fences and gates only. Single-player NOT TESTED. Placement, collision, wide-gate operation, save/reload and dedicated synchronization still require testing.

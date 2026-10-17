@@ -1,6 +1,126 @@
 # Current validation
 
-Project Version: 1.1.0-dev.11
+Project Version: 1.1.0-dev.15
+
+
+## dev.15 functional-duplicate correction
+
+Current expansion: 25 additions in 12 groups. Remove preview 11-14 (low wood)
+and 29 (wide wood gate). Exact-art checks are supplemented with reviewed native
+functional exclusions. White picket marker/painting evidence is source-only.
+[TESTED Windows offline Python/Lupa/Pillow, 2026-10-15] 68 available tests PASS;
+five original-installed-baseline checks remain BLOCKED by the absent download.
+Exact commands, all PASS:
+```
+python scripts/test_current.py --available
+python scripts/generate_expanded_catalog.py
+python scripts/audit_vanilla_recipes.py
+python scripts/check_versions.py --root .
+python scripts/prepare_workshop.py
+```
+The last command is read-only: 100 runtime files, no shipped tests/debug code
+or custom Java/JAR. The audit scans 1,004 script files, 1,407 Lua files and 194
+construction entities. Original recipe/callback contracts PASS. All 25 retained
+catalog parts compare identically to dev.14 for faces, inputs/tools, skills,
+time and health. Versioned package is absent/deferred; no --prepare was run.
+G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.
+No package, deployment, Workshop upload or native launch.
+
+## Historical dev.14 validation
+
+The following dev.14 counts and exact-art-only conclusions are historical.
+They do not establish functional uniqueness or current runtime validation.
+
+## dev.14 vanilla-recipe re-audit
+
+[TESTED Windows offline Python/Lupa/Pillow, 2026-10-15] 66 available tests PASS,
+including six new recipe-audit regressions. Five missing original-installed-
+baseline checks remain BLOCKED. The then-current candidate recipe count stayed 30 in 13
+groups. No runtime file or gameplay recipe changed in this audit-only follow-up.
+`python scripts/audit_vanilla_recipes.py` PASS: all 1,004 script files, 1,407 Lua
+files, 194 construction entities and their 986 supplied sprite identities;
+no exact/identical-art duplicates and no unresolved relevant Lua literal routes.
+The checker includes both main and floor 2x atlases, skill/learning conditions,
+implicit gate opening states, split entity definitions and legacy upgrade data.
+Exact additional commands: `python -m unittest discover -s tests -p test_vanilla_recipe_audit.py -v`,
+`python scripts/test_current.py --available`, `python scripts/check_versions.py --root .`,
+`python scripts/generate_expanded_catalog.py`, `python scripts/prepare_workshop.py`.
+All PASS; the last is a read-only preflight of the unchanged 100-file payload.
+Source availability is not actual PZ runtime proof. G6/G7 remain NOT TESTED,
+with dedicated G7 and stable G8 BLOCKED. No package, deploy or publish.
+Detailed results: VANILLA_RECIPE_AUDIT.md and catalog/vanilla-recipe-audit.json.
+
+
+## dev.14 scope correction
+
+At dev.14: 30 fence/gate parts in 13 groups. Architectural/stair railings,
+decorative wire, baskets and other freestanding barriers are removed from all
+runtime definitions, menus, policies and 29 translation maps. The generator and
+scope regression reject their return; source inventory retains explicit reasons.
+[TESTED Windows offline Python/Lupa, 2026-10-15] 60 available tests PASS,
+including 11 catalog tests. Five original-installed-baseline checks remain
+BLOCKED because the old installed Workshop download is absent.
+Exact commands from repository root:
+```
+python -m unittest discover -s tests -p test_expanded_catalog.py -v
+python scripts/test_current.py --available
+python scripts/generate_expanded_catalog.py
+python scripts/check_versions.py --root .
+python scripts/prepare_workshop.py
+```
+All PASS. Preflight checks 100 runtime files, no shipped tests/diagnostics or
+custom Java/JAR; package validation is deferred because no package was requested.
+G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.
+No package, deployment, Workshop upload or native launch.
+
+## Historical validation records
+
+The following dev.13/dev.12 observations retain their original scope and are not
+current validation or feature claims.
+
+
+## dev.13 rename validation
+
+[TESTED Windows offline Python/Lupa, 2026-10-15] Metadata-only PATCH iteration:
+59 available regressions PASS; five missing original-baseline checks BLOCKED.
+`python scripts/test_current.py --available`,
+`python scripts/generate_expanded_catalog.py`,
+`python scripts/check_versions.py --root .` and
+`python scripts/prepare_workshop.py` (read-only preflight) all PASS.
+Native SP/dedicated evidence remains absent.
+The dev.12 record below is historical at its tested version. G6 NOT TESTED;
+G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED. No packaging or upload.
+
+
+## dev.12 historical validation
+
+[TESTED Windows offline Python/Lupa, 2026-10-15] 59 available tests PASS,
+including ten catalog regressions over all 151 new entries. Five missing
+original-installed-baseline methods remain explicitly BLOCKED, not PASS.
+Coverage: no vanilla recipe duplicates; complete bounded asset disposition;
+real item IDs and paid inputs; generated entity/skin/Lua/29-language parity;
+family cycling both directions; recipe/action freeze and affordability;
+closed/open and native double-gate layout; exact server name/sprite/orientation
+validation, client/malformed-object rejection, health bounds/defaults and
+unchanged original recipe/callback fingerprints. Offline mocks are not PZ.
+
+Exact commands from repository root (local Python/Lupa):
+```
+python -m unittest discover -s tests -p test_expanded_catalog.py -v
+python scripts/test_current.py --available
+python scripts/generate_expanded_catalog.py
+python scripts/check_versions.py --root .
+python scripts/prepare_workshop.py
+```
+All PASS. Read-only preparation checks 100 runtime files, no shipped tests,
+diagnostics or custom Java/JAR; case/require and source composition checks PASS.
+Version check defers absent new packages. No package, deploy, game/server launch
+or Workshop upload. G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED;
+stable-release G8 BLOCKED. Native matrix: VANILLA_CATALOG.md.
+
+## Historical validation from earlier iterations
+
+The observations below retain their original scope and are not dev.12 proof.
 
 [TESTED Windows offline Python/Lupa, 2026-10-14] 49 available tests PASS.
 Five original-installed-baseline methods are explicitly BLOCKED because the

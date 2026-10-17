@@ -1,0 +1,6 @@
+{
+  "src/B47ANCEDBuildableFences/42/media/scripts/generated/entities/walls/entity_b47_buildable_fences.txt": "3cdcd173121b489faacc10944e3dd38d68671f2e9a031f7e869b1708fce1affc",
+  "prototypes/cohesive/42/media/scripts/entities/b47_cohesive_gate.txt": "f0877d3a5fa34fc48bbf82201ff1be49a43fb027b5a68956fa80130b637a5f4c",
+  "prototypes/cohesive/42/media/lua/server/B47_CohesiveAuthority.lua": "a96dbade25b5f652cef4a2f292318c61003ebc28eed0d51cd80756bdb88014fc",
+  "prototypes/cohesive/42/media/lua/server/B47_WroughtIronConnections.lua": "dd4671cc273c7b1fa6e68307fe1e2f359f2ec91cb3d8f8608d569aade1418e11"
+}

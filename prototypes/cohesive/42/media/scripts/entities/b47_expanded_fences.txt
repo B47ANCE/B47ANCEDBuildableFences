@@ -1,0 +1,1121 @@
+module Base
+{
+    entity B47_OrnamentalIron_PlainSection
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_OrnamentalIron_PlainSection,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 500,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_2,
+                }
+            }
+            face N
+            {
+                layer
+                {
+                    row = fencing_01_1,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildPoleFence,
+            time = 200,
+            category = Fences,
+            SkillRequired = MetalWelding:3,
+            xpAward = MetalWelding:30,
+            inputs
+            {
+                item 2 [Base.BlowTorch] flags[DontRecordInput],
+                item 2 [Base.MetalPipe],
+                item 2 [Base.WeldingRods] flags[DontRecordInput],
+                item 2 [Base.ScrapMetal],
+            }
+        }
+    }
+    entity B47_OrnamentalIron_Corner
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_OrnamentalIron_Corner,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 500,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_3,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildPoleFence,
+            time = 400,
+            category = Fences,
+            SkillRequired = MetalWelding:3,
+            xpAward = MetalWelding:30,
+            inputs
+            {
+                item 4 [Base.BlowTorch] flags[DontRecordInput],
+                item 4 [Base.MetalPipe],
+                item 4 [Base.WeldingRods] flags[DontRecordInput],
+                item 4 [Base.ScrapMetal],
+            }
+        }
+    }
+    entity B47_OrnamentalIron_Post
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_OrnamentalIron_Post,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 100,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_0,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildPoleFence,
+            time = 100,
+            category = Fences,
+            SkillRequired = MetalWelding:3,
+            xpAward = MetalWelding:30,
+            inputs
+            {
+                item 2 [Base.BlowTorch] flags[DontRecordInput],
+                item 1 [Base.MetalPipe],
+                item 2 [Base.WeldingRods] flags[DontRecordInput],
+                item 1 [Base.ScrapMetal],
+            }
+        }
+    }
+    entity B47_WhitePicket_PlainSection
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_WhitePicket_PlainSection,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 400,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_4,
+                }
+            }
+            face N
+            {
+                layer
+                {
+                    row = fencing_01_5,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildWallHammer,
+            time = 200,
+            category = Fences,
+            SkillRequired = Woodwork:2,
+            xpAward = Woodwork:20,
+            inputs
+            {
+                item 1 tags[base:hammer] mode:keep flags[Prop1;MayDegradeVeryLight],
+                item 2 [Base.Plank],
+                item 4 [Base.Nails],
+            }
+        }
+    }
+    entity B47_WhitePicket_Corner
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_WhitePicket_Corner,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 400,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_6,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildWallHammer,
+            time = 400,
+            category = Fences,
+            SkillRequired = Woodwork:2,
+            xpAward = Woodwork:20,
+            inputs
+            {
+                item 1 tags[base:hammer] mode:keep flags[Prop1;MayDegradeVeryLight],
+                item 4 [Base.Plank],
+                item 8 [Base.Nails],
+            }
+        }
+    }
+    entity B47_WhitePicket_Post
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_WhitePicket_Post,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 100,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_7,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildWallHammer,
+            time = 100,
+            category = Fences,
+            SkillRequired = Woodwork:2,
+            xpAward = Woodwork:20,
+            inputs
+            {
+                item 1 tags[base:hammer] mode:keep flags[Prop1;MayDegradeVeryLight],
+                item 1 [Base.Plank],
+                item 2 [Base.Nails],
+            }
+        }
+    }
+    entity B47_PostAndWire_PlainSection
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_PostAndWire_PlainSection,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 500,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_16,
+                }
+            }
+            face N
+            {
+                layer
+                {
+                    row = fencing_01_17,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildWallHammer,
+            time = 200,
+            category = Fences,
+            SkillRequired = Woodwork:2,
+            xpAward = Woodwork:20,
+            inputs
+            {
+                item 1 tags[base:hammer] mode:keep flags[Prop1;MayDegradeVeryLight],
+                item 1 [Base.Plank],
+                item 2 [Base.Nails],
+                item 2 [Base.Wire],
+            }
+        }
+    }
+    entity B47_PostAndWire_Corner
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_PostAndWire_Corner,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 500,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_18,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildWallHammer,
+            time = 400,
+            category = Fences,
+            SkillRequired = Woodwork:2,
+            xpAward = Woodwork:20,
+            inputs
+            {
+                item 1 tags[base:hammer] mode:keep flags[Prop1;MayDegradeVeryLight],
+                item 2 [Base.Plank],
+                item 4 [Base.Nails],
+                item 4 [Base.Wire],
+            }
+        }
+    }
+    entity B47_ShortChainLink_PostEndedSection
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_ShortChainLink_PostEndedSection,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 500,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_27,
+                }
+            }
+            face N
+            {
+                layer
+                {
+                    row = fencing_01_24,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildWireFence,
+            time = 200,
+            category = Fences,
+            SkillRequired = MetalWelding:3,
+            xpAward = MetalWelding:30,
+            inputs
+            {
+                item 2 [Base.BlowTorch] flags[DontRecordInput],
+                item 2 [Base.MetalPipe],
+                item 2 [Base.WeldingRods] flags[DontRecordInput],
+                item 2 [Base.Wire],
+            }
+        }
+    }
+    entity B47_ShortChainLink_Corner
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_ShortChainLink_Corner,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 500,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_28,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildWireFence,
+            time = 400,
+            category = Fences,
+            SkillRequired = MetalWelding:3,
+            xpAward = MetalWelding:30,
+            inputs
+            {
+                item 4 [Base.BlowTorch] flags[DontRecordInput],
+                item 4 [Base.MetalPipe],
+                item 4 [Base.WeldingRods] flags[DontRecordInput],
+                item 4 [Base.Wire],
+            }
+        }
+    }
+    entity B47_MetalPanel_PlainSection
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_MetalPanel_PlainSection,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 500,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_40,
+                }
+            }
+            face N
+            {
+                layer
+                {
+                    row = fencing_01_41,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildPoleFence,
+            time = 200,
+            category = Fences,
+            SkillRequired = MetalWelding:5,
+            xpAward = MetalWelding:50,
+            inputs
+            {
+                item 2 [Base.BlowTorch] flags[DontRecordInput],
+                item 2 [Base.MetalPipe],
+                item 2 [Base.WeldingRods] flags[DontRecordInput],
+                item 2 [Base.ScrapMetal],
+            }
+        }
+    }
+    entity B47_MetalPanel_WindowSection
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_MetalPanel_WindowSection,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 500,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_44,
+                }
+            }
+            face N
+            {
+                layer
+                {
+                    row = fencing_01_45,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildPoleFence,
+            time = 200,
+            category = Fences,
+            SkillRequired = MetalWelding:5,
+            xpAward = MetalWelding:50,
+            inputs
+            {
+                item 2 [Base.BlowTorch] flags[DontRecordInput],
+                item 2 [Base.MetalPipe],
+                item 2 [Base.WeldingRods] flags[DontRecordInput],
+                item 2 [Base.ScrapMetal],
+            }
+        }
+    }
+    entity B47_MetalPanel_Corner
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_MetalPanel_Corner,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 500,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_42,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildPoleFence,
+            time = 400,
+            category = Fences,
+            SkillRequired = MetalWelding:5,
+            xpAward = MetalWelding:50,
+            inputs
+            {
+                item 4 [Base.BlowTorch] flags[DontRecordInput],
+                item 4 [Base.MetalPipe],
+                item 4 [Base.WeldingRods] flags[DontRecordInput],
+                item 4 [Base.ScrapMetal],
+            }
+        }
+    }
+    entity B47_MetalPanel_Post
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_MetalPanel_Post,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 100,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_43,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildPoleFence,
+            time = 100,
+            category = Fences,
+            SkillRequired = MetalWelding:5,
+            xpAward = MetalWelding:50,
+            inputs
+            {
+                item 2 [Base.BlowTorch] flags[DontRecordInput],
+                item 1 [Base.MetalPipe],
+                item 2 [Base.WeldingRods] flags[DontRecordInput],
+                item 1 [Base.ScrapMetal],
+            }
+        }
+    }
+    entity B47_TallChainLink_PostEndedSection
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_TallChainLink_PostEndedSection,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 500,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_59,
+                }
+            }
+            face N
+            {
+                layer
+                {
+                    row = fencing_01_56,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildWireFence,
+            time = 200,
+            category = Fences,
+            SkillRequired = MetalWelding:3,
+            xpAward = MetalWelding:30,
+            inputs
+            {
+                item 2 [Base.BlowTorch] flags[DontRecordInput],
+                item 2 [Base.MetalPipe],
+                item 2 [Base.WeldingRods] flags[DontRecordInput],
+                item 2 [Base.Wire],
+            }
+        }
+    }
+    entity B47_TallChainLink_Corner
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_TallChainLink_Corner,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 500,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_60,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildWireFence,
+            time = 400,
+            category = Fences,
+            SkillRequired = MetalWelding:3,
+            xpAward = MetalWelding:30,
+            inputs
+            {
+                item 4 [Base.BlowTorch] flags[DontRecordInput],
+                item 4 [Base.MetalPipe],
+                item 4 [Base.WeldingRods] flags[DontRecordInput],
+                item 4 [Base.Wire],
+            }
+        }
+    }
+    entity B47_RazorCoil_PlainSection
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_RazorCoil_PlainSection,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 500,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_109,
+                }
+            }
+            face N
+            {
+                layer
+                {
+                    row = fencing_01_108,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildWireFence,
+            time = 200,
+            category = Fences,
+            SkillRequired = MetalWelding:4,
+            xpAward = MetalWelding:40,
+            inputs
+            {
+                item 2 [Base.BlowTorch] flags[DontRecordInput],
+                item 2 [Base.MetalPipe],
+                item 2 [Base.WeldingRods] flags[DontRecordInput],
+                item 2 [Base.Wire],
+            }
+        }
+    }
+    entity B47_RoundPicket_PlainSection
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_RoundPicket_PlainSection,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 400,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_121,
+                }
+            }
+            face N
+            {
+                layer
+                {
+                    row = fencing_01_120,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildWallHammer,
+            time = 200,
+            category = Fences,
+            SkillRequired = Woodwork:2,
+            xpAward = Woodwork:20,
+            inputs
+            {
+                item 1 tags[base:hammer] mode:keep flags[Prop1;MayDegradeVeryLight],
+                item 2 [Base.Plank],
+                item 4 [Base.Nails],
+            }
+        }
+    }
+    entity B47_RoundPicket_Corner
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_RoundPicket_Corner,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 400,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_122,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildWallHammer,
+            time = 400,
+            category = Fences,
+            SkillRequired = Woodwork:2,
+            xpAward = Woodwork:20,
+            inputs
+            {
+                item 1 tags[base:hammer] mode:keep flags[Prop1;MayDegradeVeryLight],
+                item 4 [Base.Plank],
+                item 8 [Base.Nails],
+            }
+        }
+    }
+    entity B47_RoundPicket_Post
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_RoundPicket_Post,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 100,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            LogicClass = WoodenWall,
+            face W
+            {
+                layer
+                {
+                    row = fencing_01_123,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildWallHammer,
+            time = 100,
+            category = Fences,
+            SkillRequired = Woodwork:2,
+            xpAward = Woodwork:20,
+            inputs
+            {
+                item 1 tags[base:hammer] mode:keep flags[Prop1;MayDegradeVeryLight],
+                item 1 [Base.Plank],
+                item 2 [Base.Nails],
+            }
+        }
+    }
+    entity B47_OrnamentalIronGate_SingleGate
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_OrnamentalIronGate_SingleGate,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 500,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            face W
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_0,
+                }
+            }
+            face N
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_1,
+                }
+            }
+            face W_OPEN
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_2,
+                }
+            }
+            face N_OPEN
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_3,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildPoleFence,
+            time = 200,
+            category = Fences,
+            SkillRequired = MetalWelding:5,
+            xpAward = MetalWelding:50,
+            inputs
+            {
+                item 2 [Base.BlowTorch] flags[DontRecordInput],
+                item 2 [Base.MetalPipe],
+                item 2 [Base.WeldingRods] flags[DontRecordInput],
+                item 2 [Base.ScrapMetal],
+                item 2 [Base.Hinge],
+                item 1 [Base.Doorknob],
+            }
+        }
+    }
+    entity B47_OrnamentalIronGate_DoubleGate
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_OrnamentalIronGate_DoubleGate,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 500,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            face W
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_33,
+                    row = fixtures_doors_fences_01_32,
+                    row = fixtures_doors_fences_01_41,
+                    row = fixtures_doors_fences_01_40,
+                }
+            }
+            face N
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_34 fixtures_doors_fences_01_35 fixtures_doors_fences_01_42 fixtures_doors_fences_01_43,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildPoleFence,
+            time = 400,
+            category = Fences,
+            SkillRequired = MetalWelding:5,
+            xpAward = MetalWelding:50,
+            inputs
+            {
+                item 4 [Base.BlowTorch] flags[DontRecordInput],
+                item 4 [Base.MetalPipe],
+                item 4 [Base.WeldingRods] flags[DontRecordInput],
+                item 4 [Base.ScrapMetal],
+                item 4 [Base.Hinge],
+                item 2 [Base.Doorknob],
+            }
+        }
+    }
+    entity B47_WhitePicketGate_SingleGate
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_WhitePicketGate_SingleGate,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 400,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            face W
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_8,
+                }
+            }
+            face N
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_9,
+                }
+            }
+            face W_OPEN
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_10,
+                }
+            }
+            face N_OPEN
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_11,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildWallHammer,
+            time = 200,
+            category = Fences,
+            SkillRequired = Woodwork:4,
+            xpAward = Woodwork:40,
+            inputs
+            {
+                item 1 tags[base:hammer] mode:keep flags[Prop1;MayDegradeVeryLight],
+                item 2 [Base.Plank],
+                item 4 [Base.Nails],
+                item 2 [Base.Hinge],
+                item 1 [Base.Doorknob],
+            }
+        }
+    }
+    entity B47_TallWoodGate_SingleGate
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_TallWoodGate_SingleGate,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 400,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            face W
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_12,
+                }
+            }
+            face N
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_13,
+                }
+            }
+            face W_OPEN
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_14,
+                }
+            }
+            face N_OPEN
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_15,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildWallHammer,
+            time = 200,
+            category = Fences,
+            SkillRequired = Woodwork:4,
+            xpAward = Woodwork:40,
+            inputs
+            {
+                item 1 tags[base:hammer] mode:keep flags[Prop1;MayDegradeVeryLight],
+                item 2 [Base.Plank],
+                item 4 [Base.Nails],
+                item 2 [Base.Hinge],
+                item 1 [Base.Doorknob],
+            }
+        }
+    }
+    entity B47_FieldGate_DoubleGate
+    {
+        component UiConfig
+        {
+            xuiSkin = default,
+            entityStyle = ES_B47_FieldGate_DoubleGate,
+            uiEnabled = false,
+        }
+        component SpriteConfig
+        {
+            OnCreate = B47ExpandedCatalog.OnCreate,
+            health = 500,
+            skillBaseHealth = 50,
+            dontNeedFrame = true,
+            face W
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_113,
+                    row = fixtures_doors_fences_01_112,
+                    row = fixtures_doors_fences_01_121,
+                    row = fixtures_doors_fences_01_120,
+                }
+            }
+            face N
+            {
+                layer
+                {
+                    row = fixtures_doors_fences_01_114 fixtures_doors_fences_01_115 fixtures_doors_fences_01_122 fixtures_doors_fences_01_123,
+                }
+            }
+        }
+        component CraftRecipe
+        {
+            timedAction = BuildPoleFence,
+            time = 400,
+            category = Fences,
+            SkillRequired = MetalWelding:5,
+            xpAward = MetalWelding:50,
+            inputs
+            {
+                item 4 [Base.BlowTorch] flags[DontRecordInput],
+                item 4 [Base.MetalPipe],
+                item 4 [Base.WeldingRods] flags[DontRecordInput],
+                item 4 [Base.ScrapMetal],
+                item 4 [Base.Hinge],
+                item 2 [Base.Doorknob],
+            }
+        }
+    }
+}

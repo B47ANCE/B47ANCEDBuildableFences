@@ -1,6 +1,6 @@
 # Architecture
 
-Project Version: 1.1.0-dev.11
+Project Version: 1.1.0-dev.15
 
 See FAMILY_SELECTORS.md for the current six-family design, native authority,
 recipe preservation, configuration decision and runtime gates. The overlay is
@@ -138,3 +138,14 @@ post. No retrofit, world scan, orphan cleanup or new client commands.
 G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.
 See docs/WROUGHT_IRON_CONNECTIONS.md (WROUGHT_IRON_CONNECTIONS.md within docs)
 for native authority and required runtime tests.
+
+## Fence-and-gate expansion (dev.15)
+
+The current catalog adds 25 paid fence and gate entries in 12 groups only where
+no vanilla recipe supplies the artwork. Original mod families, costs and server
+authority remain unchanged. Shared wooden gates serve both tall fence styles.
+Architectural/stair railings, balustrades, loose decorative wire, gabion baskets
+and crowd-control barriers are excluded. The earlier broad catalog was never
+published or deployed. Four textureless fence definitions remain blocked.
+See docs/VANILLA_CATALOG.md (VANILLA_CATALOG.md within docs) for the current
+inventory, recipe costs, exclusions, source fingerprints and runtime gates.

@@ -1,0 +1,975 @@
+{
+  "schema": 1,
+  "project_version": "1.1.0-dev.15",
+  "steam_build": "25485521",
+  "game_version": "UNKNOWN",
+  "runtime_status": "NOT TESTED",
+  "catalog_sha256": "56eb01f5f60b9692a4de06983762da2f903de6221c25c694b46ecdb9bfea07b6",
+  "script_files_scanned": 1004,
+  "script_index_sha256": "0c0db67f71b760a3f5bb84ffba625656b3eee412545568cd8fa0a3265d1a9376",
+  "lua_files_scanned": 1407,
+  "lua_index_sha256": "8e5b630b140d1f217f2432b2aa1a4be7f30c4acaaa70c50f7877a4ada8d37cab",
+  "construction_entities": 194,
+  "vanilla_sprite_identities": 650,
+  "tiledefs_sha256": "3c655f52c819fe5c64f104129fbb171d4eb55e9b84436ce44a9ee7987b7baff3",
+  "atlas_sources": [
+    {
+      "path": "media/texturepacks/Tiles2x.pack",
+      "sha256": "c06bab79ecc9859fd581d34e9ae5e9cfb6b89ec0a107abe99c3a1af9c88f9df9"
+    },
+    {
+      "path": "media/texturepacks/Tiles2x.floor.pack",
+      "sha256": "0edb8950cd40f08e57b2cca890a7769ddb9989152278c59a9f66fbf24d7c785d"
+    }
+  ],
+  "candidate_missing_art": [],
+  "native_missing_art": [],
+  "legacy_upgrade_definitions": [],
+  "literal_lua_asset_references": [
+    {
+      "path": "media/lua/client/DebugUIs/Scenarios/Trailer3Scenario_Building.lua",
+      "sha256": "e56c7b1e958fa761bdc7d1b115f0866d9371fe84a4dbb8f2d5f915528c15b479",
+      "classification": "debug"
+    },
+    {
+      "path": "media/lua/server/Items/BentFences.lua",
+      "sha256": "ac34eceec6ad0576c4b3e96478747b44b67ee4bbeee1055152a66243b438d515",
+      "classification": "damage/bending"
+    },
+    {
+      "path": "media/lua/server/Items/BrokenFences.lua",
+      "sha256": "21e493060b3243be0892ea7fa1afcba214e07a7624eebb8a1b51e908563d9b08",
+      "classification": "damage/bending"
+    }
+  ],
+  "build_menu_sources": [
+    {
+      "path": "media/lua/client/BuildingObjects/ISUI/ISBuildMenu.lua",
+      "sha256": "02c7f9ed765816ca3c9786e3197492b3640c8a68bfcaf884d16019db62f3c541"
+    },
+    {
+      "path": "media/lua/client/BuildingObjects/ISUI/ISInventoryBuildMenu.lua",
+      "sha256": "b9b6c27e85043b7f2b396b2b39d0cf209267c2ed5526ea8469d549ac45bdc1f7"
+    },
+    {
+      "path": "media/lua/client/Entity/ISUI/ISEntityBuildMenu.lua",
+      "sha256": "6f7a5fea3b0100b42bb695a64019eb57e9c1b23e37d914e55bbc527c049e61bf"
+    },
+    {
+      "path": "media/lua/server/BuildingObjects/ISBuildIsoEntity.lua",
+      "sha256": "6f485b0a90b9b8583fc8112aeddcb3f50a50bf7d1c0c6bc369138ee781deda38"
+    },
+    {
+      "path": "media/lua/server/CraftRecipeCode/CraftRecipe_BuildMenu.lua",
+      "sha256": "142a6bfae839f55024983b5666bcc18486f807a6d3c9b5de0ec74cd90fd4f071"
+    }
+  ],
+  "reviewed_functional_exclusions": [
+    {
+      "part_names": [
+        "B47_LowWood_PlainSection",
+        "B47_LowWood_PostEndedSection",
+        "B47_LowWood_Corner",
+        "B47_LowWood_Post"
+      ],
+      "sprites": [
+        "fencing_01_32",
+        "fencing_01_33",
+        "fencing_01_34",
+        "fencing_01_35",
+        "fencing_01_36",
+        "fencing_01_37"
+      ],
+      "native_entities": [
+        "Base.WoodFenceLvl1",
+        "Base.WoodFenceLvl2",
+        "Base.WoodFenceLvl3"
+      ],
+      "reason": "User-confirmed vanilla low wooden fence availability; omit these practical duplicates even though artwork differs.",
+      "native_recipe_proofs": [
+        {
+          "entity": "Base.WoodFenceLvl1",
+          "sources": [
+            {
+              "path": "media/scripts/generated/entities/walls/entity_wood_fencelvl1.txt",
+              "sha256": "18c6a0a6e24d7b6221103c0551e0526543a36fff883c9a0494ff5708cd5548be"
+            }
+          ],
+          "sprites": [
+            "carpentry_02_40",
+            "carpentry_02_41",
+            "carpentry_02_43"
+          ],
+          "skill": [
+            "Woodwork:3"
+          ],
+          "requires_learning": false,
+          "menu_callbacks": [
+            "woodenFenceLvl1Test"
+          ]
+        },
+        {
+          "entity": "Base.WoodFenceLvl2",
+          "sources": [
+            {
+              "path": "media/scripts/generated/entities/walls/entity_wood_fencelvl2.txt",
+              "sha256": "86f07c4534ee3743ff18742281f1dba731cd88abda9931dd7758f26e9f5d1436"
+            }
+          ],
+          "sprites": [
+            "carpentry_02_44",
+            "carpentry_02_45",
+            "carpentry_02_47"
+          ],
+          "skill": [
+            "Woodwork:5"
+          ],
+          "requires_learning": false,
+          "menu_callbacks": [
+            "woodenFenceLvl2Test"
+          ]
+        },
+        {
+          "entity": "Base.WoodFenceLvl3",
+          "sources": [
+            {
+              "path": "media/scripts/generated/entities/walls/entity_wood_fencelvl3.txt",
+              "sha256": "6491b6808dad86faa93f583f7c5fb79320e4fc51c5bf7c85a3993696038e1aa5"
+            }
+          ],
+          "sprites": [
+            "carpentry_02_48",
+            "carpentry_02_49",
+            "carpentry_02_51"
+          ],
+          "skill": [
+            "Woodwork:7"
+          ],
+          "requires_learning": false,
+          "menu_callbacks": [
+            "woodenFenceLvl3Test"
+          ]
+        }
+      ]
+    },
+    {
+      "part_names": [
+        "B47_TallWoodGate_DoubleGate"
+      ],
+      "sprites": [
+        "fixtures_doors_fences_01_48",
+        "fixtures_doors_fences_01_49",
+        "fixtures_doors_fences_01_50",
+        "fixtures_doors_fences_01_51",
+        "fixtures_doors_fences_01_52",
+        "fixtures_doors_fences_01_53",
+        "fixtures_doors_fences_01_54",
+        "fixtures_doors_fences_01_55",
+        "fixtures_doors_fences_01_56",
+        "fixtures_doors_fences_01_57",
+        "fixtures_doors_fences_01_58",
+        "fixtures_doors_fences_01_59",
+        "fixtures_doors_fences_01_60",
+        "fixtures_doors_fences_01_61",
+        "fixtures_doors_fences_01_62",
+        "fixtures_doors_fences_01_63"
+      ],
+      "native_entities": [
+        "Base.DoubleDoor"
+      ],
+      "reason": "User-confirmed vanilla wide wooden gate availability; omit this practical duplicate even though artwork differs.",
+      "native_recipe_proofs": [
+        {
+          "entity": "Base.DoubleDoor",
+          "sources": [
+            {
+              "path": "media/scripts/generated/entities/walls/entity_wood_doubledoor.txt",
+              "sha256": "b349e724495b91f6b0a3f423ab720f099999e8bee29fea46ef3dbc9e611ea821"
+            }
+          ],
+          "sprites": [
+            "fixtures_doors_fences_01_104",
+            "fixtures_doors_fences_01_105",
+            "fixtures_doors_fences_01_106",
+            "fixtures_doors_fences_01_107",
+            "fixtures_doors_fences_01_96",
+            "fixtures_doors_fences_01_97",
+            "fixtures_doors_fences_01_98",
+            "fixtures_doors_fences_01_99"
+          ],
+          "skill": [
+            "Woodwork:4"
+          ],
+          "requires_learning": false,
+          "menu_callbacks": []
+        }
+      ]
+    }
+  ],
+  "white_picket_review": {
+    "sprites": [
+      "fencing_01_4",
+      "fencing_01_5",
+      "fencing_01_6",
+      "fencing_01_7"
+    ],
+    "finding": "No construction recipe or paint conversion located for this white picket fence set. WoodPicket constructs a cemetery marker post; white tint is not a picket sprite conversion.",
+    "sources": [
+      {
+        "path": "media/scripts/generated/entities/outdoors/entity_wood_picket.txt",
+        "sha256": "55226bbf6b3e3590a3a0aeb3106be126eec3ca6d1cff617d6a440c8bb94b1793"
+      },
+      {
+        "path": "media/lua/server/BuildingObjects/PaintingReference.lua",
+        "sha256": "2d439997da31c3055d3fb68e2f74b66f8e06f9d862fb6a8e89af6497b6c13591"
+      },
+      {
+        "path": "media/lua/shared/BuildingObjects/TimedActions/ISPaintAction.lua",
+        "sha256": "04817f15f6d94b847ee4c3174a056410b09d93b9be11c90925f62972f46d9e5c"
+      }
+    ]
+  },
+  "vanilla_fence_gate_recipes": [
+    {
+      "entity": "Base.BarbedWireFence",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_wood_fencebarbedwirelvl1.txt",
+          "sha256": "24701fc4d8469d93295e2a32715daf4fc5222c7a32a7e69ac3bb288a9658fa75"
+        }
+      ],
+      "sprites": [
+        "fencing_01_20",
+        "fencing_01_21"
+      ],
+      "skill": [
+        "Woodwork:5"
+      ],
+      "requires_learning": false,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.BrickFenceLvl2",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_brick_fencelvl2.txt",
+          "sha256": "9dc9b97c029895eb0d607bd21a00e7612ba43152aa2a56ca156bd3df810a5cb2"
+        }
+      ],
+      "sprites": [
+        "walls_exterior_house_01_36",
+        "walls_exterior_house_01_37",
+        "walls_exterior_house_01_39"
+      ],
+      "skill": [
+        "Masonry:5"
+      ],
+      "requires_learning": false,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.DoubleDoor",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_wood_doubledoor.txt",
+          "sha256": "b349e724495b91f6b0a3f423ab720f099999e8bee29fea46ef3dbc9e611ea821"
+        }
+      ],
+      "sprites": [
+        "fixtures_doors_fences_01_104",
+        "fixtures_doors_fences_01_105",
+        "fixtures_doors_fences_01_106",
+        "fixtures_doors_fences_01_107",
+        "fixtures_doors_fences_01_96",
+        "fixtures_doors_fences_01_97",
+        "fixtures_doors_fences_01_98",
+        "fixtures_doors_fences_01_99"
+      ],
+      "skill": [
+        "Woodwork:4"
+      ],
+      "requires_learning": false,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.DoubleFenceGate",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_metal_doublepolegate.txt",
+          "sha256": "0bde17f3714fa18549003b80fbe47b932fec67aface48dd0de0b017881adb4b6"
+        }
+      ],
+      "sprites": [
+        "fixtures_doors_fences_01_80",
+        "fixtures_doors_fences_01_81",
+        "fixtures_doors_fences_01_82",
+        "fixtures_doors_fences_01_83",
+        "fixtures_doors_fences_01_88",
+        "fixtures_doors_fences_01_89",
+        "fixtures_doors_fences_01_90",
+        "fixtures_doors_fences_01_91"
+      ],
+      "skill": [
+        "MetalWelding:5"
+      ],
+      "requires_learning": true,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.DoubleWireGate",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_metal_doublewiregate.txt",
+          "sha256": "307a17e20cf52217e6dfbc68e78ee6167358b68ac95fffff01e20228e89ba001"
+        }
+      ],
+      "sprites": [
+        "fixtures_doors_fences_01_64",
+        "fixtures_doors_fences_01_65",
+        "fixtures_doors_fences_01_66",
+        "fixtures_doors_fences_01_67",
+        "fixtures_doors_fences_01_72",
+        "fixtures_doors_fences_01_73",
+        "fixtures_doors_fences_01_74",
+        "fixtures_doors_fences_01_75"
+      ],
+      "skill": [
+        "MetalWelding:5"
+      ],
+      "requires_learning": true,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.LogFence",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/fences_low/entity_logfence.txt",
+          "sha256": "4ea7ae8a5244903049e823c0fe26387489ecded7b79f19b5b65ef6eb695233d3"
+        }
+      ],
+      "sprites": [
+        "crafted_04_115",
+        "crafted_04_116",
+        "crafted_04_119"
+      ],
+      "skill": [],
+      "requires_learning": false,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.LogGate",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/fences_low/entity_logfenceopen.txt",
+          "sha256": "7ab88acb130aa7cda194bf6d85be8bac3a25e907ed1e85637def30dd7d21805f"
+        }
+      ],
+      "sprites": [
+        "walls_logs_80",
+        "walls_logs_81",
+        "walls_logs_82",
+        "walls_logs_83"
+      ],
+      "skill": [],
+      "requires_learning": false,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.MetalBigMetalFence",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_metal_bigmetalfence.txt",
+          "sha256": "fef9ac30f22f975938c07d56a741442e1c22a85d30246712d294bb77434e59b7"
+        }
+      ],
+      "sprites": [
+        "constructedobjects_01_76",
+        "constructedobjects_01_77",
+        "constructedobjects_01_78"
+      ],
+      "skill": [
+        "MetalWelding:3"
+      ],
+      "requires_learning": true,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.MetalBigWireFence",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_metal_bigwirefence.txt",
+          "sha256": "69e30a52f37b48ee5ba5cf85900b92efdafdb9113f98cee62e2c2672d880af74"
+        }
+      ],
+      "sprites": [
+        "fencing_01_57",
+        "fencing_01_58",
+        "fencing_01_61"
+      ],
+      "skill": [
+        "MetalWelding:3"
+      ],
+      "requires_learning": true,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.MetalFenceLvl1",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_metal_fencelvl1.txt",
+          "sha256": "a4bdf46de4e6b585ab0b701c47e36e6eef25d4c59734878369491e175995f82e"
+        }
+      ],
+      "sprites": [
+        "constructedobjects_01_81",
+        "constructedobjects_01_82",
+        "constructedobjects_01_85"
+      ],
+      "skill": [
+        "MetalWelding:3"
+      ],
+      "requires_learning": true,
+      "menu_callbacks": [
+        "metalWallLvl1Test"
+      ]
+    },
+    {
+      "entity": "Base.MetalFenceLvl2",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_metal_fencelvl2.txt",
+          "sha256": "163995762b54871bbedd11c59f3df8221a282cc7266173fe3d44065c687a62ab"
+        }
+      ],
+      "sprites": [
+        "constructedobjects_01_80",
+        "constructedobjects_01_83",
+        "constructedobjects_01_85"
+      ],
+      "skill": [
+        "MetalWelding:5"
+      ],
+      "requires_learning": false,
+      "menu_callbacks": [
+        "metalWallLvl2Test"
+      ]
+    },
+    {
+      "entity": "Base.MetalPoleFenceGate",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_metal_polefencegate.txt",
+          "sha256": "171286b72d38501daac776c6b286911f6602668f6bf1fc8b1543846e1ff2fff1"
+        }
+      ],
+      "sprites": [
+        "fixtures_doors_fences_01_24",
+        "fixtures_doors_fences_01_25",
+        "fixtures_doors_fences_01_26",
+        "fixtures_doors_fences_01_27"
+      ],
+      "skill": [
+        "MetalWelding:3"
+      ],
+      "requires_learning": true,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.MetalPoleFenceGateSmall",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_metal_polefencegatesmall.txt",
+          "sha256": "d9aefd5ddb603207a8cb21bba67b9f97b274e0c169454a671b34e08f801661b8"
+        }
+      ],
+      "sprites": [
+        "fixtures_doors_fences_01_28",
+        "fixtures_doors_fences_01_29",
+        "fixtures_doors_fences_01_30",
+        "fixtures_doors_fences_01_31"
+      ],
+      "skill": [
+        "MetalWelding:3"
+      ],
+      "requires_learning": true,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.MetalSmallPoleFence",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_metal_smallpolelfence.txt",
+          "sha256": "3c7926dfaa97a83da1fe19ef1cfb12fad55fe16f8a6f20d1e2b41f0783832321"
+        }
+      ],
+      "sprites": [
+        "constructedobjects_01_60",
+        "constructedobjects_01_61",
+        "constructedobjects_01_62"
+      ],
+      "skill": [
+        "MetalWelding:3"
+      ],
+      "requires_learning": true,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.MetalSmallWireFence",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_metal_smallwirefence.txt",
+          "sha256": "ed2102db9c457f3568e214c6f4d751313935be848f92b7db0aa0d1278d1d2f5d"
+        }
+      ],
+      "sprites": [
+        "fencing_01_25",
+        "fencing_01_26",
+        "fencing_01_29"
+      ],
+      "skill": [
+        "MetalWelding:3"
+      ],
+      "requires_learning": true,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.MetalWireFenceGate",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_metal_wirefencegate.txt",
+          "sha256": "e8f777cdb860c28eab0def8775344387669c50a9e9159b4d32ac41e884299833"
+        }
+      ],
+      "sprites": [
+        "fixtures_doors_fences_01_128",
+        "fixtures_doors_fences_01_129",
+        "fixtures_doors_fences_01_130",
+        "fixtures_doors_fences_01_131"
+      ],
+      "skill": [
+        "MetalWelding:3"
+      ],
+      "requires_learning": true,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.MetalWireFenceGateSmall",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_metal_wirefencegatesmall.txt",
+          "sha256": "da5de91dec23a94d0494f9398c2124cfd773aa3d6c7e4f5e52645b997b625b67"
+        }
+      ],
+      "sprites": [
+        "fixtures_doors_fences_01_16",
+        "fixtures_doors_fences_01_17",
+        "fixtures_doors_fences_01_18",
+        "fixtures_doors_fences_01_19"
+      ],
+      "skill": [
+        "MetalWelding:3"
+      ],
+      "requires_learning": true,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.StickFence",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/fences_low/entity_stickfence.txt",
+          "sha256": "21e901a603b810f30c7b1fa57f676a71facbb8f20921b6e72ebc0de20b7d006f"
+        }
+      ],
+      "sprites": [
+        "crafted_04_123",
+        "crafted_04_124",
+        "crafted_04_127"
+      ],
+      "skill": [],
+      "requires_learning": false,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.WoodFenceGate",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_wood_fencegate.txt",
+          "sha256": "9d4158d61513506514cd1745c5fe1aa164a3db715b31928eb63b50de878b5693"
+        }
+      ],
+      "sprites": [
+        "fixtures_doors_fences_01_4",
+        "fixtures_doors_fences_01_5",
+        "fixtures_doors_fences_01_6",
+        "fixtures_doors_fences_01_7"
+      ],
+      "skill": [
+        "Woodwork:3"
+      ],
+      "requires_learning": false,
+      "menu_callbacks": []
+    },
+    {
+      "entity": "Base.WoodFenceLvl1",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_wood_fencelvl1.txt",
+          "sha256": "18c6a0a6e24d7b6221103c0551e0526543a36fff883c9a0494ff5708cd5548be"
+        }
+      ],
+      "sprites": [
+        "carpentry_02_40",
+        "carpentry_02_41",
+        "carpentry_02_43"
+      ],
+      "skill": [
+        "Woodwork:3"
+      ],
+      "requires_learning": false,
+      "menu_callbacks": [
+        "woodenFenceLvl1Test"
+      ]
+    },
+    {
+      "entity": "Base.WoodFenceLvl2",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_wood_fencelvl2.txt",
+          "sha256": "86f07c4534ee3743ff18742281f1dba731cd88abda9931dd7758f26e9f5d1436"
+        }
+      ],
+      "sprites": [
+        "carpentry_02_44",
+        "carpentry_02_45",
+        "carpentry_02_47"
+      ],
+      "skill": [
+        "Woodwork:5"
+      ],
+      "requires_learning": false,
+      "menu_callbacks": [
+        "woodenFenceLvl2Test"
+      ]
+    },
+    {
+      "entity": "Base.WoodFenceLvl3",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/walls/entity_wood_fencelvl3.txt",
+          "sha256": "6491b6808dad86faa93f583f7c5fb79320e4fc51c5bf7c85a3993696038e1aa5"
+        }
+      ],
+      "sprites": [
+        "carpentry_02_48",
+        "carpentry_02_49",
+        "carpentry_02_51"
+      ],
+      "skill": [
+        "Woodwork:7"
+      ],
+      "requires_learning": false,
+      "menu_callbacks": [
+        "woodenFenceLvl3Test"
+      ]
+    },
+    {
+      "entity": "Base.WoodStake",
+      "sources": [
+        {
+          "path": "media/scripts/generated/entities/outdoors/entity_wood_stake.txt",
+          "sha256": "9b7775aad74b40ba5c9f5a2b1033b5ce0e683603edfeb3b6604fc42a052bfaa9"
+        }
+      ],
+      "sprites": [
+        "fencing_01_19"
+      ],
+      "skill": [],
+      "requires_learning": false,
+      "menu_callbacks": []
+    }
+  ],
+  "parts": [
+    {
+      "name": "B47_OrnamentalIron_PlainSection",
+      "family": "Ornamental iron fence",
+      "part": "Plain Section",
+      "sprites": [
+        "fencing_01_1",
+        "fencing_01_2"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_OrnamentalIron_Corner",
+      "family": "Ornamental iron fence",
+      "part": "Corner",
+      "sprites": [
+        "fencing_01_3"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_OrnamentalIron_Post",
+      "family": "Ornamental iron fence",
+      "part": "Standalone Post",
+      "sprites": [
+        "fencing_01_0"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_WhitePicket_PlainSection",
+      "family": "White picket fence",
+      "part": "Plain Section",
+      "sprites": [
+        "fencing_01_4",
+        "fencing_01_5"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_WhitePicket_Corner",
+      "family": "White picket fence",
+      "part": "Corner",
+      "sprites": [
+        "fencing_01_6"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_WhitePicket_Post",
+      "family": "White picket fence",
+      "part": "Standalone Post",
+      "sprites": [
+        "fencing_01_7"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_PostAndWire_PlainSection",
+      "family": "Post and wire fence",
+      "part": "Plain Section",
+      "sprites": [
+        "fencing_01_16",
+        "fencing_01_17"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_PostAndWire_Corner",
+      "family": "Post and wire fence",
+      "part": "Corner",
+      "sprites": [
+        "fencing_01_18"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_ShortChainLink_PostEndedSection",
+      "family": "Short chain-link fence",
+      "part": "Post-Ended Section",
+      "sprites": [
+        "fencing_01_24",
+        "fencing_01_27"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_ShortChainLink_Corner",
+      "family": "Short chain-link fence",
+      "part": "Corner",
+      "sprites": [
+        "fencing_01_28"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_MetalPanel_PlainSection",
+      "family": "Sheet-metal panel fence",
+      "part": "Plain Section",
+      "sprites": [
+        "fencing_01_40",
+        "fencing_01_41"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_MetalPanel_WindowSection",
+      "family": "Sheet-metal panel fence",
+      "part": "Window Section",
+      "sprites": [
+        "fencing_01_44",
+        "fencing_01_45"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_MetalPanel_Corner",
+      "family": "Sheet-metal panel fence",
+      "part": "Corner",
+      "sprites": [
+        "fencing_01_42"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_MetalPanel_Post",
+      "family": "Sheet-metal panel fence",
+      "part": "Standalone Post",
+      "sprites": [
+        "fencing_01_43"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_TallChainLink_PostEndedSection",
+      "family": "Tall chain-link fence",
+      "part": "Post-Ended Section",
+      "sprites": [
+        "fencing_01_56",
+        "fencing_01_59"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_TallChainLink_Corner",
+      "family": "Tall chain-link fence",
+      "part": "Corner",
+      "sprites": [
+        "fencing_01_60"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_RazorCoil_PlainSection",
+      "family": "Razor-wire coil",
+      "part": "Plain Section",
+      "sprites": [
+        "fencing_01_108",
+        "fencing_01_109"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_RoundPicket_PlainSection",
+      "family": "Round-top picket fence",
+      "part": "Plain Section",
+      "sprites": [
+        "fencing_01_120",
+        "fencing_01_121"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_RoundPicket_Corner",
+      "family": "Round-top picket fence",
+      "part": "Corner",
+      "sprites": [
+        "fencing_01_122"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_RoundPicket_Post",
+      "family": "Round-top picket fence",
+      "part": "Standalone Post",
+      "sprites": [
+        "fencing_01_123"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_OrnamentalIronGate_SingleGate",
+      "family": "Ornamental iron gate",
+      "part": "Single gate",
+      "sprites": [
+        "fixtures_doors_fences_01_0",
+        "fixtures_doors_fences_01_1",
+        "fixtures_doors_fences_01_2",
+        "fixtures_doors_fences_01_3"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_OrnamentalIronGate_DoubleGate",
+      "family": "Ornamental iron gate",
+      "part": "Wide double gate",
+      "sprites": [
+        "fixtures_doors_fences_01_32",
+        "fixtures_doors_fences_01_33",
+        "fixtures_doors_fences_01_34",
+        "fixtures_doors_fences_01_35",
+        "fixtures_doors_fences_01_40",
+        "fixtures_doors_fences_01_41",
+        "fixtures_doors_fences_01_42",
+        "fixtures_doors_fences_01_43"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_WhitePicketGate_SingleGate",
+      "family": "White picket gate",
+      "part": "Single gate",
+      "sprites": [
+        "fixtures_doors_fences_01_10",
+        "fixtures_doors_fences_01_11",
+        "fixtures_doors_fences_01_8",
+        "fixtures_doors_fences_01_9"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_TallWoodGate_SingleGate",
+      "family": "Tall wooden gate (both fence tops)",
+      "part": "Single gate",
+      "sprites": [
+        "fixtures_doors_fences_01_12",
+        "fixtures_doors_fences_01_13",
+        "fixtures_doors_fences_01_14",
+        "fixtures_doors_fences_01_15"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    },
+    {
+      "name": "B47_FieldGate_DoubleGate",
+      "family": "Green field gate",
+      "part": "Wide double gate",
+      "sprites": [
+        "fixtures_doors_fences_01_112",
+        "fixtures_doors_fences_01_113",
+        "fixtures_doors_fences_01_114",
+        "fixtures_doors_fences_01_115",
+        "fixtures_doors_fences_01_120",
+        "fixtures_doors_fences_01_121",
+        "fixtures_doors_fences_01_122",
+        "fixtures_doors_fences_01_123"
+      ],
+      "exact_matches": [],
+      "identical_art_matches": []
+    }
+  ]
+}

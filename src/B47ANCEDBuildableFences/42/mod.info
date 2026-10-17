@@ -1,8 +1,8 @@
-name=B47ANCE'd Buildable Fences
+name=B47ANCE'd Fences & Gates
 id=B47ANCEDBuildableFences
 description=Standalone Build 42 craftable tall wooden, military, security, razor-wire, and wrought-iron fences using vanilla sprites. Development candidate preserves the baseline collision/post architecture; dedicated runtime validation is required.
 poster=poster.png
-modversion=1.1.0-dev.11
+modversion=1.1.0-dev.15
 versionMin=42.0
 
 icon=media/ui/B47ANCEDBuildableFences_icon.png

@@ -1,0 +1,1533 @@
+{
+  "schema": 1,
+  "families": [
+    {
+      "id": "OrnamentalIron",
+      "label": "Ornamental iron fence",
+      "parts": [
+        {
+          "name": "B47_OrnamentalIron_PlainSection",
+          "label": "Plain Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_2"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_1"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_OrnamentalIron_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_3"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_OrnamentalIron_Post",
+          "label": "Standalone Post",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_0"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        }
+      ],
+      "kind": "fence"
+    },
+    {
+      "id": "WhitePicket",
+      "label": "White picket fence",
+      "parts": [
+        {
+          "name": "B47_WhitePicket_PlainSection",
+          "label": "Plain Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_4"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_5"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhitePicket_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_6"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_WhitePicket_Post",
+          "label": "Standalone Post",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_7"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        }
+      ],
+      "kind": "fence"
+    },
+    {
+      "id": "PostAndWire",
+      "label": "Post and wire fence",
+      "parts": [
+        {
+          "name": "B47_PostAndWire_PlainSection",
+          "label": "Plain Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_16"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_17"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_PostAndWire_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_18"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ],
+      "kind": "fence"
+    },
+    {
+      "id": "ShortChainLink",
+      "label": "Short chain-link fence",
+      "parts": [
+        {
+          "name": "B47_ShortChainLink_PostEndedSection",
+          "label": "Post-Ended Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_27"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_24"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_ShortChainLink_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_28"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ],
+      "kind": "fence"
+    },
+    {
+      "id": "MetalPanel",
+      "label": "Sheet-metal panel fence",
+      "parts": [
+        {
+          "name": "B47_MetalPanel_PlainSection",
+          "label": "Plain Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_40"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_41"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 5,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_MetalPanel_WindowSection",
+          "label": "Window Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_44"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_45"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 5,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_MetalPanel_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_42"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 5,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_MetalPanel_Post",
+          "label": "Standalone Post",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_43"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 5,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.ScrapMetal]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        }
+      ],
+      "kind": "fence"
+    },
+    {
+      "id": "TallChainLink",
+      "label": "Tall chain-link fence",
+      "parts": [
+        {
+          "name": "B47_TallChainLink_PostEndedSection",
+          "label": "Post-Ended Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_59"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_56"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_TallChainLink_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_60"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 3,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ],
+      "kind": "fence"
+    },
+    {
+      "id": "RazorCoil",
+      "label": "Razor-wire coil",
+      "parts": [
+        {
+          "name": "B47_RazorCoil_PlainSection",
+          "label": "Plain Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_109"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_108"
+              ]
+            ]
+          },
+          "material": "wire",
+          "perk": "MetalWelding",
+          "skill": 4,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWireFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Wire]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        }
+      ],
+      "kind": "fence"
+    },
+    {
+      "id": "RoundPicket",
+      "label": "Round-top picket fence",
+      "parts": [
+        {
+          "name": "B47_RoundPicket_PlainSection",
+          "label": "Plain Section",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_121"
+              ]
+            ],
+            "N": [
+              [
+                "fencing_01_120"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_RoundPicket_Corner",
+          "label": "Corner",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_122"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 8,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": false
+        },
+        {
+          "name": "B47_RoundPicket_Post",
+          "label": "Standalone Post",
+          "faces": {
+            "W": [
+              [
+                "fencing_01_123"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 2,
+          "health": 100,
+          "skill_bonus": 50,
+          "time": 100,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Nails]"
+            }
+          ],
+          "post": true,
+          "decorative": false,
+          "gate": false
+        }
+      ],
+      "kind": "fence"
+    },
+    {
+      "id": "OrnamentalIronGate",
+      "label": "Ornamental iron gate",
+      "parts": [
+        {
+          "name": "B47_OrnamentalIronGate_SingleGate",
+          "label": "Single gate",
+          "faces": {
+            "W": [
+              [
+                "fixtures_doors_fences_01_0"
+              ]
+            ],
+            "N": [
+              [
+                "fixtures_doors_fences_01_1"
+              ]
+            ],
+            "W_OPEN": [
+              [
+                "fixtures_doors_fences_01_2"
+              ]
+            ],
+            "N_OPEN": [
+              [
+                "fixtures_doors_fences_01_3"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 5,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 2,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.ScrapMetal]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Hinge]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Doorknob]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": true
+        },
+        {
+          "name": "B47_OrnamentalIronGate_DoubleGate",
+          "label": "Wide double gate",
+          "faces": {
+            "W": [
+              [
+                "fixtures_doors_fences_01_33"
+              ],
+              [
+                "fixtures_doors_fences_01_32"
+              ],
+              [
+                "fixtures_doors_fences_01_41"
+              ],
+              [
+                "fixtures_doors_fences_01_40"
+              ]
+            ],
+            "N": [
+              [
+                "fixtures_doors_fences_01_34",
+                "fixtures_doors_fences_01_35",
+                "fixtures_doors_fences_01_42",
+                "fixtures_doors_fences_01_43"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 5,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.ScrapMetal]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Hinge]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Doorknob]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": true
+        }
+      ],
+      "kind": "gate"
+    },
+    {
+      "id": "WhitePicketGate",
+      "label": "White picket gate",
+      "parts": [
+        {
+          "name": "B47_WhitePicketGate_SingleGate",
+          "label": "Single gate",
+          "faces": {
+            "W": [
+              [
+                "fixtures_doors_fences_01_8"
+              ]
+            ],
+            "N": [
+              [
+                "fixtures_doors_fences_01_9"
+              ]
+            ],
+            "W_OPEN": [
+              [
+                "fixtures_doors_fences_01_10"
+              ]
+            ],
+            "N_OPEN": [
+              [
+                "fixtures_doors_fences_01_11"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 4,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Hinge]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Doorknob]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": true
+        }
+      ],
+      "kind": "gate"
+    },
+    {
+      "id": "TallWoodGate",
+      "label": "Tall wooden gate (both fence tops)",
+      "parts": [
+        {
+          "name": "B47_TallWoodGate_SingleGate",
+          "label": "Single gate",
+          "faces": {
+            "W": [
+              [
+                "fixtures_doors_fences_01_12"
+              ]
+            ],
+            "N": [
+              [
+                "fixtures_doors_fences_01_13"
+              ]
+            ],
+            "W_OPEN": [
+              [
+                "fixtures_doors_fences_01_14"
+              ]
+            ],
+            "N_OPEN": [
+              [
+                "fixtures_doors_fences_01_15"
+              ]
+            ]
+          },
+          "material": "wood",
+          "perk": "Woodwork",
+          "skill": 4,
+          "health": 400,
+          "skill_bonus": 50,
+          "time": 200,
+          "action": "BuildWallHammer",
+          "inputs": [
+            {
+              "amount": 1,
+              "selector": "tags[base:hammer]",
+              "suffix": " mode:keep flags[Prop1;MayDegradeVeryLight]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Plank]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Nails]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Hinge]"
+            },
+            {
+              "amount": 1,
+              "selector": "[Base.Doorknob]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": true
+        }
+      ],
+      "kind": "gate"
+    },
+    {
+      "id": "FieldGate",
+      "label": "Green field gate",
+      "parts": [
+        {
+          "name": "B47_FieldGate_DoubleGate",
+          "label": "Wide double gate",
+          "faces": {
+            "W": [
+              [
+                "fixtures_doors_fences_01_113"
+              ],
+              [
+                "fixtures_doors_fences_01_112"
+              ],
+              [
+                "fixtures_doors_fences_01_121"
+              ],
+              [
+                "fixtures_doors_fences_01_120"
+              ]
+            ],
+            "N": [
+              [
+                "fixtures_doors_fences_01_114",
+                "fixtures_doors_fences_01_115",
+                "fixtures_doors_fences_01_122",
+                "fixtures_doors_fences_01_123"
+              ]
+            ]
+          },
+          "material": "metal",
+          "perk": "MetalWelding",
+          "skill": 5,
+          "health": 500,
+          "skill_bonus": 50,
+          "time": 400,
+          "action": "BuildPoleFence",
+          "inputs": [
+            {
+              "amount": 4,
+              "selector": "[Base.BlowTorch]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.MetalPipe]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.WeldingRods]",
+              "suffix": " flags[DontRecordInput]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.ScrapMetal]"
+            },
+            {
+              "amount": 4,
+              "selector": "[Base.Hinge]"
+            },
+            {
+              "amount": 2,
+              "selector": "[Base.Doorknob]"
+            }
+          ],
+          "post": false,
+          "decorative": false,
+          "gate": true
+        }
+      ],
+      "kind": "gate"
+    }
+  ],
+  "retired_translation_keys": [
+    "IGUI_B47_BrownHandrail_Piece40",
+    "IGUI_B47_BrownHandrail_Piece41",
+    "IGUI_B47_BrownHandrail_Piece42",
+    "IGUI_B47_BrownHandrail_Piece44",
+    "IGUI_B47_BrownHandrail_Piece45",
+    "IGUI_B47_BrownHandrail_Piece46",
+    "IGUI_B47_BrownHandrail_Piece48",
+    "IGUI_B47_BrownHandrail_Piece49",
+    "IGUI_B47_BrownHandrail_Piece50",
+    "IGUI_B47_BrownHandrail_Piece51",
+    "IGUI_B47_BrownHandrail_Piece52",
+    "IGUI_B47_BrownHandrail_Piece53",
+    "IGUI_B47_BrownHandrail_Piece54",
+    "IGUI_B47_BrownHandrail_Piece56",
+    "IGUI_B47_BrownHandrail_Piece57",
+    "IGUI_B47_BrownHandrail_Piece59",
+    "IGUI_B47_BrownHandrail_Piece60",
+    "IGUI_B47_BrownHandrail_Piece61",
+    "IGUI_B47_CrowdBarrier_EndSection",
+    "IGUI_B47_CrowdBarrier_PlainSection",
+    "IGUI_B47_DarkPanelRail_Piece116",
+    "IGUI_B47_DarkPanelRail_Piece117",
+    "IGUI_B47_DarkPanelRail_Piece118",
+    "IGUI_B47_DarkPanelRail_Piece119",
+    "IGUI_B47_DarkWoodHandrail_Piece100",
+    "IGUI_B47_DarkWoodHandrail_Piece101",
+    "IGUI_B47_DarkWoodHandrail_Piece80",
+    "IGUI_B47_DarkWoodHandrail_Piece81",
+    "IGUI_B47_DarkWoodHandrail_Piece82",
+    "IGUI_B47_DarkWoodHandrail_Piece84",
+    "IGUI_B47_DarkWoodHandrail_Piece85",
+    "IGUI_B47_DarkWoodHandrail_Piece88",
+    "IGUI_B47_DarkWoodHandrail_Piece89",
+    "IGUI_B47_DarkWoodHandrail_Piece90",
+    "IGUI_B47_DarkWoodHandrail_Piece91",
+    "IGUI_B47_DarkWoodHandrail_Piece92",
+    "IGUI_B47_DarkWoodHandrail_Piece93",
+    "IGUI_B47_LowWood_Corner",
+    "IGUI_B47_LowWood_PlainSection",
+    "IGUI_B47_LowWood_Post",
+    "IGUI_B47_LowWood_PostEndedSection",
+    "IGUI_B47_MilitaryBarrier_Basket100",
+    "IGUI_B47_MilitaryBarrier_Basket101",
+    "IGUI_B47_MilitaryBarrier_Basket102",
+    "IGUI_B47_MilitaryBarrier_Basket103",
+    "IGUI_B47_MilitaryBarrier_Basket96",
+    "IGUI_B47_MilitaryBarrier_Basket97",
+    "IGUI_B47_MilitaryBarrier_Basket98",
+    "IGUI_B47_MilitaryBarrier_Basket99",
+    "IGUI_B47_RazorCoil_LooseCoilA",
+    "IGUI_B47_RazorCoil_LooseCoilB",
+    "IGUI_B47_SlimMetalLevelRail_Piece36",
+    "IGUI_B47_SlimMetalLevelRail_Piece37",
+    "IGUI_B47_SlimMetalLevelRail_Piece38",
+    "IGUI_B47_SlimMetalStairRail_Piece16",
+    "IGUI_B47_SlimMetalStairRail_Piece17",
+    "IGUI_B47_SlimMetalStairRail_Piece18",
+    "IGUI_B47_SlimMetalStairRail_Piece19",
+    "IGUI_B47_SlimMetalStairRail_Piece20",
+    "IGUI_B47_SlimMetalStairRail_Piece21",
+    "IGUI_B47_SlimMetalStairRail_Piece22",
+    "IGUI_B47_SlimMetalStairRail_Piece23",
+    "IGUI_B47_SlimWoodLevelRail_Piece28",
+    "IGUI_B47_SlimWoodLevelRail_Piece29",
+    "IGUI_B47_SlimWoodLevelRail_Piece30",
+    "IGUI_B47_SlimWoodRail_Piece0",
+    "IGUI_B47_SlimWoodRail_Piece1",
+    "IGUI_B47_SlimWoodRail_Piece2",
+    "IGUI_B47_SlimWoodRail_Piece3",
+    "IGUI_B47_SlimWoodRail_Piece4",
+    "IGUI_B47_SlimWoodRail_Piece5",
+    "IGUI_B47_SlimWoodRail_Piece6",
+    "IGUI_B47_SlimWoodRail_Piece7",
+    "IGUI_B47_StoneBalustrade_Corner",
+    "IGUI_B47_StoneBalustrade_PlainSection",
+    "IGUI_B47_StoneBalustrade_Post",
+    "IGUI_B47_TallWoodGate_DoubleGate",
+    "IGUI_B47_Variant_Basket100",
+    "IGUI_B47_Variant_Basket101",
+    "IGUI_B47_Variant_Basket102",
+    "IGUI_B47_Variant_Basket103",
+    "IGUI_B47_Variant_Basket96",
+    "IGUI_B47_Variant_Basket97",
+    "IGUI_B47_Variant_Basket98",
+    "IGUI_B47_Variant_Basket99",
+    "IGUI_B47_Variant_EndSection",
+    "IGUI_B47_Variant_LooseCoilA",
+    "IGUI_B47_Variant_LooseCoilB",
+    "IGUI_B47_Variant_Piece0",
+    "IGUI_B47_Variant_Piece1",
+    "IGUI_B47_Variant_Piece100",
+    "IGUI_B47_Variant_Piece101",
+    "IGUI_B47_Variant_Piece108",
+    "IGUI_B47_Variant_Piece109",
+    "IGUI_B47_Variant_Piece110",
+    "IGUI_B47_Variant_Piece112",
+    "IGUI_B47_Variant_Piece113",
+    "IGUI_B47_Variant_Piece114",
+    "IGUI_B47_Variant_Piece115",
+    "IGUI_B47_Variant_Piece116",
+    "IGUI_B47_Variant_Piece117",
+    "IGUI_B47_Variant_Piece118",
+    "IGUI_B47_Variant_Piece119",
+    "IGUI_B47_Variant_Piece120",
+    "IGUI_B47_Variant_Piece121",
+    "IGUI_B47_Variant_Piece122",
+    "IGUI_B47_Variant_Piece124",
+    "IGUI_B47_Variant_Piece125",
+    "IGUI_B47_Variant_Piece128",
+    "IGUI_B47_Variant_Piece129",
+    "IGUI_B47_Variant_Piece130",
+    "IGUI_B47_Variant_Piece131",
+    "IGUI_B47_Variant_Piece132",
+    "IGUI_B47_Variant_Piece133",
+    "IGUI_B47_Variant_Piece136",
+    "IGUI_B47_Variant_Piece137",
+    "IGUI_B47_Variant_Piece140",
+    "IGUI_B47_Variant_Piece141",
+    "IGUI_B47_Variant_Piece16",
+    "IGUI_B47_Variant_Piece17",
+    "IGUI_B47_Variant_Piece18",
+    "IGUI_B47_Variant_Piece19",
+    "IGUI_B47_Variant_Piece2",
+    "IGUI_B47_Variant_Piece20",
+    "IGUI_B47_Variant_Piece21",
+    "IGUI_B47_Variant_Piece22",
+    "IGUI_B47_Variant_Piece23",
+    "IGUI_B47_Variant_Piece24",
+    "IGUI_B47_Variant_Piece25",
+    "IGUI_B47_Variant_Piece26",
+    "IGUI_B47_Variant_Piece27",
+    "IGUI_B47_Variant_Piece28",
+    "IGUI_B47_Variant_Piece29",
+    "IGUI_B47_Variant_Piece3",
+    "IGUI_B47_Variant_Piece30",
+    "IGUI_B47_Variant_Piece33",
+    "IGUI_B47_Variant_Piece34",
+    "IGUI_B47_Variant_Piece35",
+    "IGUI_B47_Variant_Piece36",
+    "IGUI_B47_Variant_Piece37",
+    "IGUI_B47_Variant_Piece38",
+    "IGUI_B47_Variant_Piece4",
+    "IGUI_B47_Variant_Piece40",
+    "IGUI_B47_Variant_Piece41",
+    "IGUI_B47_Variant_Piece42",
+    "IGUI_B47_Variant_Piece44",
+    "IGUI_B47_Variant_Piece45",
+    "IGUI_B47_Variant_Piece46",
+    "IGUI_B47_Variant_Piece48",
+    "IGUI_B47_Variant_Piece49",
+    "IGUI_B47_Variant_Piece5",
+    "IGUI_B47_Variant_Piece50",
+    "IGUI_B47_Variant_Piece51",
+    "IGUI_B47_Variant_Piece52",
+    "IGUI_B47_Variant_Piece53",
+    "IGUI_B47_Variant_Piece54",
+    "IGUI_B47_Variant_Piece56",
+    "IGUI_B47_Variant_Piece57",
+    "IGUI_B47_Variant_Piece59",
+    "IGUI_B47_Variant_Piece6",
+    "IGUI_B47_Variant_Piece60",
+    "IGUI_B47_Variant_Piece61",
+    "IGUI_B47_Variant_Piece64",
+    "IGUI_B47_Variant_Piece65",
+    "IGUI_B47_Variant_Piece66",
+    "IGUI_B47_Variant_Piece67",
+    "IGUI_B47_Variant_Piece68",
+    "IGUI_B47_Variant_Piece69",
+    "IGUI_B47_Variant_Piece7",
+    "IGUI_B47_Variant_Piece70",
+    "IGUI_B47_Variant_Piece71",
+    "IGUI_B47_Variant_Piece72",
+    "IGUI_B47_Variant_Piece73",
+    "IGUI_B47_Variant_Piece74",
+    "IGUI_B47_Variant_Piece75",
+    "IGUI_B47_Variant_Piece76",
+    "IGUI_B47_Variant_Piece78",
+    "IGUI_B47_Variant_Piece79",
+    "IGUI_B47_Variant_Piece80",
+    "IGUI_B47_Variant_Piece81",
+    "IGUI_B47_Variant_Piece82",
+    "IGUI_B47_Variant_Piece84",
+    "IGUI_B47_Variant_Piece85",
+    "IGUI_B47_Variant_Piece86",
+    "IGUI_B47_Variant_Piece87",
+    "IGUI_B47_Variant_Piece88",
+    "IGUI_B47_Variant_Piece89",
+    "IGUI_B47_Variant_Piece90",
+    "IGUI_B47_Variant_Piece91",
+    "IGUI_B47_Variant_Piece92",
+    "IGUI_B47_Variant_Piece93",
+    "IGUI_B47_Variant_Piece94",
+    "IGUI_B47_Variant_Piece95",
+    "IGUI_B47_Variant_Piece97",
+    "IGUI_B47_WhiteBalusterRail_Piece64",
+    "IGUI_B47_WhiteBalusterRail_Piece65",
+    "IGUI_B47_WhiteBalusterRail_Piece66",
+    "IGUI_B47_WhiteBalusterRail_Piece67",
+    "IGUI_B47_WhiteBalusterRail_Piece68",
+    "IGUI_B47_WhiteBalusterRail_Piece69",
+    "IGUI_B47_WhiteBalusterRail_Piece70",
+    "IGUI_B47_WhiteBalusterRail_Piece71",
+    "IGUI_B47_WhiteBalusterRail_Piece72",
+    "IGUI_B47_WhiteBalusterRail_Piece73",
+    "IGUI_B47_WhiteBalusterRail_Piece74",
+    "IGUI_B47_WhiteBalusterRail_Piece75",
+    "IGUI_B47_WhiteBalusterRail_Piece76",
+    "IGUI_B47_WhiteBalusterRail_Piece78",
+    "IGUI_B47_WhiteBalusterRail_Piece79",
+    "IGUI_B47_WhiteHeavyRail_Piece120",
+    "IGUI_B47_WhiteHeavyRail_Piece121",
+    "IGUI_B47_WhiteHeavyRail_Piece122",
+    "IGUI_B47_WhiteHeavyRail_Piece124",
+    "IGUI_B47_WhiteHeavyRail_Piece125",
+    "IGUI_B47_WhiteHeavyRail_Piece128",
+    "IGUI_B47_WhiteHeavyRail_Piece129",
+    "IGUI_B47_WhiteHeavyRail_Piece130",
+    "IGUI_B47_WhiteHeavyRail_Piece131",
+    "IGUI_B47_WhiteHeavyRail_Piece132",
+    "IGUI_B47_WhiteHeavyRail_Piece133",
+    "IGUI_B47_WhiteHeavyRail_Piece136",
+    "IGUI_B47_WhiteHeavyRail_Piece137",
+    "IGUI_B47_WhiteHeavyRail_Piece140",
+    "IGUI_B47_WhiteHeavyRail_Piece141",
+    "IGUI_B47_WhitePanelRail_Piece112",
+    "IGUI_B47_WhitePanelRail_Piece113",
+    "IGUI_B47_WhitePanelRail_Piece114",
+    "IGUI_B47_WhitePanelRail_Piece115",
+    "IGUI_B47_WhiteSlimRail_Piece108",
+    "IGUI_B47_WhiteSlimRail_Piece109",
+    "IGUI_B47_WhiteSlimRail_Piece110",
+    "IGUI_B47_WhiteSlimRail_Piece86",
+    "IGUI_B47_WhiteSlimRail_Piece87",
+    "IGUI_B47_WhiteSlimRail_Piece94",
+    "IGUI_B47_WhiteSlimRail_Piece95",
+    "IGUI_B47_WhiteSlimRail_Piece97",
+    "IGUI_B47_WoodBalusterRail_Piece24",
+    "IGUI_B47_WoodBalusterRail_Piece25",
+    "IGUI_B47_WoodBalusterRail_Piece26",
+    "IGUI_B47_WoodBalusterRail_Piece27",
+    "IGUI_B47_WoodBalusterRail_Piece33",
+    "IGUI_B47_WoodBalusterRail_Piece34",
+    "IGUI_B47_WoodBalusterRail_Piece35"
+  ],
+  "scope": "Intact fence sections, their paid corners/posts and gates without vanilla recipes. No architectural railings, stair components, decorative wire, baskets or freestanding barriers.",
+  "vanilla_equivalent_exclusions": [
+    {
+      "part_names": [
+        "B47_LowWood_PlainSection",
+        "B47_LowWood_PostEndedSection",
+        "B47_LowWood_Corner",
+        "B47_LowWood_Post"
+      ],
+      "sprites": [
+        "fencing_01_32",
+        "fencing_01_33",
+        "fencing_01_34",
+        "fencing_01_35",
+        "fencing_01_36",
+        "fencing_01_37"
+      ],
+      "native_entities": [
+        "Base.WoodFenceLvl1",
+        "Base.WoodFenceLvl2",
+        "Base.WoodFenceLvl3"
+      ],
+      "reason": "User-confirmed vanilla low wooden fence availability; omit these practical duplicates even though artwork differs."
+    },
+    {
+      "part_names": [
+        "B47_TallWoodGate_DoubleGate"
+      ],
+      "sprites": [
+        "fixtures_doors_fences_01_48",
+        "fixtures_doors_fences_01_49",
+        "fixtures_doors_fences_01_50",
+        "fixtures_doors_fences_01_51",
+        "fixtures_doors_fences_01_52",
+        "fixtures_doors_fences_01_53",
+        "fixtures_doors_fences_01_54",
+        "fixtures_doors_fences_01_55",
+        "fixtures_doors_fences_01_56",
+        "fixtures_doors_fences_01_57",
+        "fixtures_doors_fences_01_58",
+        "fixtures_doors_fences_01_59",
+        "fixtures_doors_fences_01_60",
+        "fixtures_doors_fences_01_61",
+        "fixtures_doors_fences_01_62",
+        "fixtures_doors_fences_01_63"
+      ],
+      "native_entities": [
+        "Base.DoubleDoor"
+      ],
+      "reason": "User-confirmed vanilla wide wooden gate availability; omit this practical duplicate even though artwork differs."
+    }
+  ]
+}

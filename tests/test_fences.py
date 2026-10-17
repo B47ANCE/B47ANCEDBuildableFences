@@ -171,6 +171,8 @@ class SourceContracts(unittest.TestCase):
             path = MOD / record["path"]
             raw = path.read_bytes()
             if path.name == "mod.info":
+                self.assertIn(b"name=B47ANCE'd Fences & Gates", raw)
+                raw = raw.replace(b"name=B47ANCE'd Fences & Gates", b"name=B47ANCE'd Buildable Fences")
                 raw = re.sub(rb"(?:\r?\n)?icon=media/ui/B47ANCEDBuildableFences_icon.png\r?\n", b"", raw)
             if path.suffix == ".lua" or path.name == "mod.info":
                 raw = raw.replace(version, b"CURRENT_VERSION")
