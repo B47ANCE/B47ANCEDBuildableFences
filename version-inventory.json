@@ -126,7 +126,7 @@
   "packaging": {
     "artifacts": [
       {
-        "glob": "dist/full-catalog-development-current/*.zip",
+        "glob": "dist/wooden-icon-development-current/*.zip",
         "pattern": "B47ANCEDBuildableFences-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?)\\.zip",
         "zip_members": [
           {
@@ -237,6 +237,10 @@
     {
       "reference": "dist/family-corner-development-current/*.zip; dist/workshop-candidates/1.1.0-dev.10; dev.11 branding iteration",
       "reason": "Preserved prior published packages/provenance and validation, never current proof."
+    },
+    {
+      "reference": "dist/full-catalog-development-current/*.zip; dist/workshop-candidates/1.1.0-dev.16",
+      "reason": "Preserved dev.16 three-fence-icon package and failed cached-auth upload evidence. No successful dev.16 Workshop content update; never relabel as dev.17."
     }
   ]
 }

@@ -1,5 +1,5 @@
-[b]Version 1.1.0-dev.16[/b]
+[b]Version 1.1.0-dev.17[/b]
 MP testing build - dedicated multiplayer NOT TESTED
 Project display name: B47ANCE'd Fences & Gates. Add 25 missing intact fence and gate parts in 12 grouped menu entries, excluding vanilla recipe artwork and reviewed functional duplicates. Low wooden fence pieces and the wide wooden gate are omitted because vanilla already builds them. Preserve original mod recipes, costs and server authority. Includes shared tall wooden gates for both fence tops, white picket, ornamental iron and green field gates. This expansion contains fences and gates only. Single-player NOT TESTED. Placement, collision, wide-gate operation, save/reload and dedicated synchronization still require testing.
 
-Use a new transparent, text-free mod-list icon made from real vanilla fence art. Keep the Workshop thumbnail unchanged.
+Use a transparent, text-free mod-list icon containing only the real vanilla wooden fence. Keep the Workshop thumbnail unchanged.

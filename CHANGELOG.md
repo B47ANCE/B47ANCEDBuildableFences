@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0-dev.17]
+
+Compatible PATCH artwork revision: use only the real wooden fence in the
+transparent, text-free mod icon. Remove the wire and iron subjects from the
+icon at the user's direction. Preserve the Workshop thumbnail, original poster,
+recipes, costs, server authority and every dev.16 gameplay definition. SP and
+dedicated multiplayer remain NOT TESTED; stable G8 is BLOCKED.
+
 ## [1.1.0-dev.16]
 
 Compatible PATCH artwork iteration: replace the 64x64 mod-list icon with the

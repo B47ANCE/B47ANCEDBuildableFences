@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.16
+-- B47ANCE'd Buildable Fences v1.1.0-dev.17
 -- Native construction owns payment, placement, transmission and persistence.
 require "B47_ExpandedCatalog"
 

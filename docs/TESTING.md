@@ -1,7 +1,28 @@
 # Current validation
 
-Project Version: 1.1.0-dev.16
+Project Version: 1.1.0-dev.17
 
+
+## dev.17 wooden-only icon checks
+
+Compatible PATCH: keep only the original wooden fence subject in the transparent
+mod-list icon. Gameplay, recipes, costs, source poster and Workshop thumbnail
+are unchanged from dev.16. No native runtime evidence is added.
+[TESTED Windows offline Python/Lupa/Pillow, 2026-10-18] 68 available tests PASS;
+five original-installed-baseline checks remain unavailable. Commands all PASS:
+`python scripts/test_current.py --available`,
+`python scripts/generate_expanded_catalog.py`,
+`python scripts/audit_vanilla_recipes.py`,
+`python scripts/check_versions.py --root .`, `python scripts/prepare_workshop.py`.
+Preflight checks 100 runtime files with the custom 64x64 RGBA icon, no shipped
+test/debug code or custom Java/JAR. Old dev.16 artifacts remain intact in their
+original directory; dev.17 uses dist/wooden-icon-development-current.
+SP NOT TESTED; dedicated G7 and stable
+G8 remain BLOCKED. The earlier dev.16 upload failed at SteamCMD authentication;
+its candidate and failed-upload evidence are preserved. Publishing still awaits
+local SteamCMD sign-in.
+
+## Historical dev.16 validation
 
 ## dev.16 icon and publication checks
 

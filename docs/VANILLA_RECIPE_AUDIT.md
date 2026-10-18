@@ -1,6 +1,6 @@
 # Vanilla fence and gate recipe re-audit
 
-Project Version: 1.1.0-dev.16
+Project Version: 1.1.0-dev.17
 
 [VERIFIED installed source/art, 2026-10-15] Steam build 25485521; full game version UNKNOWN.
 [VERIFIED installed source] The earlier exact-art audit was too narrow: different
