@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0-dev.16]
+
+Compatible PATCH artwork iteration: replace the 64x64 mod-list icon with the
+user-approved transparent wooden, razor-wire security and wrought-iron subject.
+Retain the larger editable source, original poster and live Workshop thumbnail.
+No recipe, gameplay, server-authority, save or configuration behavior changes
+from dev.15. Publish the merged 25-part expansion as an MP testing build with
+SP and dedicated multiplayer NOT TESTED; stable G8 remains BLOCKED.
+
 ## [1.1.0-dev.15]
 
 Compatible PATCH correction to the unpublished expansion: remove the four low

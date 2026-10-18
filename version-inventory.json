@@ -109,6 +109,14 @@
     {
       "path": "catalog/vanilla-recipe-audit.json",
       "pattern": "^  \"project_version\": \"(?P<version>[^\\\"]+)\",$"
+    },
+    {
+      "path": "docs/BRANDING.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/MOD_OVERVIEW.json",
+      "pattern": "^  \"version\": \"(?P<version>[^\\\"]+)\",$"
     }
   ],
   "changelog": {
