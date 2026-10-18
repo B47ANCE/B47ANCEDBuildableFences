@@ -1,6 +1,28 @@
+# Custom mod icon
+
+Project Version: 1.1.0-dev.16
+
+User-selected 2026-10-18: use only the three-fence subject from the approved
+Fences & Gates thumbnail. Authoring source assets/artwork/fence-icon.png is
+512x512 RGBA, with transparent gaps/background and no lettering or shadows.
+The 64x64 mod icon at media/ui/B47ANCEDBuildableFences_icon.png is a Lanczos
+resize of that source. Original vanilla wood, razor-wire security and wrought
+iron sprite artwork is retained; no AI-generated fence art is included.
+
+This compatible PATCH iteration changes the mod-list icon only. Existing
+poster.png, fallback branding assets and the live Workshop thumbnail remain
+unchanged. The upload VDF omits previewfile, and the public preview hash is
+compared before/after upload. No gameplay/recipe/authority/configuration changes.
+No new gameplay sandbox option is needed for this presentation-only asset.
+
+Source SHA-256: 0c20461cd3e375daece3a15de1bae9174cc05273b83e717f6b19396b8b92e11d.
+Runtime icon SHA-256: ed65f65709dd73dab3d70c2a60812800b9336d3d763b24a85f124af3275409ba.
+
+## Historical fallback branding
+
 # Fallback artwork
 
-Current authoring version: 1.1.0-dev.11
+Historical authoring version: 1.1.0-dev.11
 
 Use manually supplied artwork first, independently for each role. Only missing roles use assets/branding/B47_ICON_SMALL.png (64x64 mod icon) and B47_ICON.png (128x128 poster) and B47_THUMBNAIL.png (512x512 Workshop thumbnail). Copy bytes without resizing or regenerating. Existing Eyewear thumbnail and Buildable Fences poster are custom and preserved. Future custom replacements take precedence. No UI project is included.
 

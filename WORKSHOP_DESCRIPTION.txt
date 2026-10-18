@@ -1,4 +1,4 @@
-[b]Version 1.1.0-dev.15[/b]
+[b]Version 1.1.0-dev.16[/b]
 
 Build tall wooden, military, security, razor-wire and wrought-iron fences, plus missing ornamental fences, pickets, sheet-metal panels and gates using vanilla Project Zomboid art. Choose sections, corners and standalone posts to suit your build, with a separate wrought-iron gate.
 

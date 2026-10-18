@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.15
+-- B47ANCE'd Buildable Fences v1.1.0-dev.16
 -- UI selection model only. No topology, world scans or permanent state writes.
 require "B47_ExpandedCatalog"
 B47Cohesive = B47Cohesive or {}

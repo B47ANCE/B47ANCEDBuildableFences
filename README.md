@@ -1,9 +1,12 @@
 # B47ANCE'd Fences & Gates
 
-Project Version: 1.1.0-dev.15
+Project Version: 1.1.0-dev.16
 
 Standalone Build 42 mod, technical ID B47ANCEDBuildableFences, Workshop ID
 3817174798. Editable source is `src/B47ANCEDBuildableFences/42`.
+The mod-list icon uses the three real vanilla fence subjects from the approved
+thumbnail, with transparency and no text. The Workshop thumbnail and existing
+poster remain unchanged. See [artwork provenance](docs/BRANDING.md).
 Recovered from the downloaded Workshop baseline at the user's direction on
 2026-10-02. Installed Workshop files are not edited or deployed automatically.
 

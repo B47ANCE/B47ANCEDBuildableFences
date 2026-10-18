@@ -1,7 +1,44 @@
 # Current validation
 
-Project Version: 1.1.0-dev.15
+Project Version: 1.1.0-dev.16
 
+
+## dev.16 icon and publication checks
+
+Compatible PATCH: custom transparent 64x64 mod icon; all dev.15 gameplay and
+part costs remain unchanged. Source and icon PNG integrity, RGBA transparency,
+source-to-runtime pixels, original recipe/callback contracts and unchanged
+poster/Workshop preview are checked. No new native runtime evidence is claimed.
+
+A fresh checkout initially lacked one ignored historical entity fixture and
+used Git CRLF conversion for three production text files. The existing local
+fixture was restored after its recorded SHA-256 matched; original byte line
+endings were retained. Both baseline checks then passed without changing their
+assertions or historical evidence. Original installed-baseline tests remain
+explicitly unavailable because the old Workshop download is absent.
+
+[TESTED Windows offline Python/Lupa/Pillow, 2026-10-18] 68 available tests PASS.
+Five original installed-baseline checks remain explicitly BLOCKED by the absent
+old Workshop download. Existing available assertions were not disabled.
+Exact commands, all PASS:
+```
+python scripts/test_current.py --available
+python scripts/generate_expanded_catalog.py
+python scripts/audit_vanilla_recipes.py
+python scripts/check_versions.py --root .
+python scripts/prepare_workshop.py
+```
+The final command is read-only: 100 runtime files, Lua-only payload with no
+shipped test/debug utilities. The existing icon contract now checks the chosen
+512x512 authoring source resized to the 64x64 runtime RGBA icon, including alpha.
+All gameplay Lua matches dev.15 after removing only the version header, and
+entity recipes/scripts and poster.png match dev.15 byte-for-byte. Packaging
+and --release version/integrity checks run again on committed merged source
+before upload. G6 SP NOT TESTED;
+G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED. Workshop publication is
+explicitly authorized as MP test distribution, not gameplay validation.
+
+## Historical dev.15 validation
 
 ## dev.15 functional-duplicate correction
 

@@ -1,6 +1,6 @@
 # Cohesive family selector overlay
 
-Project Version: 1.1.0-dev.15
+Project Version: 1.1.0-dev.16
 
 See docs/FAMILY_SELECTORS.md for the current six-family design, native authority,
 recipe preservation, configuration decision and runtime gates. The overlay is
