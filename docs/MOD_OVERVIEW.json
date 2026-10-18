@@ -2,9 +2,9 @@
   "schema": 1,
   "id": "fences",
   "name": "B47ANCE'd Fences & Gates",
-  "version": "1.1.0-dev.16",
+  "version": "1.1.0-dev.17",
   "reviewed": true,
-  "source_digest": "6ca0be6b09d3d4db0f4b2d720b1a18c824a88257e29e2fe0eafb3cad3cced59a",
+  "source_digest": "bb4306dde81f488ccee4d644d1ec4e9c1bb8a5c456ca68a95eebd4519871d772",
   "features": [
     {
       "status": "Source",
@@ -20,7 +20,7 @@
     },
     {
       "status": "Source",
-      "text": "Custom transparent mod icon uses real wooden, razor-wire security and wrought-iron sprites. Existing Workshop thumbnail and poster are preserved."
+      "text": "Custom transparent mod icon uses only the real vanilla wooden fence. Existing Workshop thumbnail and poster are preserved."
     },
     {
       "status": "Blocked",
