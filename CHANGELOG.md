@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.0-dev.18]
+
+Compatible PATCH UI correction: keep a grouped construction entry when the
+native recipe list supplies only a secondary part. Prefer the normal root
+when present; otherwise retain the first native-supplied member. Preserve all
+unrelated recipes and native eligibility, payment, costs and server authority.
+Audit all 47 recipe/component/skin bindings and 29 translation maps; exercise
+all 47 parts and six gates through 19 grouped entries. Add seven regressions.
+The Workshop reporter's session remains unreproduced; no razor-wire gate is
+invented. No runtime launch, deploy or upload; SP/dedicated NOT TESTED.
+
 ## [1.1.0-dev.17]
 
 Compatible PATCH artwork revision: use only the real wooden fence in the

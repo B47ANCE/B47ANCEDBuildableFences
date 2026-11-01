@@ -2,13 +2,13 @@
   "schema": 1,
   "id": "fences",
   "name": "B47ANCE'd Fences & Gates",
-  "version": "1.1.0-dev.17",
+  "version": "1.1.0-dev.18",
   "reviewed": true,
-  "source_digest": "bb4306dde81f488ccee4d644d1ec4e9c1bb8a5c456ca68a95eebd4519871d772",
+  "source_digest": "375bd7917344a05427f69ba5f294954c119db78d173abed2dcb421c40956248e",
   "features": [
     {
       "status": "Source",
-      "text": "41 paid fence parts and 6 gates use vanilla artwork. Family selectors preserve each part's recipe, materials, skills and construction time."
+      "text": "41 paid fence parts and 6 gates use vanilla artwork. All 47 recipes are exercised through 19 grouped construction entries in offline tests; a secondary-only native list retains its family entry. Individual recipe requirements and costs are preserved."
     },
     {
       "status": "Source",
@@ -27,13 +27,14 @@
       "text": "SP and dedicated multiplayer acceptance remain untested; stable-release G8 is blocked. Workshop distribution is an MP testing build."
     }
   ],
-  "limits": "Lua-only runtime. Source review and 68 offline regressions do not prove runtime collision, gates, payment, save/reload or dedicated synchronization. Five unavailable original-installed-baseline checks remain blocked.",
+  "limits": "Lua-only runtime. Source review and 75 offline regressions do not prove runtime collision, gates, payment, save/reload or dedicated synchronization. Five unavailable original-installed-baseline checks remain blocked.",
   "evidence": [
     "README.md",
     "docs/VANILLA_CATALOG.md",
     "docs/TESTING.md",
     "docs/BRANDING.md",
-    "docs/FAMILY_SELECTORS.md"
+    "docs/FAMILY_SELECTORS.md",
+    "docs/CONSTRUCTION_MENU_AUDIT.md"
   ],
   "relations": []
 }

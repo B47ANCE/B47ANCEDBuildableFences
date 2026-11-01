@@ -1,7 +1,38 @@
 # Current validation
 
-Project Version: 1.1.0-dev.17
+Project Version: 1.1.0-dev.18
 
+
+## dev.18 construction visibility audit
+
+Seven targeted offline Lua regression methods PASS after failing 30 subcases
+before the filter fix. The full construction audit covers all 47 recipes and
+six gates across 19 grouped entries, every recipe supplied alone, partial and
+empty native lists, absent roots, unrelated recipes, all script/skin components
+and 29 translation maps. It does not bypass native filters or skill/payment
+requirements. Source authority and all recipe data remain unchanged.
+
+[TESTED Windows offline Python/Lupa/Pillow, 2026-11-01] Full suite: 75 PASS.
+Five original-installed-baseline checks remain explicitly unavailable. The first
+full run caught a stale installed-Lua index (1,407 versus 1,409 files). After
+reviewing unchanged recipe/art/UI evidence and the local overlay metadata,
+refreshing the index made the full suite pass; no assertion was disabled.
+Read-only packaging preflight PASS: 100 runtime files, no shipped test/debug
+code or custom Java/JAR. Exact commands, all PASS:
+```
+python -m unittest discover -s tests -p test_construction_menu_visibility.py -v
+python scripts/test_current.py --available
+python scripts/generate_expanded_catalog.py
+python scripts/audit_vanilla_recipes.py
+python scripts/check_versions.py --root .
+python scripts/prepare_workshop.py
+```
+The latter is read-only. No package, upload, local deploy or game/server launch
+is authorized by this debug audit. The external Workshop report is not reproduced
+in PZ; local logs from October 24 were not used as reporter evidence.
+G6 SP NOT TESTED; G7 dedicated and stable G8 BLOCKED.
+
+## Historical dev.17 validation
 
 ## dev.17 wooden-only icon checks
 

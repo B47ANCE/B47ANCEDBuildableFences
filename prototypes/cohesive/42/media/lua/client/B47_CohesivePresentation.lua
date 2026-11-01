@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.17
+-- B47ANCE'd Buildable Fences v1.1.0-dev.18
 -- Client files load before the native server-side cursor directory is available.
 -- Install once after the complete world Lua load; never require it at boot.
 local function installPresentation()
@@ -7,7 +7,6 @@ require "B47_CohesiveCursor"
 require "Entity/ISUI/ISEntityBuildMenu"
 require "Entity/ISUI/BuildRecipe/ISBuildPanel"
 local V=B47Cohesive
-local hidden=V.hidden
 local function filtered(infos)
     local result,seen={},{}
     for _,info in ipairs(infos) do
@@ -43,15 +42,32 @@ function ISEntityBuildMenu.createToolTip(option,player,info)
 end
 function ISBuildPanel:refreshList()
     local all=self.logic:getAllBuildableRecipes() -- keep native entity lookup
-    local excluded={}
-    for name in pairs(hidden) do
-        local info=SpriteConfigManager.GetObjectInfo(name)
-        if info and info:getRecipe() then excluded[info:getRecipe():getCraftRecipe()]=true end
+    local present={}
+    for i=0,all:size()-1 do present[all:get(i)]=true end
+    local familyByRecipe,preferred={},{}
+    for _,family in ipairs(V.families) do
+        local root=family[1]
+        for _,name in ipairs(family) do
+            local info=SpriteConfigManager.GetObjectInfo(name)
+            if info and info:getRecipe() then
+                local recipe=info:getRecipe():getCraftRecipe()
+                familyByRecipe[recipe]=root
+                if name==root and present[recipe] then preferred[root]=recipe end
+            end
+        end
     end
-    local list=ArrayList.new()
+    local list,seen=ArrayList.new(),{}
     for i=0,all:size()-1 do
         local recipe=all:get(i)
-        if not excluded[recipe] then list:add(recipe) end
+        local family=familyByRecipe[recipe]
+        if not family then
+            list:add(recipe) -- preserve unrelated vanilla/mod recipes verbatim
+        elseif not seen[family] and (not preferred[family] or preferred[family]==recipe) then
+            -- Without a native root, retain the first supplied member rather
+            -- than hiding the whole family. Never inject a different recipe.
+            list:add(recipe)
+            seen[family]=true
+        end
     end
     self.logic:setRecipes(list)
     self:ReselectRecipeOrFirst(self.logic:getLastSelectedRecipe())
