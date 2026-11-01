@@ -117,6 +117,14 @@
     {
       "path": "docs/MOD_OVERVIEW.json",
       "pattern": "^  \"version\": \"(?P<version>[^\\\"]+)\",$"
+    },
+    {
+      "path": "docs/CONSTRUCTION_MENU_AUDIT.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/THIRD_PARTY_RESEARCH.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
   "changelog": {
@@ -126,7 +134,7 @@
   "packaging": {
     "artifacts": [
       {
-        "glob": "dist/wooden-icon-development-current/*.zip",
+        "glob": "dist/construction-menu-development-current/*.zip",
         "pattern": "B47ANCEDBuildableFences-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?)\\.zip",
         "zip_members": [
           {
@@ -241,6 +249,10 @@
     {
       "reference": "dist/full-catalog-development-current/*.zip; dist/workshop-candidates/1.1.0-dev.16",
       "reason": "Preserved dev.16 three-fence-icon package and failed cached-auth upload evidence. No successful dev.16 Workshop content update; never relabel as dev.17."
+    },
+    {
+      "reference": "dist/wooden-icon-development-current/*.zip; dist/workshop-candidates/1.1.0-dev.17",
+      "reason": "Preserved dev.17 wooden-only icon candidate and its source/package evidence. No successful Workshop content update was recorded; never relabel as dev.18."
     }
   ]
 }

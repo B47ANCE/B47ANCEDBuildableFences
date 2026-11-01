@@ -1,6 +1,6 @@
 # Custom mod icon
 
-Project Version: 1.1.0-dev.17
+Project Version: 1.1.0-dev.18
 
 User-selected 2026-10-18: use only the wooden fence subject from the approved
 Fences & Gates thumbnail. Authoring source assets/artwork/fence-icon.png is
@@ -9,10 +9,11 @@ The 64x64 mod icon at media/ui/B47ANCEDBuildableFences_icon.png is a Lanczos
 resize of that source. Original vanilla wooden fence artwork is retained;
 no wire or iron fencing is included in the icon. No AI-generated fence art.
 
-This compatible PATCH iteration changes the mod-list icon only. Existing
+The wooden-only icon was selected in dev.17. Dev.18 retains it unchanged while
+correcting construction-menu visibility. Existing
 poster.png, fallback branding assets and the live Workshop thumbnail remain
 unchanged. The upload VDF omits previewfile, and the public preview hash is
-compared before/after upload. No gameplay/recipe/authority/configuration changes.
+compared before/after upload. No recipe, cost, authority or gameplay configuration changes.
 No new gameplay sandbox option is needed for this presentation-only asset.
 
 Source SHA-256: 88b28b3dd7088fc82feb862f77e5ae2859e5643418ab1aa4d8a4ea73226fc30a.

@@ -1,6 +1,6 @@
 # B47ANCE'd Fences & Gates
 
-Project Version: 1.1.0-dev.17
+Project Version: 1.1.0-dev.18
 
 Standalone Build 42 mod, technical ID B47ANCEDBuildableFences, Workshop ID
 3817174798. Editable source is `src/B47ANCEDBuildableFences/42`.
@@ -22,6 +22,13 @@ materials, skills and construction time. The iron gate remains separate.
 The source/overlay composition is unchanged from dev.6. See
 [family selectors](docs/FAMILY_SELECTORS.md) for implementation and validation.
 Native collision/save/dedicated testing is pending.
+
+Construction menu audit: all 47 recipes (41 fence parts and 6 gates) are
+reachable through 19 grouped entries in offline tests. A missing plain/root
+recipe no longer causes available secondary parts to disappear from the tab.
+Native requirements and per-part costs are preserved. See
+[menu coverage and runtime limits](docs/CONSTRUCTION_MENU_AUDIT.md).
+
 
 The development source defines 21 buildable pieces, including four wrought-iron
 variants. Security and Razor recipes consume mixed concrete uses rather than

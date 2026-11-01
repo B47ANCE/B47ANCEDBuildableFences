@@ -1,12 +1,14 @@
 # Roadmap
 
-Project Version: 1.1.0-dev.17
+Project Version: 1.1.0-dev.18
 
-See FAMILY_SELECTORS.md for the current six-family design, native authority,
+See FAMILY_SELECTORS.md for the current family-selector design, native authority,
 recipe preservation, configuration decision and runtime gates. The overlay is
 composed with production src/ as in the existing dev.6 test candidate.
 
-All 21 fence definitions and their original costs/skills persist. One menu
+All 21 original fence definitions and their costs/skills persist. The full
+source has 47 recipes in 19 grouped entries; see CONSTRUCTION_MENU_AUDIT.md
+for the audited inventory and native partial-list visibility fallback. One menu
 entry per family cycles each real part/face; iron gate remains separate.
 No shared state, recipe, collision, migration or post-conversion rewrite.
 

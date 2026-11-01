@@ -1,9 +1,9 @@
 # Fence family selectors
 
-Project Version: 1.1.0-dev.17
+Project Version: 1.1.0-dev.18
 
 Compatible MINOR-scope expansion within the current 1.1.0 prerelease series.
-The composed development candidate has six fence entries: straight-top wood,
+The six original fence-family entries are straight-top wood,
 sloped-top wood, military, security, razor-wire security and wrought iron.
 The wrought-iron gate stays separate. Every existing part/entity/recipe remains
 registered. Q/E, the native rotate binding, or controller bumpers cycle actual
@@ -14,9 +14,13 @@ Implementation lives in prototypes/cohesive/42, composed with authoritative
 src/B47ANCEDBuildableFences/42, as in dev.6. Source layout is unchanged.
 The family map contains only existing identifiers, never copied cost/skill data.
 The selected ObjectInfo supplies its CraftRecipe, health, time, tool choices and
-face. Context and Build-window lists hide secondary parts, but native entity
-lookup retains them. When vanilla returns only an affordable secondary part, it is represented by its
-family root. The family entry stays accessible for selecting that cheaper part.
+face. The full composed source has 47 recipes in 19 grouped entries. Context
+menus represent an available secondary piece by its registered family root.
+The construction tab prefers that root only if the native list contains it;
+otherwise it keeps the first native-supplied family member instead of hiding
+the family. It never injects a recipe outside the native list. Native entity
+lookup and all independent recipes remain intact. See CONSTRUCTION_MENU_AUDIT.md
+for the complete inventory and partial-list regressions.
 The native requirement widgets and placement tooltip follow the selected recipe.
 
 [VERIFIED source] Installed vanilla ISBuildPanel.lua createBuildIsoEntity reads

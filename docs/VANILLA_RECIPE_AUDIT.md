@@ -1,6 +1,6 @@
 # Vanilla fence and gate recipe re-audit
 
-Project Version: 1.1.0-dev.17
+Project Version: 1.1.0-dev.18
 
 [VERIFIED installed source/art, 2026-10-15] Steam build 25485521; full game version UNKNOWN.
 [VERIFIED installed source] The earlier exact-art audit was too narrow: different
@@ -26,7 +26,7 @@ posts/corners and implicit double-gate opening states. All corresponding artwork
 is accounted for in Tiles2x.pack and Tiles2x.floor.pack. Visible RGBA comparisons
 ignore transparent padding and detect identical art under different sprite names.
 
-The checker also scans 1,407 Lua files. Fence/gate/railing asset literals occur
+The checker also scans 1,409 installed Lua files. Fence/gate/railing asset literals occur
 only in debug brush/scenario code and damage/bending tables. ISBuildMenu offers
 ramps; ISInventoryBuildMenu handles inventory/build interactions such as fill
 materials. ISEntityBuildMenu obtains buildables through native ISBuildIsoEntity.
@@ -38,6 +38,15 @@ The absence of an option for an unskilled/untrained character is not justificati
 for cloning the recipe. Wooden fence callbacks select level 1 below Carpentry 5,
 level 2 at 5-6 and level 3 at 7+. Existing fence/gate recipes and those callbacks
 remain untouched. No claim is made about UI behavior beyond source inspection.
+
+Environment note, 2026-11-01: the installed Lua scan is an installed-environment
+fingerprint, not proof of a pristine vanilla installation. Local pzopt overlay
+files were updated after the prior audit, and the scan now contains 1,409 Lua
+files. Only the Lua count/index changed in the report: recipe-script index,
+recorded native build-menu source hashes, tile/atlas evidence and per-part
+availability findings remained identical. No external implementation is copied
+or attributed as the cause of the Workshop report. See THIRD_PARTY_RESEARCH.md.
+
 
 catalog/vanilla-recipe-audit.json records each candidate, exact/alias matches,
 the 24 vanilla fence/gate/stake recipes, skill/menu conditions, source hashes and
