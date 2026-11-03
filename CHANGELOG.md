@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.0-dev.19]
+
+Compatible PATCH fix: keep construction-panel and tooltip references outside
+native placement cursors. Vanilla recursively copies cursor table values when
+starting a build; the panel/cursor cycle could prevent action creation. Add
+regressions executing the installed vanilla tryBuild path with a bounded copy
+model, including all 47 recipes, previews, action freezing and UI cleanup.
+Preserve recipes, costs, server authority, object identities and saved fences.
+Workshop report/save corruption is not reproduced; logs remain unavailable.
+SP/dedicated NOT TESTED; stable G8 BLOCKED. No deploy or Workshop upload.
+
 ## [1.1.0-dev.18]
 
 Compatible PATCH UI correction: keep a grouped construction entry when the

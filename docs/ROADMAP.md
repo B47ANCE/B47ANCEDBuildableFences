@@ -1,6 +1,6 @@
 # Roadmap
 
-Project Version: 1.1.0-dev.18
+Project Version: 1.1.0-dev.19
 
 See FAMILY_SELECTORS.md for the current family-selector design, native authority,
 recipe preservation, configuration decision and runtime gates. The overlay is
@@ -11,6 +11,10 @@ source has 47 recipes in 19 grouped entries; see CONSTRUCTION_MENU_AUDIT.md
 for the audited inventory and native partial-list visibility fallback. One menu
 entry per family cycles each real part/face; iron gate remains separate.
 No shared state, recipe, collision, migration or post-conversion rewrite.
+
+Dev.19 removes UI object graphs from native action copies; see
+CONSTRUCTION_ACTION_COPY.md. The construction failure is reproduced offline;
+the reported save failure is not established.
 
 Next: native SP and dedicated two-client validation. G7 BLOCKED / NOT TESTED;
 G8 BLOCKED. Historical checkpoint reports retain their original versions.

@@ -85,10 +85,13 @@ ISBuildIsoEntity.GetAllBuildableEntities=function() return infoList end
 ISBuildIsoEntity.GetBuildableEntities=function() return availableInfos or infoList,'items' end
 ISEntityBuildMenu={onBuildEntity=function(p,i) drag=ISBuildIsoEntity:new(p,i,1,{}) end,
  createToolTip=function(option) option.onSelect=nil; option.notAvailable=true; return {} end,
- addToolTip=function() return {addToUIManager=function() end,setX=function() end,setY=function() end,setVisible=function() end,removeFromUIManager=function() end} end}
+ addToolTip=function() lastTooltip={addToUIManager=function() end,setX=function() end,setY=function() end,setVisible=function() end,removeFromUIManager=function() end}; return lastTooltip end}
 ISBuildPanel={createBuildIsoEntity=function(self,noDrag)
  local info=self.logic:getSelectedBuildObject()
- if not self.buildEntity or self.buildEntity.objectInfo~=info then self.buildEntity=ISBuildIsoEntity:new(player,info,1,{},self.logic) end
+ if not self.buildEntity or self.buildEntity.objectInfo~=info then
+  self.buildEntity=ISBuildIsoEntity:new(player,info,1,{},self.logic)
+  self.buildEntity.dragNilAfterPlace=false; self.buildEntity.blockAfterPlace=true
+ end
  if not noDrag then drag=self.buildEntity end
 end}
 ArrayList={new=function() local t={}; local l=list(t); l.add=function(self,v) t[#t+1]=v end; return l end}
@@ -125,7 +128,7 @@ class VariantTests(unittest.TestCase):
             self.assertEqual(self.lua.eval("drag.craftRecipe.health"),d["health"])
             self.assertEqual(self.lua.eval("drag.buildPanelLogic:getRecipe().name"),name)
             self.lua.execute("drag:render(0,0,0,{})")
-            text=self.lua.eval("drag.B47Requirements.description")
+            text=self.lua.eval("lastTooltip.description")
             for i in d["inputs"]:
                 self.assertIn(i["names"][0]+": "+str(i["amount"]),text)
             self.assertIn("Welding: 7",text)

@@ -2,13 +2,17 @@
   "schema": 1,
   "id": "fences",
   "name": "B47ANCE'd Fences & Gates",
-  "version": "1.1.0-dev.18",
+  "version": "1.1.0-dev.19",
   "reviewed": true,
-  "source_digest": "375bd7917344a05427f69ba5f294954c119db78d173abed2dcb421c40956248e",
+  "source_digest": "90dca27e54ea6e9e6c9da03f4d639628db0deee1dc335523acd2c1444973e260",
   "features": [
     {
       "status": "Source",
       "text": "41 paid fence parts and 6 gates use vanilla artwork. All 47 recipes are exercised through 19 grouped construction entries in offline tests; a secondary-only native list retains its family entry. Individual recipe requirements and costs are preserved."
+    },
+    {
+      "status": "Source",
+      "text": "Client panel and tooltip references stay outside native cursor copies, removing a recursive build-start cycle. All 47 recipes pass an offline action-copy regression; reporter save corruption remains unconfirmed."
     },
     {
       "status": "Source",
@@ -27,14 +31,15 @@
       "text": "SP and dedicated multiplayer acceptance remain untested; stable-release G8 is blocked. Workshop distribution is an MP testing build."
     }
   ],
-  "limits": "Lua-only runtime. Source review and 75 offline regressions do not prove runtime collision, gates, payment, save/reload or dedicated synchronization. Five unavailable original-installed-baseline checks remain blocked.",
+  "limits": "Lua-only runtime. Source review and offline regressions do not prove runtime collision, gates, payment, save/reload or dedicated synchronization. Five unavailable original-installed-baseline checks remain blocked. Reported save failure is not reproduced; dev.19 is not a verified save repair.",
   "evidence": [
     "README.md",
     "docs/VANILLA_CATALOG.md",
     "docs/TESTING.md",
     "docs/BRANDING.md",
     "docs/FAMILY_SELECTORS.md",
-    "docs/CONSTRUCTION_MENU_AUDIT.md"
+    "docs/CONSTRUCTION_MENU_AUDIT.md",
+    "docs/CONSTRUCTION_ACTION_COPY.md"
   ],
   "relations": []
 }

@@ -1,6 +1,6 @@
 # B47ANCE'd Fences & Gates
 
-Project Version: 1.1.0-dev.18
+Project Version: 1.1.0-dev.19
 
 Standalone Build 42 mod, technical ID B47ANCEDBuildableFences, Workshop ID
 3817174798. Editable source is `src/B47ANCEDBuildableFences/42`.
@@ -26,7 +26,8 @@ Native collision/save/dedicated testing is pending.
 Construction menu audit: all 47 recipes (41 fence parts and 6 gates) are
 reachable through 19 grouped entries in offline tests. A missing plain/root
 recipe no longer causes available secondary parts to disappear from the tab.
-Native requirements and per-part costs are preserved. See
+Native requirements and per-part costs are preserved. Dev.19 also keeps UI
+references outside cursors so vanilla can copy them when a build starts. See
 [menu coverage and runtime limits](docs/CONSTRUCTION_MENU_AUDIT.md).
 
 

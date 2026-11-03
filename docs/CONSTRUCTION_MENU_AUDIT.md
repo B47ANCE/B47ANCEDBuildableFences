@@ -1,6 +1,6 @@
 # Construction menu visibility audit
 
-Project Version: 1.1.0-dev.18
+Project Version: 1.1.0-dev.19
 
 [VERIFIED source / TESTED Windows offline Python+Lupa, 2026-11-01]
 Installed Steam build 25485521; full game version UNKNOWN.
@@ -66,12 +66,17 @@ learned gate recipes.
 
 ## Workshop report versus current source
 
-The current public item 3817174798 still advertises 1.1.0-dev.10. Its installed
+At the time of the dev.18 audit, public item 3817174798 advertised 1.1.0-dev.10. Its installed
 files contain the three razor-wire recipes and the single wrought-iron gate;
 they do not contain the 25-part expansion. Versions dev.17 and dev.18 are source
 iterations, not evidence of successful Workshop distribution. No upload or
 local deployment occurs during this audit. The pending SteamCMD authentication
 issue is separate from this source fix.
+
+Subsequent distribution [VERIFIED Steam upload/API, 2026-11-01]: dev.18 was
+published after PR #8 merged. The prior paragraph describes pre-upload evidence,
+not the current public version. The dev.19 build-start investigation is recorded
+separately in CONSTRUCTION_ACTION_COPY.md; it does not change the menu filter.
 
 The reporter's game version, SP/MP context, filters and runtime logs are unknown.
 The developer's available local console is dated October 24 and was not treated

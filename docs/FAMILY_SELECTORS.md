@@ -1,6 +1,6 @@
 # Fence family selectors
 
-Project Version: 1.1.0-dev.18
+Project Version: 1.1.0-dev.19
 
 Compatible MINOR-scope expansion within the current 1.1.0 prerelease series.
 The six original fence-family entries are straight-top wood,
@@ -22,6 +22,15 @@ the family. It never injects a recipe outside the native list. Native entity
 lookup and all independent recipes remain intact. See CONSTRUCTION_MENU_AUDIT.md
 for the complete inventory and partial-list regressions.
 The native requirement widgets and placement tooltip follow the selected recipe.
+
+Dev.19 keeps panel associations and placement tooltips in client-local weak-key
+maps rather than fields on a placement cursor. Vanilla tryBuild recursively
+copies cursor table values into the timed action; a panel holding buildEntity
+would create a cycle. Deactivation removes the mappings and tooltip; the panel
+reattaches its association when reusing a cursor. Primitive selected-face state
+continues into the native copy, with the unchanged native recipe/BuildLogic.
+No generic copyTable replacement, custom build action or error suppression is
+introduced. See CONSTRUCTION_ACTION_COPY.md for evidence and runtime limits.
 
 [VERIFIED source] Installed vanilla ISBuildPanel.lua createBuildIsoEntity reads
 getSelectedBuildObject/getRecipe, creates the matching native cursor, equips

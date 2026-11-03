@@ -1,6 +1,6 @@
 # Fence and gate catalog
 
-Project Version: 1.1.0-dev.18
+Project Version: 1.1.0-dev.19
 
 Scope: intact fence sections, their paid corners/posts and gates without vanilla
 recipes. This is a PATCH correction to the unpublished 1.1.0 catalog expansion;

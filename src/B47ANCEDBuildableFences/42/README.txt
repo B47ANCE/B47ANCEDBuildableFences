@@ -1,4 +1,4 @@
-B47ANCE'd Fences & Gates — v1.1.0-dev.18
+B47ANCE'd Fences & Gates — v1.1.0-dev.19
 
 Standalone Project Zomboid Build 42 fence-building mod.
 
