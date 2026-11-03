@@ -180,6 +180,43 @@ local action=drag:tryBuild(1,2,0)
 assert(queued and action.item.objectInfo==foreignInfo)
 ''')
 
+    def test_reported_native_joypad_chain_queues_every_recipe_after_preview(self):
+        source = (GAME / 'media/lua/server/BuildingObjects/ISBuildingObject.lua').read_text()
+        start = source.index('function DoTileBuilding(')
+        end = source.index('\nfunction ISBuildingObject:tryBuild(', start)
+        self.lua.execute(source[start:end])
+        start = source.index('function DoTileBuildingJoyPad(')
+        end = source.index('\nlocal function RenderOpaqueObjectsInWorld(', start)
+        self.lua.execute(source[start:end])
+        source = (GAME / 'media/lua/server/BuildingObjects/ISBuildIsoEntity.lua').read_text()
+        start = source.index('function ISBuildIsoEntity:tryBuild(')
+        end = source.index('\nfunction ISBuildIsoEntity:onObjectLeftMouseButtonDown(', start)
+        self.lua.execute(source[start:end])
+        self.lua.execute('''
+player.isBuildButtonDown=function() return false end
+player.isBuildButtonReleased=function(self) return self.releaseBuild end
+for _,info in pairs(infos) do
+    info.getScript=function() return {getTimedActionOnIsValid=function() end} end
+end
+''')
+        for name in catalog_fixture.info_data():
+            with self.subTest(recipe=name):
+                self.lua.execute('''
+openPanel(...)
+player.releaseBuild=false
+DoTileBuildingJoyPad(drag,true,1,2,0)
+assert(drag.canBeBuild and lastTooltip.visible)
+-- Real squares are opaque userdata. This fixture's coordinate methods contain
+-- no cursor/UI references; they exercise the native second-pass square path.
+drag.square.getX=function() return 1 end
+drag.square.getY=function() return 2 end
+drag.square.getZ=function() return 0 end
+player.releaseBuild=true
+DoTileBuildingJoyPad(drag,false,1,2,0)
+assert(queued and queuedAction.item.objectInfo==drag.objectInfo)
+assert(queuedAction.item.B47BuildPanel==nil and queuedAction.item.B47Requirements==nil)
+''', name)
+
 
 if __name__ == '__main__':
     unittest.main()

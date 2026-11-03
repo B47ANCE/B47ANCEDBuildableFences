@@ -1,6 +1,6 @@
 # Bounded third-party environment observation
 
-Project Version: 1.1.0-dev.19
+Project Version: 1.1.0-dev.20
 
 Date: 2026-11-01. Purpose: explain a changed installed-Lua fingerprint during
 the construction menu recipe audit, not reproduce the reporter's mod list.

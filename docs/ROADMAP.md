@@ -1,6 +1,6 @@
 # Roadmap
 
-Project Version: 1.1.0-dev.19
+Project Version: 1.1.0-dev.20
 
 See FAMILY_SELECTORS.md for the current family-selector design, native authority,
 recipe preservation, configuration decision and runtime gates. The overlay is
@@ -15,6 +15,10 @@ No shared state, recipe, collision, migration or post-conversion rewrite.
 Dev.19 removes UI object graphs from native action copies; see
 CONSTRUCTION_ACTION_COPY.md. The construction failure is reproduced offline;
 the reported save failure is not established.
+
+Current incident: treat the supplied construction stack as dev.19. Icon-path
+warnings have a bounded dev.20 source fix; native build failure/save status are
+still unresolved. Preserve first-exception/runtime diagnostics when available.
 
 Next: native SP and dedicated two-client validation. G7 BLOCKED / NOT TESTED;
 G8 BLOCKED. Historical checkpoint reports retain their original versions.

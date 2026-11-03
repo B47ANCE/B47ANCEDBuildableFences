@@ -67,7 +67,7 @@ def render(catalog, version):
                 entities += ['                item ' + str(item['amount']) + ' ' + item['selector'] + item.get('suffix', '') + ',']
             entities += ['            }', '        }', '    }']
             skins += ['        entity ES_' + name, '        {', '            LuaWindowClass = ISEntityWindow,',
-                      '            DisplayName = IGUI_' + name + ',', '            Icon = B47ANCEDBuildableFences_icon,', '        }']
+                      '            DisplayName = IGUI_' + name + ',', '            Icon = media/ui/B47ANCEDBuildableFences_icon.png,', '        }']
             allowed = ','.join('["' + key + '"]=true' for key in orientations)
             model += ['C.policies["' + name + '"]={material="' + part['material'] + '",post=' + str(part.get('post', False)).lower() + ',gate=' + str(part.get('gate',False)).lower() + ',allowed={' + allowed + '}}']
         model += ['C.families[#C.families+1]={' + ','.join(members) + '}']

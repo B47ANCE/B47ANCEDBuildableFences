@@ -1,6 +1,6 @@
 # Custom mod icon
 
-Project Version: 1.1.0-dev.19
+Project Version: 1.1.0-dev.20
 
 User-selected 2026-10-18: use only the wooden fence subject from the approved
 Fences & Gates thumbnail. Authoring source assets/artwork/fence-icon.png is
@@ -18,6 +18,25 @@ No new gameplay sandbox option is needed for this presentation-only asset.
 
 Source SHA-256: 88b28b3dd7088fc82feb862f77e5ae2859e5643418ab1aa4d8a4ea73226fc30a.
 Runtime icon SHA-256: 50d2a0cddaa9e593e92245491ec8e91b5853fc47b7a80812559a1ed7e0be433e.
+
+## Expansion-style icon binding (dev.20)
+
+The 25 expansion XUI styles previously used the bare name
+B47ANCEDBuildableFences_icon. User-forwarded runtime warnings identify that
+lookup as unresolved, including ShortChainLink_Corner and MetalPanel_Corner.
+The generator now emits media/ui/B47ANCEDBuildableFences_icon.png, the exact
+case-sensitive path already shipped and declared in mod.info. All 25 generated
+styles are checked against the composed payload. The existing 22 original
+style bindings are retained. Neither artwork nor thumbnail bytes change.
+
+[VERIFIED installed native evidence, Steam build 25485521] EntityUiStyle.Load
+passes the script's icon string directly to Texture.trygetTexture; a missing
+texture warns and falls back to the question-mark icon (and can assert if
+assertions are enabled). The recorded decompiled class was compared byte-for-
+byte to the installed JAR class before reuse. XuiSkin$EntityUiStyle.class SHA-256:
+25a197547fcaf6deee2ff2185cb7b3c090778b3ecc89647978dd0e01c7eb194a.
+No PZ rendering/loader invocation is claimed. The warning is a confirmed binding
+defect, not proof that it caused the later tryBuild exception or save failure.
 
 ## Historical dev.16 icon
 

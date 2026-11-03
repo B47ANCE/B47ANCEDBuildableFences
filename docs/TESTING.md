@@ -1,9 +1,38 @@
 # Current validation
 
-Project Version: 1.1.0-dev.19
+Project Version: 1.1.0-dev.20
 
 
-## dev.19 construction action-copy fix
+## dev.20 runtime-report follow-up and icon binding
+
+The new report is treated as dev.19 at the user's direction. Its native build
+exception is not reproduced or resolved. The stack lacks its exception message;
+SP/dedicated/save safety remain unverified. See CONSTRUCTION_ACTION_COPY.md.
+
+[TESTED Windows offline Python/Lupa, 2026-11-02] Full suite: 83 PASS.
+Five unavailable original-installed-baseline checks remain BLOCKED. Version,
+generator and read-only 100-file shipped-content preflight PASS.
+
+The added icon regression fails 25 style bindings
+(and their mod.info consistency check) before the generator correction
+and passes afterward. Seven action-copy methods also PASS, including the new
+installed native controller callback chain exercised for all 47 recipes after
+preview. Fake objects/Lupa do not reproduce Kahlua, native texture loading or
+native construction. No runtime evidence is promoted from these tests.
+
+Commands:
+```
+python -m unittest discover -s tests -p test_expanded_catalog.py -k expansion_style_icons -v
+python -m unittest discover -s tests -p test_construction_action_copy.py -v
+python scripts/test_current.py --available
+python scripts/generate_expanded_catalog.py
+python scripts/check_versions.py --root .
+python scripts/prepare_workshop.py
+```
+G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.
+No package, deployment, Workshop upload, Steam restart or save mutation.
+
+## Historical dev.19 construction action-copy fix
 
 [TESTED Windows offline Python/Lupa, 2026-11-02] Six focused methods PASS.
 Full current suite: 81 PASS; five original-installed-baseline checks remain

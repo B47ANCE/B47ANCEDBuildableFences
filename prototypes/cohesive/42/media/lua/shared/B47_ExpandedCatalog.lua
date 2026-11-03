@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.19
+-- B47ANCE'd Buildable Fences v1.1.0-dev.20
 -- Generated from catalog/vanilla-expansion.json; no world access.
 B47ExpandedCatalog={families={},policies={}}
 local C=B47ExpandedCatalog

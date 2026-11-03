@@ -1,6 +1,6 @@
 # Architecture
 
-Project Version: 1.1.0-dev.19
+Project Version: 1.1.0-dev.20
 
 See FAMILY_SELECTORS.md for the current grouped-family design, native authority,
 recipe preservation, configuration decision and runtime gates. The overlay is
@@ -15,6 +15,10 @@ No shared state, recipe, collision, migration or post-conversion rewrite.
 Dev.19 removes UI object graphs from native action copies; see
 CONSTRUCTION_ACTION_COPY.md. The construction failure is reproduced offline;
 the reported save failure is not established.
+
+Dev.20 changes only generated expansion-style icon references. It adds offline
+coverage for the newly reported controller build chain. The current build-start
+failure is still unresolved; no authority/metatable workaround is introduced.
 
 Next: native SP and dedicated two-client validation. G7 BLOCKED / NOT TESTED;
 G8 BLOCKED. Historical checkpoint reports retain their original versions.
