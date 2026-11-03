@@ -1,6 +1,13 @@
 # Version inventory and provenance
 
-Project Version: 1.1.0-dev.18
+Project Version: 1.1.0-dev.19
+
+Dev.19 is a compatible PATCH correction within the existing 1.1.0 prerelease:
+remove client UI references from native action copies. No saved object identity,
+recipe, cost, schema, protocol or server-authority change. Existing dev.18 ZIPs
+and upload provenance remain historical in their original directories. Future
+authorized packaging uses dist/action-copy-development-current; none is created
+by this debugging iteration.
 
 Canonical VERSION migrated from downloaded mod.info 1.0.37 at the user's
 direction. MINOR classification: four compatible menu/entities added, no ID,

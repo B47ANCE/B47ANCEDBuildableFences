@@ -1,4 +1,4 @@
-[b]Version 1.1.0-dev.18[/b]
+[b]Version 1.1.0-dev.19[/b]
 
 Build tall wooden, military, security, razor-wire and wrought-iron fences, plus missing ornamental fences, pickets, sheet-metal panels and gates using vanilla Project Zomboid art. Choose sections, corners and standalone posts to suit your build, with a separate wrought-iron gate.
 
@@ -29,6 +29,8 @@ Separate [b]automatic junction post[/b] settings for wrought iron, military, slo
 Ornamental iron, white and round-top pickets, post-and-wire, additional chain-link parts, sheet-metal panels and razor-wire coils. Parts retain their own recipes and skill requirements, shown during selection.
 
 [h2]Known issues[/h2]
+The prior development build has a reported construction failure and possible save-loading issue. Dev.19 corrects a confirmed source/offline build-start copy defect; the reporter's save failure is not reproduced and this is not a verified save repair.
+
 Wide-gate operation and fence placement require in-game testing. Unavailable artwork is excluded.
 
 Automatic junctions are created only during new construction. Existing fences are not retrofitted, and removing a section does not automatically remove its junction post. Native collision/save/multiplayer validation remains pending.

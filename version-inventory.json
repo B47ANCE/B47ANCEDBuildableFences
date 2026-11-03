@@ -125,6 +125,10 @@
     {
       "path": "docs/THIRD_PARTY_RESEARCH.md",
       "pattern": "^Project Version: (?P<version>\\S+)$"
+    },
+    {
+      "path": "docs/CONSTRUCTION_ACTION_COPY.md",
+      "pattern": "^Project Version: (?P<version>\\S+)$"
     }
   ],
   "changelog": {
@@ -134,7 +138,7 @@
   "packaging": {
     "artifacts": [
       {
-        "glob": "dist/construction-menu-development-current/*.zip",
+        "glob": "dist/action-copy-development-current/*.zip",
         "pattern": "B47ANCEDBuildableFences-(?P<version>[0-9]+\\.[0-9]+\\.[0-9]+(?:-[0-9A-Za-z.-]+)?)\\.zip",
         "zip_members": [
           {
@@ -253,6 +257,10 @@
     {
       "reference": "dist/wooden-icon-development-current/*.zip; dist/workshop-candidates/1.1.0-dev.17",
       "reason": "Preserved dev.17 wooden-only icon candidate and its source/package evidence. No successful Workshop content update was recorded; never relabel as dev.18."
+    },
+    {
+      "reference": "dist/construction-menu-development-current/*.zip; dist/workshop-candidates/1.1.0-dev.18",
+      "reason": "Published dev.18 package and successful upload provenance remain unchanged. Future cursor-copy candidates use a separate output directory."
     }
   ]
 }

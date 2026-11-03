@@ -1,9 +1,34 @@
 # Current validation
 
-Project Version: 1.1.0-dev.18
+Project Version: 1.1.0-dev.19
 
 
-## dev.18 construction visibility audit
+## dev.19 construction action-copy fix
+
+[TESTED Windows offline Python/Lupa, 2026-11-02] Six focused methods PASS.
+Full current suite: 81 PASS; five original-installed-baseline checks remain
+BLOCKED because the original baseline is unavailable. Read-only shipped-content
+preflight: 100 runtime files PASS; version consistency and generator checks PASS.
+All 47 panel recipes reproduce the recursive-copy defect before the fix and
+pass after it. The harness executes the installed vanilla tryBuild function
+with opaque engine-object fakes and a bounded recursive-copy model. It also
+checks panel/context preview, unrelated native cursors, frozen action selection,
+independent copied face fields and repeated tooltip deactivation/reuse.
+This is not native game execution or an actual StackOverflowError capture.
+See CONSTRUCTION_ACTION_COPY.md for source fingerprints and incident limits.
+
+Exact validation commands:
+```
+python -m unittest discover -s tests -p test_construction_action_copy.py -v
+python scripts/test_current.py --available
+python scripts/generate_expanded_catalog.py
+python scripts/check_versions.py --root .
+python scripts/prepare_workshop.py
+```
+No package, local deployment, Workshop upload, game/server launch or save edit.
+G6 SP NOT TESTED; G7 dedicated BLOCKED / NOT TESTED; stable G8 BLOCKED.
+
+## Historical dev.18 construction visibility audit
 
 Seven targeted offline Lua regression methods PASS after failing 30 subcases
 before the filter fix. The full construction audit covers all 47 recipes and

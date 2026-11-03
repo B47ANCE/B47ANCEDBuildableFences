@@ -52,7 +52,7 @@ class FamilySelectors(unittest.TestCase):
                     self.assertEqual(self.lua.eval('drag.maxTime'), self.data[name]['time'])
                     self.assertEqual(self.lua.eval('drag.craftRecipe.health'), self.data[name]['health'])
                     self.lua.execute('drag:render(0,0,0,{})')
-                    text = self.lua.eval('drag.B47Requirements.description')
+                    text = self.lua.eval('lastTooltip.description')
                     for item in self.data[name]['inputs']:
                         self.assertIn(' / '.join(item['names']) + ': ' + str(item['amount']), text)
                     skill_name = 'Carpentry' if self.data[name]['perk'] == 'Woodwork' else 'Welding'

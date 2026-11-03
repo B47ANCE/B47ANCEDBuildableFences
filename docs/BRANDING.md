@@ -1,6 +1,6 @@
 # Custom mod icon
 
-Project Version: 1.1.0-dev.18
+Project Version: 1.1.0-dev.19
 
 User-selected 2026-10-18: use only the wooden fence subject from the approved
 Fences & Gates thumbnail. Authoring source assets/artwork/fence-icon.png is

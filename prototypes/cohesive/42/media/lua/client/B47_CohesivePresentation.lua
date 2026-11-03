@@ -1,4 +1,4 @@
--- B47ANCE'd Buildable Fences v1.1.0-dev.18
+-- B47ANCE'd Buildable Fences v1.1.0-dev.19
 -- Client files load before the native server-side cursor directory is available.
 -- Install once after the complete world Lua load; never require it at boot.
 local function installPresentation()
@@ -7,6 +7,11 @@ require "B47_CohesiveCursor"
 require "Entity/ISUI/ISEntityBuildMenu"
 require "Entity/ISUI/BuildRecipe/ISBuildPanel"
 local V=B47Cohesive
+-- Vanilla tryBuild recursively copies cursor table values into its action.
+-- UI graphs contain cycles (panel.buildEntity points back to the cursor), so
+-- keep them outside the cursor. Only primitive selection state travels with it.
+local panels=setmetatable({},{__mode="k"})
+local requirements=setmetatable({},{__mode="k"})
 local function filtered(infos)
     local result,seen={},{}
     for _,info in ipairs(infos) do
@@ -97,7 +102,7 @@ function V.cycle(cursor,delta)
     cursor:getSprite()
     local state=V.nextState(cursor,delta)
     if not state then return end
-    local panel=cursor.B47BuildPanel
+    local panel=panels[cursor]
     if panel then
         panel.B47PendingFace=state.nSprite
         panel.logic:setRecipe(state.recipe) -- native widgets update live
@@ -119,7 +124,7 @@ function ISBuildPanel:createBuildIsoEntity(dontSetDrag)
     originalPanelCursor(self,dontSetDrag)
     local cursor=self.buildEntity
     if cursor and V.cursor(cursor) then
-        cursor.B47BuildPanel=self
+        panels[cursor]=self
         if self.B47PendingFace then
             V.pin(cursor,self.B47PendingFace)
             self.B47PendingFace=nil
@@ -158,11 +163,11 @@ function ISBuildIsoEntity:render(x,y,z,square)
         self.buildPanelLogic:autoPopulateInputs()
     end
     originalRender(self,x,y,z,square) -- render EXACT existing entity face
-    if not self.B47Requirements then
-        self.B47Requirements=ISEntityBuildMenu.addToolTip()
-        self.B47Requirements:addToUIManager()
+    if not requirements[self] then
+        requirements[self]=ISEntityBuildMenu.addToolTip()
+        requirements[self]:addToUIManager()
     end
-    local tooltip=self.B47Requirements
+    local tooltip=requirements[self]
     tooltip.description=description(self)
     tooltip.footNote=getText("IGUI_B47_VariantControls")
     tooltip:setX(getMouseX()+24); tooltip:setY(getMouseY()+24)
@@ -170,11 +175,13 @@ function ISBuildIsoEntity:render(x,y,z,square)
 end
 local originalDeactivate=ISBuildIsoEntity.deactivate
 function ISBuildIsoEntity:deactivate()
-    if self.B47Requirements then
-        self.B47Requirements:setVisible(false)
-        self.B47Requirements:removeFromUIManager()
-        self.B47Requirements=nil
+    local tooltip=requirements[self]
+    if tooltip then
+        tooltip:setVisible(false)
+        tooltip:removeFromUIManager()
+        requirements[self]=nil
     end
+    panels[self]=nil
     return originalDeactivate(self)
 end
 -- Context path constructs the initial native cursor; pin its selected face.
