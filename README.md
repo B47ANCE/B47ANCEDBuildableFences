@@ -1,6 +1,6 @@
 # B47ANCE'd Fences & Gates
 
-Project Version: 1.1.0-dev.19
+Project Version: 1.1.0-dev.20
 
 Standalone Build 42 mod, technical ID B47ANCEDBuildableFences, Workshop ID
 3817174798. Editable source is `src/B47ANCEDBuildableFences/42`.
@@ -29,6 +29,9 @@ recipe no longer causes available secondary parts to disappear from the tab.
 Native requirements and per-part costs are preserved. Dev.19 also keeps UI
 references outside cursors so vanilla can copy them when a build starts. See
 [menu coverage and runtime limits](docs/CONSTRUCTION_MENU_AUDIT.md).
+Dev.20 corrects unresolved expansion-style icon paths. The latest reported
+build failure is still open; offline controller tests do not establish a native
+fix or save recovery. See [report follow-up](docs/CONSTRUCTION_ACTION_COPY.md).
 
 
 The development source defines 21 buildable pieces, including four wrought-iron

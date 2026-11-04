@@ -2,9 +2,9 @@
   "schema": 1,
   "id": "fences",
   "name": "B47ANCE'd Fences & Gates",
-  "version": "1.1.0-dev.19",
+  "version": "1.1.0-dev.20",
   "reviewed": true,
-  "source_digest": "90dca27e54ea6e9e6c9da03f4d639628db0deee1dc335523acd2c1444973e260",
+  "source_digest": "82acb6de3e044fd3606c77d6ee2e1a49dce77967e4b38c2e5073771d185df082",
   "features": [
     {
       "status": "Source",
@@ -29,9 +29,13 @@
     {
       "status": "Blocked",
       "text": "SP and dedicated multiplayer acceptance remain untested; stable-release G8 is blocked. Workshop distribution is an MP testing build."
+    },
+    {
+      "status": "Source",
+      "text": "All 25 expansion XUI styles reference the case-exact shipped wooden-fence PNG; artwork bytes are unchanged."
     }
   ],
-  "limits": "Lua-only runtime. Source review and offline regressions do not prove runtime collision, gates, payment, save/reload or dedicated synchronization. Five unavailable original-installed-baseline checks remain blocked. Reported save failure is not reproduced; dev.19 is not a verified save repair.",
+  "limits": "Lua-only runtime. Latest reported build failure is treated as dev.19 by user instruction and remains unresolved. Offline native-controller-chain regressions do not prove Kahlua, payment, collision, save safety or dedicated behavior. Five original-baseline checks remain unavailable.",
   "evidence": [
     "README.md",
     "docs/VANILLA_CATALOG.md",

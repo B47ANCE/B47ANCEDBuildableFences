@@ -1,5 +1,8 @@
-[b]Version 1.1.0-dev.19[/b]
+[b]Version 1.1.0-dev.20[/b]
 MP testing build - dedicated multiplayer NOT TESTED
+Correct missing expansion-style icon references to the shipped wooden-fence PNG.
+A new construction-failure report is being treated as dev.19 and remains
+unresolved; this icon correction is not a verified construction or save repair.
 Fix build startup failing when vanilla copies a fence/gate placement cursor.
 Keep panel and tooltip references outside that copy. Recipes, costs and saved
 fence identities are unchanged. The reported save failure is not reproduced;

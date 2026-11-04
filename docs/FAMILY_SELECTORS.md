@@ -1,6 +1,6 @@
 # Fence family selectors
 
-Project Version: 1.1.0-dev.19
+Project Version: 1.1.0-dev.20
 
 Compatible MINOR-scope expansion within the current 1.1.0 prerelease series.
 The six original fence-family entries are straight-top wood,

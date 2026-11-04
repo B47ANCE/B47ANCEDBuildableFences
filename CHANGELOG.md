@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.0-dev.20]
+
+Compatible PATCH UI binding correction: generated expansion styles reference
+media/ui/B47ANCEDBuildableFences_icon.png instead of an unresolved bare texture
+name. Preserve the wooden icon bytes and Workshop thumbnail. Add path/case
+regressions for all 25 styles and execute the reported native controller build
+chain for all 47 recipes offline. Treat the new build-failure report as dev.19
+by user instruction; its exception and save failure remain unresolved. No new
+construction workaround, recipe/cost/authority change, deployment or publication.
+SP/dedicated NOT TESTED; stable G8 BLOCKED.
+
 ## [1.1.0-dev.19]
 
 Compatible PATCH fix: keep construction-panel and tooltip references outside

@@ -1,6 +1,11 @@
 # Version inventory and provenance
 
-Project Version: 1.1.0-dev.19
+Project Version: 1.1.0-dev.20
+
+Dev.20 is a compatible PATCH UI binding correction: generated expansion styles
+use the shipped icon path. No recipe, gameplay Lua, artwork, schema or protocol
+change. Dev.19 packages/provenance are preserved in place; future authorized
+packaging has a separate dist/icon-binding-development-current directory.
 
 Dev.19 is a compatible PATCH correction within the existing 1.1.0 prerelease:
 remove client UI references from native action copies. No saved object identity,

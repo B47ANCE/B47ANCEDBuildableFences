@@ -1,6 +1,6 @@
 # Construction menu visibility audit
 
-Project Version: 1.1.0-dev.19
+Project Version: 1.1.0-dev.20
 
 [VERIFIED source / TESTED Windows offline Python+Lupa, 2026-11-01]
 Installed Steam build 25485521; full game version UNKNOWN.

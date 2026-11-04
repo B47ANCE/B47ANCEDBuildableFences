@@ -1,14 +1,15 @@
 # Construction action-copy investigation
 
-Project Version: 1.1.0-dev.19
+Project Version: 1.1.0-dev.20
 
 ## Report and evidence limits
 
 An external Workshop report forwarded on 2026-11-02 says each attempted build
 adds two errors and the save is now broken. The exact game version, SP/client/
 dedicated context, mod list, first exception and meaning of "broken" are UNKNOWN.
-No reporter console or save was supplied. The available developer console is
-dated October 24, predates the dev.18 upload, and is not this reproduction.
+At the initial investigation, no reporter console or save was supplied. A
+partial stack has since been supplied; see the follow-up below. The developer
+console is dated October 24, predates the dev.18 upload, and is not this reproduction.
 No save or remote server has been opened, rewritten, repaired or tested.
 
 [VERIFIED distribution] Dev.18 was uploaded to existing item 3817174798 on
@@ -16,7 +17,48 @@ No save or remote server has been opened, rewritten, repaired or tested.
 The public description and unchanged thumbnail were checked after upload.
 That establishes distribution, not successful SP or dedicated acceptance.
 
-## Confirmed source defect and falsifiable hypothesis
+## Follow-up report, handled as dev.19
+
+The user supplied this additional chain and instructed us to treat it as the
+latest Workshop build. Version dev.19 is an explicit investigation assumption,
+not a version observed in the excerpt. Time zone and exact game build remain
+UNKNOWN. The report is handled as an unresolved current failure, rather than
+dismissed as an older client.
+
+[USER-REPORTED runtime] At log timestamp 02-11-26 20:32:57.746, frame 8173,
+tryBuild(ISBuildingObject.lua:197) is called by tryBuild(ISBuildIsoEntity.lua:859),
+DoTileBuilding(ISBuildingObject.lua:169), and DoTileBuildingJoyPad(...:718).
+The actual exception message and preceding native stack were not included.
+On the installed build, line 197 restores the copied cursor metatable; line 196
+calls copyTable. Thus this chain corroborates a build-start failure, but does
+not by itself identify recursive copying as its cause or prove save corruption.
+The native joypad callback can appear in this stack without establishing what
+physical input device the reporter used.
+
+[TESTED Windows offline Python/Lupa] A new regression executes the installed
+DoTileBuildingJoyPad -> DoTileBuilding -> ISBuildIsoEntity:tryBuild ->
+ISBuildingObject:tryBuild chain, after preview, for all 47 recipes. All queue
+successfully against the dev.19 gameplay implementation. It still uses fake
+engine objects and the bounded copy model, and Lupa's metatable implementation
+is not the game Kahlua runtime. This does not reproduce or resolve the current
+reported exception. No generic metatable override, cursor error suppression or
+speculative build-action workaround has been added.
+
+[USER-REPORTED runtime] Earlier log lines at 20:29:10 show unresolved
+B47ANCEDBuildableFences_icon for ShortChainLink_Corner and MetalPanel_Corner.
+The dev.20 generator/path correction addresses the confirmed style binding
+problem across all 25 added styles; see BRANDING.md. The supplied FluidContainer
+sanitization messages do not identify a B47 fence callback. This mod does not
+define the named Large Bucket/Fuel Pump fluid containers; no vanilla or external
+mod is changed or blamed. These startup messages do not establish the cause of
+the later construction failure.
+
+Dev.19 was published from merged PR #9 on 2026-11-02 (America/Phoenix), commit
+535063fcae49ec04f55a78492b60d4db178964b6. This is distribution evidence only.
+The new icon-path source fix is not published. Build failure and save status
+remain UNKNOWN / RUNTIME GATE pending actual exception/runtime evidence.
+
+## Historical dev.19 source defect and falsifiable hypothesis
 
 [VERIFIED source] Installed ISBuildingObject:tryBuild recursively copies its
 placement cursor with copyTable(self) before creating ISBuildAction. The
@@ -59,8 +101,8 @@ No new network messages, client inventory/world writes, save scan or migration.
 These UI lifetime references are implementation structure, not configurable
 gameplay; no new sandbox setting is justified. Existing server settings remain.
 
-Six regression methods cover all 47 recipes at build start, rendered panel and
-context cursors, unrelated native cursors, the copied recipe/face and shared
+The original six regression methods cover all 47 recipes at build start,
+rendered panel and context cursors, unrelated native cursors, the copied recipe/face and shared
 native logic, frozen active selection, and repeated deactivate/reuse cleanup.
 The test fixture now mirrors vanilla's persistent panel cursor flags. It treats
 engine-object fakes as opaque, matching native userdata rather than reporting

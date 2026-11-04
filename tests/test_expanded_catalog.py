@@ -75,6 +75,18 @@ class ExpandedCatalog(unittest.TestCase):
             with self.assertRaises(ValueError):
                 render(invalid, '1.1.0-dev.14')
 
+    def test_expansion_style_icons_use_the_shipped_case_exact_texture_path(self):
+        from prepare_workshop import runtime_files
+        files = runtime_files()
+        text = files['media/scripts/entities/b47_expanded_fences_skin.txt'].read_text()
+        icons = re.findall(r'\bIcon\s*=\s*([^,\s]+)\s*,', text)
+        self.assertEqual(len(icons), len(PARTS))
+        for icon in icons:
+            with self.subTest(icon=icon):
+                self.assertEqual(icon, 'media/ui/B47ANCEDBuildableFences_icon.png')
+                self.assertIn(icon, files)
+        self.assertIn('icon=' + icons[0], files['mod.info'].read_text())
+
     def test_no_added_sprite_already_supplied_by_vanilla_recipe(self):
         vanilla = set(AVAILABILITY['vanilla_supplied_sprites'])
         sprites = {s for p in PARTS for rows in p['faces'].values() for row in rows for s in row}
